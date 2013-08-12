@@ -10,6 +10,6 @@
 SENDGRID_USERNAME: Your_Username
 SENDGRID_PASSWORD: Your_Password
 ADMIN_NAME: First User
-ADMIN_EMAIL: user@example.com
-ADMIN_PASSWORD: changeme
+ADMIN_EMAIL: admin@trendpublishing.com
+ADMIN_PASSWORD: trend2013
 ROLES: [admin, user, VIP]
