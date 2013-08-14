@@ -1,0 +1,25 @@
+.row
+  .span4
+    %h1 REGISTRATION
+
+  .span8
+    %ul.inline.pull-right
+      %li
+        %span.badge.badge-info 1
+      %li
+        %span.badge.badge-info 2
+      %li
+        %span.badge.badge-inverse 3
+      %li
+        %span.badge 4
+      %li
+        %span.badge 5
+      %li
+        %span.badge 6
+      %li
+        %span.badge CONFIRM
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    %p step 3
+
+= link_to 'Next', wizard_path(:step4), class: 'btn btn-primary pull-right'

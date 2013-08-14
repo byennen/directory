@@ -1,0 +1,35 @@
+.row
+  .span4
+    %h1 REGISTRATION
+
+  .span8
+    %ul.inline.pull-right
+      %li
+        %span.badge.badge-info 1
+      %li
+        %span.badge.badge-info 2
+      %li
+        %span.badge.badge-info 3
+      %li
+        %span.badge.badge-inverse 4
+      %li
+        %span.badge 5
+      %li
+        %span.badge 6
+      %li
+        %span.badge CONFIRM
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    %h4 SELECT LOGO PACKAGE: PRINT
+    %p
+      The Metals Directory gives your company the...
+.row
+  .span6
+    %p Drop down for Logo packages
+  .span6
+    %p show example ad here
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    %h4 LOGO UPLOAD
+
+= link_to 'Next', wizard_path(:step5), class: 'btn btn-primary pull-right'

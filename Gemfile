@@ -17,6 +17,8 @@ gem 'rolify'
 gem 'sendgrid'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
+gem 'wicked', '>= 1.0.0'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]

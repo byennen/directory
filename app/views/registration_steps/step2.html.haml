@@ -1,0 +1,30 @@
+.row
+  .span4
+    %h1 REGISTRATION
+
+  .span8
+    %ul.inline.pull-right
+      %li
+        %span.badge.badge-info 1
+      %li
+        %span.badge.badge-inverse 2
+      %li
+        %span.badge 3
+      %li
+        %span.badge 4
+      %li
+        %span.badge 5
+      %li
+        %span.badge 6
+      %li
+        %span.badge CONFIRM
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f|
+      = f.error_notification
+      = display_base_errors resource
+      = f.input :name, :autofocus => true
+      = f.input :email, :required => true
+      = f.input :password, :required => true
+      = f.input :password_confirmation, :required => true
+      = f.button :submit, 'Next', :class => 'btn-primary', class: 'pull-right btn btn-primary'

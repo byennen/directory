@@ -1,0 +1,40 @@
+.row
+  .span4
+    %h1 Welcome
+
+  .span8
+    %ul.inline.pull-right
+      %li
+        %span.badge.badge-inverse 1
+      %li
+        %span.badge 2
+      %li
+        %span.badge 3
+      %li
+        %span.badge 4
+      %li
+        %span.badge 5
+      %li
+        %span.badge 6
+      %li
+        %span.badge CONFIRM
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    %h4 WHAT IS THE METALS DIRECTORY?
+    %p
+      The Metals Directory...
+    = link_to "CONTINUE WITH FREE REGISTRATION", '', class: 'btn'
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    %h4 WHY STOP THERE?
+    %p
+      We offer many ways...
+    = link_to "REGISTER FOR AN UPGRADED LISTING", next_wizard_path, class: 'btn btn-primary'
+.row
+  .span12{style: 'margin-bottom: 40px;'}
+    %h4 ALREADY IN THE METALS DIRECTORY?
+    %p
+      Type in the name of your company to see if a registration already exists.
+    %p
+      = text_field_tag :search, params[:search]
+      = submit_tag "Search", name: nil, class: 'btn'
