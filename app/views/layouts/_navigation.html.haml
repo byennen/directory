@@ -1,17 +1,22 @@
-= link_to "Metals Directory", root_path, :class => 'brand'
+= link_to "The Metals Directory", root_path, :class => 'brand'
 %ul.nav
-  - if user_signed_in?
-    %li
-      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-  - else
-    %li
-      = link_to 'Login', new_user_session_path
-  - if user_signed_in?
-    %li
-      = link_to 'Edit account', edit_user_registration_path
-    - if current_user.has_role? :admin
-      %li
-        = link_to 'Admin', users_path
-  - else
-    %li
-      = link_to 'Sign up', new_user_registration_path
+  %li= link_to 'Home', root_path
+  %li= link_to 'About', about_path
+  %li= link_to 'Media Kit', media_kit_path
+  %li= link_to 'Associations', associations_path
+  %li= link_to 'Contact', contact_path
+  -#- if user_signed_in?
+  -#  %li
+  -#    = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+  -#- else
+  -#  %li
+  -#    = link_to 'Login', new_user_session_path
+  -#- if user_signed_in?
+  -#  %li
+  -#    = link_to 'Edit account', edit_user_registration_path
+  -#  - if current_user.has_role? :admin
+  -#    %li
+  -#      = link_to 'Admin', users_path
+  -#- else
+  -#  %li
+  -#    = link_to 'Sign up', new_user_registration_path
