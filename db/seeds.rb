@@ -17,3 +17,10 @@ user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => EN
 puts 'user: ' << user.name
 user.confirm!
 user.add_role :admin
+
+puts 'Create Logo Packages'
+LogoPackage.create(name: 'GOLD, 2 INCH LOGO')
+LogoPackage.create(name: 'GOLD, 1 INCH LOGO')
+LogoPackage.create(name: 'SILVER, 2 INCH LOGO')
+LogoPackage.create(name: 'SILVER, 1 INCH LOGO')
+LogoPackage.create(name: 'BRONZE, NO LOGO')

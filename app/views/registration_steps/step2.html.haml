@@ -20,11 +20,25 @@
         %span.badge CONFIRM
 .row
   .span12{style: 'margin-bottom: 40px;'}
-    = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f|
-      = f.error_notification
-      = display_base_errors resource
-      = f.input :name, :autofocus => true
-      = f.input :email, :required => true
-      = f.input :password, :required => true
-      = f.input :password_confirmation, :required => true
-      = f.button :submit, 'Next', :class => 'btn-primary', class: 'pull-right btn btn-primary'
+    %h4 SELECT LOGO PACKAGE: PRINT
+    %p
+      The Metals Directory gives your company....
+.row
+  .span6
+    = simple_form_for(@user, url: wizard_path) do |f|
+      = f.input :logo_package_id, collection: LogoPackage.all.sort_by(&:price_cents)
+      = f.input :logo
+      = f.submit "Continue"
+  .span6
+    .thumbnail
+      logo
+      %h5= @user.company_name
+      %p
+        = @user.address_1
+        = @user.address_2
+      %p
+        P:
+        = @user.phone_1
+        F:
+        = @user.fax
+      %p= @user.website

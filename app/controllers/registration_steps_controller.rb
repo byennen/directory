@@ -1,4 +1,6 @@
 class RegistrationStepsController < ApplicationController
+  before_filter :authenticate_user!
+
   include Wicked::Wizard
   steps :step1, :step2, :step3, :step4, :step5, :step6, :confirm
 
@@ -9,7 +11,7 @@ class RegistrationStepsController < ApplicationController
 
   def update
     @user = current_user
-    @user.attributes = params[:user]
+    @user.attributes = user_params
     render_wizard @user
   end
 
@@ -17,5 +19,9 @@ class RegistrationStepsController < ApplicationController
 
   def redirect_to_finish_wizard
     redirect_to root_url, notice: "Thank you for signing up."
+  end
+
+  def user_params
+    params.require(:user).permit(:logo, :remote_image_url, pets_attributes: [:name, :category])
   end
 end
