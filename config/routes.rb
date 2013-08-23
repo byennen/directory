@@ -10,7 +10,7 @@ MetalsDirectory::Application.routes.draw do
   resources :registration_steps
   #resources :users
 
-  #namespace :admin do
-  #  root to: 'dashboard#index'
-  #end
+  namespace :admin do
+    root to: 'dashboard#index'
+  end
 end
