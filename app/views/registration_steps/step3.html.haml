@@ -20,6 +20,21 @@
         %span.badge CONFIRM
 .row
   .span12{style: 'margin-bottom: 40px;'}
-    %p step 3
+    %h4 BRANCH LOCATION (ONLINE ONLY)
+    %p Branch locations only...
+    = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
+      = f.input :name
+      = f.input :address_1
+      = f.input :address_2
+      = f.input :city
+      = f.input :state
+      = f.input :zip
+      = country_select("user", "country", [ "United States" ])
+      = f.input :phone_1
+      = f.input :phone_2
+      = f.input :fax
+      = f.submit "Continue"
+
+
 
 = link_to 'Next', wizard_path(:step4), class: 'btn btn-primary pull-right'

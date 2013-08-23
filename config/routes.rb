@@ -9,4 +9,8 @@ MetalsDirectory::Application.routes.draw do
   devise_for :users, :controllers => {registrations: 'registrations', confirmations: 'confirmations'}
   resources :registration_steps
   #resources :users
+
+  #namespace :admin do
+  #  root to: 'dashboard#index'
+  #end
 end

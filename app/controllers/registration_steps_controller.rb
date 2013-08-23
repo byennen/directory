@@ -6,6 +6,7 @@ class RegistrationStepsController < ApplicationController
 
   def show
     @user = current_user
+    @branch = Branch.new
     render_wizard
   end
 
@@ -22,6 +23,6 @@ class RegistrationStepsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:logo, :remote_image_url, pets_attributes: [:name, :category])
+    params.require(:user).permit(:logo, :remote_image_url, branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
   end
 end

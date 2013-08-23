@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_one :logo_package
+  has_many :branches
 
   rolify
   # Include default devise modules. Others available are:
