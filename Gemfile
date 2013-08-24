@@ -23,10 +23,6 @@ gem 'country_select'
 gem 'carrierwave'
 gem 'money'
 
-#heroku
-gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
