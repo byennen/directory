@@ -9,17 +9,27 @@
       = csrf_meta_tags
       = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
-    .navbar.navbar-fixed-top
-      %nav.navbar-inner
-        .container
-          = render 'layouts/navigation'
+    #left-background{style: "background-image: url(/assets/bg-left.jpg); width: 754px; height: 700px; position: absolute; top: 0; left: 0; z-index: 1;"}
+    %header
+      .container
+        .logo{style: 'position: relative; z-index: 1; float: left; width: 209px; height: 58px;'}
+          = image_tag 'logo.png'
+        .slogan.pull-right{style: 'z-index: 1; position: relative;'}
+          %h1{style: 'font-size: 16px;'} THE SOURCEBOOK FOR THE METALS INDUSTRY
     #main{:role => "main"}
       .container
+        = render 'layouts/navigation'
         .content
+          .row
+            .span12{style: 'height: 90px; background: #666;'}
+              %p TOP BANNER
           .row
             .span12
               = render 'layouts/messages'
               = yield
+          .row
+            .span12{style: 'height: 90px; background: #666;'}
+              %p BOTTOM BANNER
           %footer
       / ! end of .container
     / ! end of #main
