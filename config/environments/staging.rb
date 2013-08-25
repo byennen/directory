@@ -88,4 +88,10 @@ MetalsDirectory::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #password for staging
+  config.middleware.insert_after(::Rack::Lock, "::Rack::Auth::Basic", "Staging") do |u, p|
+    [u, p] == [ENV['STAGING_USERNAME'], ENV['STAGING_PASSWORD']]
+  end
+
 end

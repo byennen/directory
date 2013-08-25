@@ -13,13 +13,13 @@
     %header
       .container
         .logo{style: 'position: relative; z-index: 1; float: left; width: 209px; height: 58px;'}
-          = image_tag 'logo.png'
+          = link_to image_tag('logo.png'), root_path
         .slogan.pull-right{style: 'z-index: 1; position: relative;'}
           %h1{style: 'font-size: 16px;'} THE SOURCEBOOK FOR THE METALS INDUSTRY
     #main{:role => "main"}
       .container
-        = render 'layouts/navigation'
         .content
+          = render 'layouts/navigation'
           .row
             .span12{style: 'height: 90px; background: #666;'}
               %p TOP BANNER

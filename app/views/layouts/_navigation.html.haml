@@ -1,20 +1,35 @@
-%ul.inline{style: 'position: relative; z-index: 1;'}
-  %li= link_to 'Home', root_path
-  %li= link_to 'About', about_path
-  %li= link_to 'Media Kit', media_kit_path
-  %li= link_to 'Associations', associations_path
-  %li= link_to 'Contact', contact_path
-  - if user_signed_in?
-    %li= link_to 'Logout', destroy_user_session_path, :method=>'delete'
-  -#- else
-  -#  %li
-  -#    = link_to 'Login', new_user_session_path
-  -#- if user_signed_in?
-  -#  %li
-  -#    = link_to 'Edit account', edit_user_registration_path
-  -#  - if current_user.has_role? :admin
-  -#    %li
-  -#      = link_to 'Admin', users_path
-  -#- else
-  -#  %li
-  -#    = link_to 'Sign up', new_user_registration_path
+:css
+  .main-nav {
+    position: relative;
+    z-index: 1;
+    background: white;
+    maring: 0;
+    font-weight: 800;
+  }
+  .main-nav li {
+    background: black;
+    margin: 0;
+    padding: 10px 40px;
+  }
+
+.row-fluid
+  %ul.inline.main-nav
+    %li.span2= link_to 'Home', root_path
+    %li.span2= link_to 'About', about_path
+    %li.span2= link_to 'Media Kit', media_kit_path
+    %li.span2= link_to 'Associations', associations_path
+    %li.span2= link_to 'Contact', contact_path
+    - if user_signed_in?
+      %li.span2= link_to 'Logout', destroy_user_session_path, :method=>'delete'
+    -#- else
+    -#  %li
+    -#    = link_to 'Login', new_user_session_path
+    -#- if user_signed_in?
+    -#  %li
+    -#    = link_to 'Edit account', edit_user_registration_path
+    -#  - if current_user.has_role? :admin
+    -#    %li
+    -#      = link_to 'Admin', users_path
+    -#- else
+    -#  %li
+    -#    = link_to 'Sign up', new_user_registration_path
