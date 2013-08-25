@@ -81,7 +81,7 @@ MetalsDirectory::Application.configure do
     password: ENV["SENDGRID_PASSWORD"]
   }
 
-  config.action_mailer.default_url_options = { :host => 'themetalsdirectory.com' }
+  config.action_mailer.default_url_options = { :host => 'staging.themetalsdirectory.com' }
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
