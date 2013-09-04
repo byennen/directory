@@ -24,3 +24,8 @@ LogoPackage.create(name: 'GOLD, 1 INCH LOGO')
 LogoPackage.create(name: 'SILVER, 2 INCH LOGO')
 LogoPackage.create(name: 'SILVER, 1 INCH LOGO')
 LogoPackage.create(name: 'BRONZE, NO LOGO')
+
+
+puts 'Create Categories'
+Category.create(name: 'Abrasive Cutoff Machines')
+Category.create(name: 'Abrasive Finishing, Arbor Machine')
