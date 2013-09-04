@@ -19,6 +19,8 @@ class RegistrationStepsController < ApplicationController
         @user.attributes = params[:branch]
       #  @branch = Branch.new
       #  @branch.update_attributes(user_id: @user.id)
+      when :step4
+        @user.attributes = params[:branch]
     end
 
     render_wizard @user
@@ -26,8 +28,8 @@ class RegistrationStepsController < ApplicationController
 
   private
 
-  def redirect_to_finish_wizard
-    redirect_to root_url, notice: "Thank you for signing up."
+  def redirect_to_finish_wizard(options = nil)
+    redirect_to root_path , notice: "Thank you for signing up."
   end
 
   def user_params
