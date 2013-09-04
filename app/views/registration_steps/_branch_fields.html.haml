@@ -1,0 +1,19 @@
+%fieldset
+  .form-inputs
+    = f.input :branch_name
+    = f.input :address_1
+    = f.input :address_2
+    = f.input :city
+    = f.input :state
+    = f.input :zip
+    .control-group
+      .controls
+        = country_select("user", "country", [ "United States" ])
+    = f.input :phone_1
+    = f.input :phone_2
+    = f.input :fax
+    = f.hidden_field :_destroy
+    .control-group
+      .controls
+        = link_to "remove", '#', class: "remove_fields btn btn-inverse"
+    %hr

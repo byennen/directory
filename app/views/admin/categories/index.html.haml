@@ -1,0 +1,22 @@
+%h1 Categories
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Name
+      -#%th
+      %th
+      %th
+
+  %tbody
+    - @categories.each do |category|
+      %tr
+        %td= category.name
+        -#%td= link_to 'Show', category
+        %td= link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-mini'
+        %td= link_to 'Destroy', admin_category_path(category), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-mini'
+
+%br
+
+.form-actions
+  = link_to 'New Category', new_admin_category_path, class: 'btn btn-primary'

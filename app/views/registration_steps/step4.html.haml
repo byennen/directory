@@ -1,4 +1,11 @@
-  .row
+- content_for :title, "Step 4: Category Selection"
+-#- content_for :description, ""
+-#- content_for :keywords, ""
+- content_for :head do
+  = javascript_include_tag "add_fields"
+
+
+.row
   .span4
     %h1 REGISTRATION
 
@@ -20,16 +27,14 @@
         %span.badge CONFIRM
 .row
   .span12{style: 'margin-bottom: 40px;'}
-    %h4 SELECT LOGO PACKAGE: PRINT
-    %p
-      The Metals Directory gives your company the...
+    %h4 CATEGORY SELECTION
+    %p Choose equipment, materials...
+
 .row
-  .span6
-    %p Drop down for Logo packages
-  .span6
-    %p show example ad here
-.row
-  .span12{style: 'margin-bottom: 40px;'}
-    %h4 LOGO UPLOAD
+  .span12
+    %h5 EQUIPMENT
+    %p Please select products and services that your company manufactures or sells.
+
+
 
 = link_to 'Next', wizard_path(:step5), class: 'btn btn-primary pull-right'

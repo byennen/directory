@@ -12,7 +12,15 @@ class RegistrationStepsController < ApplicationController
 
   def update
     @user = current_user
-    @user.attributes = user_params
+    case steps
+      when :step1 || :step2
+        @user.attributes = user_params
+      when :step3
+        @user.attributes = params[:branch]
+      #  @branch = Branch.new
+      #  @branch.update_attributes(user_id: @user.id)
+    end
+
     render_wizard @user
   end
 

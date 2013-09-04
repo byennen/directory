@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
   #attr_accessible :logo_package_id, :logo, :remote_logo_url
 
   mount_uploader :logo, LogoUploader
+
+  accepts_nested_attributes_for :branches
 end

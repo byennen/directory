@@ -14,11 +14,14 @@
   = f.input :city
   = f.input :state
   = f.input :zip
-  = country_select("user", "country", [ "United States" ])
+  .control-group
+    .controls
+      = country_select("user", "country", [ "United States" ])
   %hr
   = f.input :website
   = f.input :phone_1
   = f.input :phone_2
   = f.input :fax
-  = f.button :submit, 'Sign up', :class => 'btn-primary'
+  .form-actions
+    = f.button :submit, 'Sign up', :class => 'btn-primary'
 = render "devise/shared/links"
