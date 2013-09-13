@@ -2,6 +2,7 @@
   = f.error_notification
 
   .form-inputs
+    = f.select(:type, Category::TYPES)
     = f.input :name
 
   .form-actions

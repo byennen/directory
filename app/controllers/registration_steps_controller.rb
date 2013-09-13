@@ -33,6 +33,6 @@ class RegistrationStepsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:logo, :remote_image_url, branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
+    params.require(:user).permit(:logo, branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
   end
 end
