@@ -1,29 +1,55 @@
 :css
+  .navbar {
+    margin-bottom: 0;
+  }
+  .navbar ul.inline > li, ol.inline > li {
+    padding: 0;
+  }
   .main-nav {
     position: relative;
     z-index: 1;
-    background: white;
     maring: 0;
     font-weight: 800;
   }
-  .main-nav li {
+  .main-nav ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .main-nav a {
+    border-left: 15px solid #a3a3a3;
     background: black;
     margin: 0;
-    padding: 10px 40px;
+    padding: 15px 148px 15px 10px;
+  }
+  .main-nav a:hover {
+    border-left: 15px solid #4fa4d0;
+    background: #fff;
+    color: #4fa4d0;
+    text-decoration: none;
+  }
+  .main-nav a {
+    color: white;
   }
 
-.row-fluid
-  %ul.inline.main-nav
-    %li.span2= link_to 'Home', root_path
-    %li.span2= link_to 'About', about_path
-    %li.span2= link_to 'Media Kit', media_kit_path
-    %li.span2= link_to 'Associations', associations_path
-    %li.span2= link_to 'Contact', contact_path
-    - if user_signed_in?
-      %li.span2= link_to 'Logout', destroy_user_session_path, :method=>'delete'
-    -#- else
-    -#  %li
-    -#    = link_to 'Login', new_user_session_path
+.container
+  %nav.navbar.top-nav
+    / .btn-navbar is used as the toggle for collapsed navbar content
+    %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    / Everything you want hidden at 940px or less, place within here
+    .nav-collapse.collapse
+      %ul#nav.inline.main-nav
+        %li= link_to 'Home', root_path
+        %li= link_to 'About', about_path
+        %li= link_to 'Media Kit', media_kit_path
+        %li= link_to 'Associations', associations_path
+        %li= link_to 'Contact', contact_path, class: 'contact'
+
+
+
+
     -#- if user_signed_in?
     -#  %li
     -#    = link_to 'Edit account', edit_user_registration_path
