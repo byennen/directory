@@ -15,12 +15,13 @@
         .logo{style: 'position: relative; z-index: 1; float: left; width: 209px; height: 58px;'}
           = link_to image_tag('logo.png'), root_path
         .slogan.pull-right{style: 'z-index: 1; position: relative;'}
-          %h1{style: 'font-size: 16px;'} THE SOURCEBOOK FOR THE METALS INDUSTRY
+          %h1{style: 'font-size: 16px;'}
+            %em THE SOURCEBOOK FOR THE METALS INDUSTRY
     #main{:role => "main"}
       .container
+        = render 'layouts/navigation'
         .content
-          = render 'layouts/navigation'
-          .row
+          .row-fluid
             .span12{style: 'height: 90px; background: #666;'}
               %p TOP BANNER
           .row
@@ -30,6 +31,24 @@
           .row
             .span12{style: 'height: 90px; background: #666;'}
               %p BOTTOM BANNER
-          %footer
-      / ! end of .container
-    / ! end of #main
+        %footer{style: 'position: relative; z-index: 100;'}
+          .row.text-center
+            = link_to image_tag('trend-publishing-logo.png'), 'http://www.trendpublishing.com'
+            = link_to image_tag('modern-metals-logo.png'), 'http://www.modernmetals.com'
+            = link_to image_tag('ffjournal.png'), 'http://www.ffjournal.net'
+            = link_to image_tag('the-metals-directory.png'), root_url
+            = link_to image_tag('regional-metals-directories.png'), root_url
+          .row.text-center
+            %p{style: 'color: white; text-transform: uppercase;'}
+              COPYRIGHTS
+              = Time.now.year
+              trend publishing metals group. all rights reserved
+              |
+              = link_to 'terms & conditions', '#'
+              |
+              = link_to 'privacy policy', '#'
+              |
+              = link_to 'site map', '#'
+
+    / ! end of .container
+  / ! end of #main

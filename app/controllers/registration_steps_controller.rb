@@ -21,6 +21,8 @@ class RegistrationStepsController < ApplicationController
       #  @branch.update_attributes(user_id: @user.id)
       when :step4
         @user.attributes = params[:branch]
+        @equipment_categories = Category.where(category_type: 'Equipment')
+        @service_categories = Category.where(category_type: 'Service')
     end
 
     render_wizard @user
