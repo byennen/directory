@@ -1,20 +1,21 @@
+.row-fluid
+  .span12
 
+    - if user_signed_in?
+      %h1
+        = current_user.company_name
+        Dashboard
+      %p Show company ads here.
+      %p If registration isn't finished show that here
+    - else
+      %h2 NEW TO THE METALS DIRECTORY?
+      = link_to 'SIGN UP NOW', new_user_registration_path, class: 'btn btn-danger btn-large'
 
-- if user_signed_in?
-  %h1
-    = current_user.company_name
-    Dashboard
-  %p Show company ads here.
-  %p If registration isn't finished show that here
-- else
-  %h2 NEW TO THE METALS DIRECTORY?
-  = link_to 'SIGN UP NOW', new_user_registration_path, class: 'btn btn-danger btn-large'
-
-  %h2 Update your company listing
-  = simple_form_for("user", :url => user_session_path, :html => {:class => 'form-inline' }) do |f|
-    = f.input :email, autofocus: true, placeholder: "Email", label: false
-    = f.input :password, placeholder: "Password", label: false
-    = f.input :remember_me, inline_label: 'Yes, remember me', label: false, as: :boolean if devise_mapping.rememberable?
-    = f.button :submit, "Login", :class => 'btn-primary'
-  = render "devise/shared/links"
+      %h2 Update your company listing
+      = simple_form_for("user", :url => user_session_path, :html => {:class => 'form-inline' }) do |f|
+        = f.input :email, autofocus: true, placeholder: "Email", label: false
+        = f.input :password, placeholder: "Password", label: false
+        = f.input :remember_me, inline_label: 'Yes, remember me', label: false, as: :boolean if devise_mapping.rememberable?
+        = f.button :submit, "Login", :class => 'btn-primary'
+      = render "devise/shared/links"
 

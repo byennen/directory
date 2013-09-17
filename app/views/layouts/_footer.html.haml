@@ -1,0 +1,18 @@
+%footer{style: 'position: relative; z-index: 100;'}
+  .row.text-center
+    = link_to image_tag('trend-publishing-logo.png'), 'http://www.trendpublishing.com'
+    = link_to image_tag('modern-metals-logo.png'), 'http://www.modernmetals.com'
+    = link_to image_tag('ffjournal.png'), 'http://www.ffjournal.net'
+    = link_to image_tag('the-metals-directory.png'), root_url
+    = link_to image_tag('regional-metals-directories.png'), root_url
+  .row.text-center
+    %p{style: 'color: white; text-transform: uppercase;'}
+      COPYRIGHTS
+      = Time.now.year
+      trend publishing metals group. all rights reserved
+      |
+      = link_to 'terms & conditions', '#'
+      |
+      = link_to 'privacy policy', '#'
+      |
+      = link_to 'site map', '#'
