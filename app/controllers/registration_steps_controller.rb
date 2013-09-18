@@ -6,7 +6,6 @@ class RegistrationStepsController < ApplicationController
 
   def show
     @user = current_user
-    @branch = Branch.new
     render_wizard
   end
 
@@ -15,10 +14,10 @@ class RegistrationStepsController < ApplicationController
     case steps
       when :step1 || :step2
         @user.attributes = user_params
+        @user.save
       when :step3
         @user.attributes = params[:branch]
-      #  @branch = Branch.new
-      #  @branch.update_attributes(user_id: @user.id)
+        @user.save
       when :step4
         @user.attributes = params[:branch]
         @equipment_categories = Category.where(category_type: 'Equipment')

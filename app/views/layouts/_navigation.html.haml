@@ -21,7 +21,7 @@
     margin: 0;
     padding: 15px 148px 15px 10px;
   }
-  .main-nav a:hover {
+  .main-nav a:hover, .main-nav li.active a {
     border-left: 15px solid #4fa4d0;
     background: #fff;
     color: #4fa4d0;
@@ -41,11 +41,11 @@
     / Everything you want hidden at 940px or less, place within here
     .nav-collapse.collapse
       %ul#nav.inline.main-nav
-        %li= link_to 'Home', root_path
-        %li= link_to 'About', about_path
-        %li= link_to 'Media Kit', media_kit_path
-        %li= link_to 'Associations', associations_path
-        %li= link_to 'Contact', contact_path, class: 'contact'
+        %li= nav_link 'Home', root_path
+        %li= nav_link 'About', about_path
+        %li= nav_link 'Media Kit', media_kit_path
+        %li= nav_link 'Associations', associations_path
+        %li= nav_link 'Contact', contact_path
 
 
 
