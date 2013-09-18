@@ -19,9 +19,14 @@ class RegistrationStepsController < ApplicationController
         @user.attributes = params[:branch]
         @user.save
       when :step4
-        @user.attributes = params[:branch]
+        @user.attributes = params[:user_category_selections]
         @equipment_categories = Category.where(category_type: 'Equipment')
         @service_categories = Category.where(category_type: 'Service')
+        @user.save
+      when :step5
+        @user.attributes = params[:branch]
+        @categories = Category.all
+
     end
 
     render_wizard @user

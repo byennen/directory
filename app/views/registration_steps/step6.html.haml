@@ -1,25 +1,28 @@
-.row
-  .span4
-    %h1 REGISTRATION
+.content
+  .row-fluid
+    .span4
+      %h1 REGISTRATION
 
-  .span8
-    %ul.inline.pull-right
-      %li
-        %span.badge.badge-info 1
-      %li
-        %span.badge.badge-info 2
-      %li
-        %span.badge.badge-info 3
-      %li
-        %span.badge.badge-info 4
-      %li
-        %span.badge.badge-info 5
-      %li
-        %span.badge.badge-inverse 6
-      %li
-        %span.badge CONFIRM
-.row
-  .span12{style: 'margin-bottom: 40px;'}
-    %p step5
+    .span8
+      %ul.inline.pull-right
+        %li
+          %span.badge.badge-info 1
+        %li
+          %span.badge.badge-info 2
+        %li
+          %span.badge.badge-info 3
+        %li
+          %span.badge.badge-info 4
+        %li
+          %span.badge.badge-info 5
+        %li
+          %span.badge.badge-inverse 6
+        %li
+          %span.badge CONFIRM
+  .row-fluid
+    .span12{style: 'margin-bottom: 40px;'}
+      %h4 CONFIRM YOUR INFORMATION AND PAYMENT
+      %p Look over your company information, category...
+      = @user.inspect
 
-= link_to 'Next', wizard_path(:confirm), class: 'btn btn-primary pull-right'
+  = link_to 'Next', wizard_path(:confirm), class: 'btn btn-primary pull-right'
