@@ -1,3 +1,7 @@
+- content_for :head do
+  = tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY
+  = javascript_include_tag 'https://js.stripe.com/v1/', 'order'
+
 .content
   .row-fluid
     .span4
@@ -25,4 +29,25 @@
       %p Look over your company information, category...
       = @user.inspect
 
-  = link_to 'Next', wizard_path(:confirm), class: 'btn btn-primary pull-right'
+
+      %h2 Payment
+      #stripe_error.alert.alert-error{style: "display:none"}
+      = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
+        = f.error_notification
+        = display_base_errors resource
+        #stripe_error
+          %noscript JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
+        .field
+          = label_tag :card_number, "Credit Card Number"
+          = text_field_tag :card_number, nil, name: nil
+        .field
+          = label_tag :card_code, "Card Security Code (CVV)"
+          = text_field_tag :card_code, nil, name: nil
+        .field
+          = label_tag :card_month, "Card Expiration"
+          = select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}
+          = select_year nil, {start_year: Date.today.year, end_year: Date.today.year+10}, {name: nil, id: "card_year"}
+        = f.hidden_field :stripe_card_token
+        = f.button :submit, 'Sign up', :class => 'btn-primary'
+
+  -#= link_to 'Next', wizard_path(:confirm), class: 'btn btn-primary pull-right'

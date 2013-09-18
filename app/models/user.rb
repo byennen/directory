@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :branches
   has_many :user_category_selections
 
+  attr_accessor :stripe_card_token
+
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -15,4 +17,5 @@ class User < ActiveRecord::Base
   mount_uploader :logo, LogoUploader
 
   accepts_nested_attributes_for :branches
+
 end

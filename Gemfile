@@ -23,6 +23,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'money'
 gem 'font-awesome-rails'
+gem 'stripe'
 
 group :development do
   gem 'better_errors'

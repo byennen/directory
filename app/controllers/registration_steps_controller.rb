@@ -26,7 +26,13 @@ class RegistrationStepsController < ApplicationController
       when :step5
         @user.attributes = params[:branch]
         @categories = Category.all
-
+        @user.save
+      when :step6
+        @order = @user.orders.new
+        @user.create_stripe_customer(params[:user][:stripe_card_token])
+        if @order.save && @order.charge!
+          flash[:notice] = "Thank you for your order!"
+        end
     end
 
     render_wizard @user
