@@ -19,9 +19,10 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
 gem 'wicked', '>= 1.0.0'
 gem 'country_select'
-#gem 'rmagick'
+gem 'rmagick'
 gem 'carrierwave'
 gem 'money'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'better_errors'
