@@ -35,4 +35,7 @@
         = link_to_add_fields "Add branch", f, :branches
 
 
-  = link_to 'Next', wizard_path(:step4), class: 'btn btn-primary pull-right'
+        .form-actions
+          %button.btn.btn-primary.pull-right
+            Continue
+            %i.icon-arrow-right

@@ -2,7 +2,7 @@ class RegistrationStepsController < ApplicationController
   before_filter :authenticate_user!
 
   include Wicked::Wizard
-  steps :step1, :step2, :step3, :step4, :step5, :step6, :confirm
+  steps :start, :general, :logo, :branches, :category_selections, :print_and_online_selections, :checkout, :thank_you
 
   def show
     @user = current_user
@@ -12,22 +12,22 @@ class RegistrationStepsController < ApplicationController
   def update
     @user = current_user
     case steps
-      when :step1 || :step2
+      when :general || :logo
         @user.attributes = user_params
         @user.save
-      when :step3
+      when :branches
         @user.attributes = params[:branch]
         @user.save
-      when :step4
+      when :category_selections
         @user.attributes = params[:user_category_selections]
         @equipment_categories = Category.where(category_type: 'Equipment')
         @service_categories = Category.where(category_type: 'Service')
         @user.save
-      when :step5
+      when :print_and_online_selections
         @user.attributes = params[:branch]
         @categories = Category.all
         @user.save
-      when :step6
+      when :checkout
         @order = @user.orders.new
         @user.create_stripe_customer(params[:user][:stripe_card_token])
         if @order.save && @order.charge!

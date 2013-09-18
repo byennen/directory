@@ -32,21 +32,32 @@
         %p Choose equipment, materials...
         - @equipment_categories = Category.where(category_type: 'Equipment')
         - @service_categories = Category.where(category_type: 'Service')
+        - @material_categories = Category.where(category_type: 'Material')
 
         %h5 EQUIPMENT CATEGORIES
         = hidden_field_tag "user[category_ids][]", nil
-        - @equipment_categories.each do |equipment_category|
-          = check_box "user[category_ids]", equipment_category.id
-          = label_tag dom_id(equipment_category), equipment_category.name
+        - @equipment_categories.each do |category|
+          = check_box "user[category_ids]", category.id
+          = label_tag dom_id(category), category.name
+
+        %h5 MATERIALS
+        %p Choose materials...
+        = hidden_field_tag "user[category_ids][]", nil
+        - @material_categories.each do |category|
+          = check_box "user[category_ids]", category.id
+          = label_tag dom_id(category), category.name
+
         %h5 SERVICE CATEGORIES
-        - @service_categories.each do |service_category|
-          = service_category.name
+        %p Choose services...
+        = hidden_field_tag "user[category_ids][]", nil
+        - @service_categories.each do |category|
+          = check_box "user[category_ids]", category.id
+          = label_tag dom_id(category), category.name
 
 
 
-  .row-fluid
-    .span12
-      %h5 EQUIPMENT
-      %p Please select products and services that your company manufactures or sells.
-
-  = link_to 'Next', wizard_path(:step5), class: 'btn btn-primary pull-right'
+      .form-actions
+        = link_to 'Continue', wizard_path(:print_and_online_selections), class: 'btn btn-primary pull-right'
+        -#%button.btn.btn-primary.pull-right
+        -#  Continue
+        -#  %i.icon-arrow-right

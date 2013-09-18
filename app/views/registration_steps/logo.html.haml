@@ -1,0 +1,51 @@
+.content
+  .row-fluid
+    .span4
+      %h1 REGISTRATION
+
+    .span8
+      %ul.inline.pull-right
+        %li
+          %span.badge.badge-info 1
+        %li
+          %span.badge.badge-inverse 2
+        %li
+          %span.badge 3
+        %li
+          %span.badge 4
+        %li
+          %span.badge 5
+        %li
+          %span.badge 6
+        %li
+          %span.badge CONFIRM
+  .row-fluid
+    .span12{style: 'margin-bottom: 40px;'}
+      %h4 SELECT LOGO PACKAGE: PRINT
+      %p
+        The Metals Directory gives your company....
+  .row-fluid
+    = simple_form_for(@user, url: wizard_path) do |f|
+      .row-fluid
+        .span6
+          = f.input :logo_package_id, collection: LogoPackage.all.sort_by(&:price_cents)
+          = f.input :logo
+
+        .span6
+          .thumbnail
+            logo
+            %h5= @user.company_name
+            %p
+              = @user.address_1
+              = @user.address_2
+            %p
+              P:
+              = @user.phone_1
+              F:
+              = @user.fax
+            %p= @user.website
+
+        .form-actions
+          %button.btn.btn-primary.pull-right
+            Continue
+            %i.icon-arrow-right
