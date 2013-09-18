@@ -1,2 +1,25 @@
-%h1 Pages#media_kit
-%p Find me in app/views/pages/media_kit.html.haml
+.container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
+  .row-fluid
+    .span12
+
+      - if user_signed_in?
+        %h1
+          = current_user.company_name
+          Dashboard
+        %p Show company ads here.
+        %p If registration isn't finished show that here
+        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+      - else
+        #homepage.row-fluid
+          .span2
+            = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+            %h3.act-now
+              %span.act-now-hightlight
+                Act Now!
+              The Deadline to include listins in the print edition is
+              %span.act-now-hightlight
+                May 30th, 2014
+          .span10
+            .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
+              %h1.search-inside The Metals Directory Media Kit
+              %p coming soon...

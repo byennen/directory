@@ -8,34 +8,57 @@
           Dashboard
         %p Show company ads here.
         %p If registration isn't finished show that here
+        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
       - else
-        .row-fluid
+        #homepage.row-fluid
           .span2
             = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+            %h3.act-now
+              %span.act-now-hightlight
+                Act Now!
+              The Deadline to include listins in the print edition is
+              %span.act-now-hightlight
+                May 30th, 2014
           .span5
             .div{style: 'background: white; margin: 10px;'}
-              %h2.search-inside
-                %em
-                  Search Inside
-                  %i.icon-arrow-right.icon-4
-              %p The most comprehensive annual guide to metalworking euipment, materials and services in print and online
-              = link_to 'SIGN UP NOW', new_user_registration_path, class: 'btn btn-danger btn-large'
+              %h1.search-inside
+                Search Inside
+                %i.icon-arrow-right.icon-4
+              %p.info The most comprehensive annual guide to metalworking euipment, materials and services in print and online
 
-              = simple_form_for("user", :url => user_session_path, :html => {:class => 'form-inline' }) do |f|
-                = f.input :email, autofocus: true, placeholder: "Email", label: false
-                = f.input :password, placeholder: "Password", label: false
-                = f.input :remember_me, inline_label: 'Yes, remember me', label: false, as: :boolean if devise_mapping.rememberable?
-                = f.button :submit, "Login", :class => 'btn-primary'
-              = render "devise/shared/links"
+              .row-fluid
+                .new-to-the-metals-directory
+                  %h2.sign-up New to The Metals Directory?
+                  .row-fluid
+                    .span12.sign-up-box
+                      %a{href: new_user_registration_path}
+                        .span9
+                          Want a
+                          %em free
+                          listing in
+                          %br
+                          The Metals Directory
+                          %br
+                          both in print and online?
+                        .span3.sign-up-box-button
+                          %span
+                            Sign Up Now
+
+              .row-fluid
+                .the-metals-directory-login
+                  .span12.login-box
+                    = simple_form_for("user", :url => user_session_path, :html => {:class => 'form-inline' }) do |f|
+                      .row-fluid.login-submit-box
+                        .span9.login-submit-box-form
+                          %p.login-box-heading Update your company listing
+                          = f.input :email, autofocus: true, placeholder: "Email", label: false, input_html: {class: 'span11'}
+                          = f.input :password, placeholder: "Password", label: false, input_html: {class: 'span11'}
+                        .span3.login-submit-box-button
+                          = f.button :submit, "SUBMIT", :class => 'login-submit-button'
+
+              .row-fluid
+                .devise-links
+                  = render "devise/shared/links"
           .span5{style: 'background: white; margin: 10px;'}
-
-
-
-:css
-  .the-metals-directory-magazine {
-    padding: 20px;
-  }
-  .search-inside {
-    color: #3dc6f4;
-    text-transform: uppercase;
-  }
+            %div{style: 'height: 100%;'}
+              %p Search Coming Soon

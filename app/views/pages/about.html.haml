@@ -1,2 +1,34 @@
-%h1 Pages#about
-%p Find me in app/views/pages/about.html.haml
+.container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
+  .row-fluid
+    .span12
+
+      - if user_signed_in?
+        %h1
+          = current_user.company_name
+          Dashboard
+        %p Show company ads here.
+        %p If registration isn't finished show that here
+        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+      - else
+        #homepage.row-fluid
+          .span2
+            = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+            %h3.act-now
+              %span.act-now-hightlight
+                Act Now!
+              The Deadline to include listins in the print edition is
+              %span.act-now-hightlight
+                May 30th, 2014
+          .span10
+            .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
+              %h1.search-inside About the Metals Directory
+              %p
+                This is an indispensable resource directory with hundreds of listings, reaching service centers, fabricators and end-users.
+                %strong The Metals Directory
+                is a valuable year-round resource for readers, distributed to the powerful combined circulations of Modern Metals and FFJournal. This user-friendly guide will reach a variety of key decision makers in every segment of metalworking including corporate officials, plant operations, engineers and purchasing agents, utilizing the combined resources of both magazines.
+              %p
+                %strong The Metals Directory
+                is published annually in June, both in print and online, and replaces Modern Metals' and FFJournal's June issue.
+              %p
+                %strong The Metals Directory
+                will encompass 650-plus product category listings organized under tab pages into the sections of Equipment, Materials and Services.
