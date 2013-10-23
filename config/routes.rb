@@ -14,6 +14,7 @@ MetalsDirectory::Application.routes.draw do
 
   namespace :admin do
     resources :categories
+    resources :users
     root to: 'dashboard#index'
   end
 end

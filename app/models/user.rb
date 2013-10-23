@@ -18,4 +18,7 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :branches
 
+  def admin?
+    has_role?(:admin)
+  end
 end
