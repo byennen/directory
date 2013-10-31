@@ -11,10 +11,9 @@ class RegistrationStepsController < ApplicationController
 
   def update
     @user = current_user
+    @user.update(user_params)
+
     case steps
-    when :general
-      @user.attributes = params[:user]
-      @user.save
     when :branches
       @user.attributes = params[:branch]
       @user.save
@@ -34,7 +33,6 @@ class RegistrationStepsController < ApplicationController
         flash[:notice] = "Thank you for your order!"
       end
     end
-
     render_wizard @user
   end
 
