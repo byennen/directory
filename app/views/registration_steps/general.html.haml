@@ -2,23 +2,26 @@
   .row-fluid
     .span4
       %h1 REGISTRATION
-
     .span8
-      %ul.inline.pull-right
-        %li
-          %span.badge.badge-info 1
-        %li
-          %span.badge.badge-inverse 2
-        %li
-          %span.badge 3
-        %li
-          %span.badge 4
-        %li
-          %span.badge 5
-        %li
-          %span.badge 6
-        %li
-          %span.badge CONFIRM
+      .span6.pull-right
+        %ul.inline.steps
+          %li
+            %span.badge.badge-info 1
+          %li
+            %span.badge.badge-inverse 2
+          %li
+            %span.badge 3
+          %li
+            %span.badge 4
+          %li
+            %span.badge 5
+          %li
+            %span.badge 6
+          %li
+            %span.badge CONFIRM
+      .span2.pull-right
+        %h3.pull-right STEP
+
   .row-fluid
     .span12{style: 'margin-bottom: 40px;'}
       %h4 NEW LISTING
@@ -26,7 +29,7 @@
         Fill out...
   .row-fluid
     .span12
-      = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
+      = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
         = f.input :company_name
         = f.input :sub_company_name
         = f.input :address_1
@@ -36,7 +39,7 @@
         = f.input :zip
         .control-group
           .controls
-            = country_select("user", "country", [ "United States" ])
+            = country_select("company", "country", [ "United States" ])
         %hr
         = f.input :website
         = f.input :phone_1

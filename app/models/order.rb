@@ -2,9 +2,8 @@ class Order < ActiveRecord::Base
   belongs_to :user
 
   def charge!
-    money = Money.new(1 * 100, "USD")
     Stripe::Charge.create(
-        :amount => money.cents,
+        :amount => "4000",
         :currency => "usd",
         :customer => user.stripe_customer_token,
         :description => "Charge for Event Title Here"

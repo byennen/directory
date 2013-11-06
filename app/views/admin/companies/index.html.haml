@@ -1,0 +1,36 @@
+%h1 Companies
+
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Contact name
+      %th Company name
+      %th City
+      %th State
+      %th Zip
+      %th Country
+      %th Phone
+      %th Logo package
+      %th
+      %th
+      %th
+  %tbody
+    - @companies.each do |company|
+      %tr
+        %td= company.contact_name
+        %td= company.company_name
+        %td= company.city
+        %td= company.state
+        %td= company.zip
+        %td= company.country
+        %td= company.phone_1
+        %td= company.logo_package_id
+        %td= link_to 'Show', company
+        %td= link_to 'Edit', edit_admin_company_path(company)
+        %td= link_to 'Destroy', admin_company_path(company), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+.form-actions
+  = link_to 'New Company', new_admin_company_path, class: 'btn btn-primary'

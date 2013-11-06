@@ -24,6 +24,9 @@ gem 'carrierwave'
 gem 'money'
 gem 'font-awesome-rails'
 gem 'stripe'
+gem "jquery-fileupload-rails"
+gem "binding_of_caller"
+
 
 group :development do
   gem 'better_errors'

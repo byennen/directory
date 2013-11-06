@@ -1,7 +1,7 @@
 class CreateBranches < ActiveRecord::Migration
   def change
     create_table :branches do |t|
-      t.integer :user_id
+      t.integer :company_id
       t.string  :branch_name
       t.string  :address_1
       t.string  :address_2

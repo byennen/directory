@@ -1,0 +1,51 @@
+%p#notice= notice
+
+%p
+  %b Contact name:
+  = @company.contact_name
+%p
+  %b Company name:
+  = @company.company_name
+%p
+  %b Sub company name:
+  = @company.sub_company_name
+%p
+  %b Address 1:
+  = @company.address_1
+%p
+  %b Address 2:
+  = @company.address_2
+%p
+  %b City:
+  = @company.city
+%p
+  %b State:
+  = @company.state
+%p
+  %b Zip:
+  = @company.zip
+%p
+  %b Country:
+  = @company.country
+%p
+  %b Website:
+  = @company.website
+%p
+  %b Phone 1:
+  = @company.phone_1
+%p
+  %b Phone 2:
+  = @company.phone_2
+%p
+  %b Fax:
+  = @company.fax
+%p
+  %b Logo package:
+  = @company.logo_package_id
+%p
+  %b Logo:
+  = @company.logo
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path

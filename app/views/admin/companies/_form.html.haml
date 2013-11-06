@@ -1,0 +1,78 @@
+= simple_form_for([:admin, @company]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :contact_name, input_html: {class: 'span8'}, placeholder: 'Joe Foo'
+    = f.input :company_name, input_html: {class: 'span8'}, placeholder: 'Trend Publishing'
+    = f.input :sub_company_name, input_html: {class: 'span8'}, placeholder: 'Metals Directory'
+    = f.input :address_1, input_html: {class: 'span8'}, placeholder: '625 N. Michigan ave.'
+    = f.input :address_2, input_html: {class: 'span8'}, placeholder: 'Suite 1100'
+    = f.input :city, input_html: {class: 'span8'}, placeholder: 'Chicago'
+    = f.input :state, input_html: {class: 'span8'}, placeholder: 'IL'
+    = f.input :zip, input_html: {class: 'span8'}, placeholder: '60611-3110'
+    .control-group
+      .controls
+        = country_select("company", "country", [ "United States" ])
+    = f.input :website, input_html: {class: 'span8'}, placeholder: 'http://trendpublishing.com'
+    = f.input :phone_1, input_html: {class: 'span8'}, placeholder: '312-555-5555'
+    = f.input :phone_2, input_html: {class: 'span8'}, placeholder: '312-555-5555'
+    = f.input :fax, input_html: {class: 'span8'}, placeholder: '312-555-5555'
+    = f.input :logo_package_id, collection: LogoPackage.all.sort_by(&:price_cents)
+    = f.input :logo
+
+    %hr
+    %h2 Branches
+    = f.simple_fields_for :branch do |builder|
+      = render 'branch_fields', f: builder
+    = link_to_add_fields "Add branch", f, :branches
+    %hr
+    %h3 Equipment Categories
+
+    = hidden_field_tag "user[category_ids][]", nil
+    - @equipment_categories.each do |category|
+      = check_box "user[category_ids]", category.id
+      = label_tag dom_id(category), category.name
+
+    %h5 Materials
+    = hidden_field_tag "user[category_ids][]", nil
+    - @material_categories.each do |category|
+      = check_box "user[category_ids]", category.id
+      = label_tag dom_id(category), category.name
+
+    %h5 Services
+    = hidden_field_tag "user[category_ids][]", nil
+    - @service_categories.each do |category|
+      = check_box "user[category_ids]", category.id
+      = label_tag dom_id(category), category.name
+    %hr
+    %h3 Category Selections
+    .row-fluid
+      .span6{style: 'margin-bottom: 40px;'}
+        %h4 CATEGORY LOGO SELECTION (PRINT)
+        %p Company logos are $50...
+        = hidden_field_tag "user[category_ids][]", nil
+        - @categories.each do |category|
+          = check_box "user[category_ids]", category.id
+          = label_tag dom_id(category), category.name
+      .span6
+        .category-logo-selection-cost
+          %strong
+            Total Cost
+    .row-fluid
+      .span6{style: 'margin-bottom: 40px;'}
+        %h4 CATEGORY SPONSORSHIP (ONLINE)
+        %p $400...
+        = hidden_field_tag "user[category_ids][]", nil
+        - @categories.each do |category|
+          = check_box "user[category_ids]", category.id
+          = label_tag dom_id(category), category.name
+      .span6
+        .category-sponsorship-cost
+          %strong
+            Total Cost
+
+  .form-actions
+    = f.button :submit
+    |
+    = link_to 'Back', admin_companies_path, class: 'btn'
+

@@ -1,7 +1,5 @@
 class User < ActiveRecord::Base
-  has_one :logo_package
-  has_many :branches
-  has_many :user_category_selections
+  belongs_to :company
 
   attr_accessor :stripe_card_token
 
@@ -11,12 +9,6 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  #attr_accessible :logo_package_id, :logo, :remote_logo_url
-
-  mount_uploader :logo, LogoUploader
-
-  accepts_nested_attributes_for :branches
 
   def admin?
     has_role?(:admin)

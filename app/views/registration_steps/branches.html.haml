@@ -10,26 +10,30 @@
       %h1 REGISTRATION
 
     .span8
-      %ul.inline.pull-right
-        %li
-          %span.badge.badge-info 1
-        %li
-          %span.badge.badge-info 2
-        %li
-          %span.badge.badge-inverse 3
-        %li
-          %span.badge 4
-        %li
-          %span.badge 5
-        %li
-          %span.badge 6
-        %li
-          %span.badge CONFIRM
+      .span6.pull-right
+        %ul.inline.steps
+          %li
+            %span.badge.badge-info 1
+          %li
+            %span.badge.badge-info 2
+          %li
+            %span.badge.badge-info 3
+          %li
+            %span.badge.badge-inverse 4
+          %li
+            %span.badge 5
+          %li
+            %span.badge 6
+          %li
+            %span.badge CONFIRM
+      .span2.pull-right
+        %h3.pull-right STEP
+
   .row-fluid
     .span12{style: 'margin-bottom: 40px;'}
       %h4 BRANCH LOCATION (ONLINE ONLY)
       %p Branch locations only...
-      = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
+      = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
         = f.simple_fields_for :branch do |builder|
           = render 'branch_fields', f: builder
         = link_to_add_fields "Add branch", f, :branches

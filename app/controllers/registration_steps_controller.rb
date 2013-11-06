@@ -6,17 +6,24 @@ class RegistrationStepsController < ApplicationController
 
   def show
     @user = current_user
+    @company = Company.new
     render_wizard
   end
 
   def update
-    @user = current_user
-    @user.update(user_params)
-
-    case steps
+    case step
+    when :general
+      @company = Company.new(company_params)
+      @company.save
+      session[:company_id] = @company.id
+    when :logo
+      @company = Company.find session[:company_id]
+      @company.attributes = company_params
+      @company.save
     when :branches
-      @user.attributes = params[:branch]
-      @user.save
+      @company = Company.find session[:company_id]
+      @company.attributes = params[:branch]
+      @company.save
     when :category_selections
       @user.attributes = params[:user_category_selections]
       @equipment_categories = Category.where(category_type: 'Equipment')
@@ -33,7 +40,35 @@ class RegistrationStepsController < ApplicationController
         flash[:notice] = "Thank you for your order!"
       end
     end
-    render_wizard @user
+
+    render_wizard @company
+
+    #case steps
+    #when :general
+    #  @company = Company.new
+    #  @company = Company.update(company_params)
+    #end
+    #when :logo
+    #
+    #when :branches
+    #  @company.attributes = params[:branch]
+    #  @company.save
+    #when :category_selections
+    #  @user.attributes = params[:user_category_selections]
+    #  @equipment_categories = Category.where(category_type: 'Equipment')
+    #  @service_categories = Category.where(category_type: 'Service')
+    #  @user.save
+    #when :print_and_online_selections
+    #  @user.attributes = params[:branch]
+    #  @categories = Category.all
+    #  @user.save
+    #when :checkout
+    #  @order = @user.orders.new
+    #  @user.create_stripe_customer(params[:user][:stripe_card_token])
+    #  if @order.save && @order.charge!
+    #    flash[:notice] = "Thank you for your order!"
+    #  end
+    #end
   end
 
   private
@@ -42,10 +77,22 @@ class RegistrationStepsController < ApplicationController
     redirect_to root_path , notice: "Thank you for signing up."
   end
 
-  def user_params
-    params.require(:user).permit(:company_name, :sub_company_name, :address_1,
-                                 :address_2, :city, :state, :zip, :country,
-                                 :website, :phone_1, :phone_2, :fax, :logo,
-                                 branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
+  def registration_params
+    params.require(:user).permit(:stripe_card_token)
+  end
+
+  #def company_params
+  #  params.require(:company).permit(company_attributes: [:company_name, :sub_company_name, :address_1,
+  #                                                       :address_2, :city, :state, :zip, :country,
+  #                                                       :website, :phone_1, :phone_2, :fax, :logo,
+  #                                                       :logo_package_id],
+  #                                  branches_attributes: [:name, :address_1, :address_2, :city, :state,
+  #                                                        :zip, :country, :phone_1, :phone_2, :fax])
+  #end
+
+  def company_params
+    params.require(:company).permit(:contact_name, :company_name, :sub_company_name, :address_1, :address_2,
+                                    :city, :state, :zip, :country, :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo,
+                                    branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
   end
 end
