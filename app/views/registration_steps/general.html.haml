@@ -30,20 +30,20 @@
   .row-fluid
     .span12
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
-        = f.input :company_name, lable: "Company Name"
-        = f.input :sub_company_name, lable: "Sub Company Name"
-        = f.input :address_1, lable: "Address 1"
-        = f.input :address_2, lable: "Address 2"
-        = f.input :city, lable: "City"
-        = f.input :state, lable: "State"
-        = f.input :zip, lable: "ZIP Code"
+        = f.input :company_name, label: "Company Name"
+        = f.input :sub_company_name, label: "Sub Company Name"
+        = f.input :address_1, label "Address 1"
+        = f.input :address_2, label: "Address 2"
+        = f.input :city, label: "City"
+        = f.input :state, label: "State"
+        = f.input :zip, label: "ZIP Code"
         .control-group
           .controls
             = country_select("company", "country", [ "United States" ])
         %hr
-        = f.input :website, lable: "Website"
-        = f.input :phone_1, lable: "Phone 1"
-        = f.input :phone_2, lable: "Phone 2"
+        = f.input :website, label: "Website"
+        = f.input :phone_1, label: "Phone 1"
+        = f.input :phone_2, label: "Phone 2"
         = f.input :fax
         .form-actions
           %button.btn.btn-primary.pull-right
