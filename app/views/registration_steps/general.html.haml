@@ -22,28 +22,32 @@
       .span2.pull-right
         %h3.pull-right STEP
 
-  .row-fluid
-    .span6
+  .row-fluid{style: 'margin-top: 40px;'}
+    .span12
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
-        = f.input :company_name, label: "Company Name"
-        = f.input :sub_company_name, label: "Sub Company Name"
-        = f.input :contact_name, label: "Contact Name"
-        = f.input :address_1, label: "Address 1"
-        = f.input :address_2, label: "Address 2"
-        = f.input :city, label: "City"
-        = f.input :state, label: "State"
-        = f.input :zip, label: "ZIP Code"
-        .control-group
-          .controls
-            = country_select("company", "country", [ "United States" ])
-        %hr
-        = f.input :website, label: "Website"
-        = f.input :phone_1, label: "Phone 1"
-        = f.input :phone_2, label: "Phone 2"
-        = f.input :phone_2, label: "Fax"
-        .form-actions
-          %button.btn.btn-primary.pull-right
-            Continue
-            %i.icon-arrow-right
-    .span6
-      %p test here
+        .row-fluid
+          .span6
+            = f.input :company_name, label: "Company Name"
+            = f.input :sub_company_name, label: "Sub Company Name"
+            = f.input :contact_name, label: "Contact Name"
+            = f.input :address_1, label: "Address 1"
+            = f.input :address_2, label: "Address 2"
+            = f.input :city, label: "City"
+            = f.input :state, label: "State"
+            = f.input :zip, label: "ZIP Code"
+            .control-group
+              .controls
+                = country_select("company", "country", [ "United States" ])
+            = f.input :website, label: "Website"
+            = f.input :phone_1, label: "Phone 1"
+            = f.input :phone_2, label: "Phone 2"
+            = f.input :phone_2, label: "Fax"
+
+          .span6
+            %p test here
+        .row-fluid
+          .span12
+            .form-actions
+              %button.btn.btn-primary.pull-right
+                Continue
+                %i.icon-arrow-right
