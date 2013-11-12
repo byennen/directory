@@ -25,13 +25,12 @@
   .row-fluid
     .span12{style: 'margin-bottom: 40px;'}
       %h4 NEW LISTING
-      %p
-        Fill out...
   .row-fluid
     .span12
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
         = f.input :company_name, label: "Company Name"
         = f.input :sub_company_name, label: "Sub Company Name"
+        = f.input :contact_name, label: "Contact Name"
         = f.input :address_1, label: "Address 1"
         = f.input :address_2, label: "Address 2"
         = f.input :city, label: "City"
