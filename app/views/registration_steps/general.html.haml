@@ -23,10 +23,7 @@
         %h3.pull-right STEP
 
   .row-fluid
-    .span12{style: 'margin-bottom: 40px;'}
-      %h4 NEW LISTING
-  .row-fluid
-    .span12
+    .span6
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
         = f.input :company_name, label: "Company Name"
         = f.input :sub_company_name, label: "Sub Company Name"
@@ -48,3 +45,5 @@
           %button.btn.btn-primary.pull-right
             Continue
             %i.icon-arrow-right
+    .span6
+      %p test here
