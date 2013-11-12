@@ -1,3 +1,20 @@
 @import "bootstrap";
 body { padding-top: 20px; }
-@import "bootstrap-responsive";
+
+
+/* .container {
+ 	width: 750px;
+} */
+
+
+$gridColumns: 20;
+$gridColumnWidth: 100px;
+$gridGutterWidth: 26px;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// @import "bootstrap-responsive";
+
+// @media (min-width: 768px) { .container { max-width: 750px; } }
+// @grid-gutter-width: { gutter-width:20px; }
+// @container-desktop: { width:940px; }
+// @container-large-desktop: { @container-desktop; }
