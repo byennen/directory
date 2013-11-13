@@ -1,32 +1,32 @@
 .container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
   .row-fluid
     .span12
-
-      - if user_signed_in?
-        %h1
-          -#= @user.company.company_name if @current_user.company.company_name.present?
-          Dashboard
-        %p Show company ads here.
-        %p If registration isn't finished show that here
-        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-      - else
-        #homepage.row-fluid
-          .span2
-            = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
-            %h3.act-now
-              %span.act-now-hightlight
-                Act Now!
-              The Deadline to include a listing in the print edition is
-              %span.act-now-hightlight
-                May 2,
-                = Time.now.year + 1
-          .span5
-            .div{style: 'background: white; margin: 10px 10px 10px 30px;'}
-              %h1.search-inside
-                Search Online
-                %i.icon-arrow-right.icon-4
-              %p.info The most comprehensive guide to metalworking equipment, materials and services in print and online
-
+      #homepage.row-fluid
+        .span2
+          = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+          %h3.act-now
+            %span.act-now-hightlight
+              Act Now!
+            The Deadline to include a listing in the print edition is
+            %span.act-now-hightlight
+              May 2,
+              = Time.now.year + 1
+        .span5
+          .div{style: 'background: white; margin: 10px 10px 10px 30px;'}
+            %h1.search-inside
+              Search Online
+              %i.icon-arrow-right.icon-4
+            %p.info The most comprehensive guide to metalworking equipment, materials and services in print and online
+            - if user_signed_in?
+              .row-fluid
+                .span12{style: 'margin: 10px;'}
+                  %h1
+                    -#= @user.company.company_name if @current_user.company.company_name.present?
+                    Welcome
+                  %p Show company ads here.
+                  %p If registration isn't finished show that here
+                  = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+            - else
               .row-fluid
                 .new-to-the-metals-directory
                   %h2.sign-up New to The Metals Directory?
@@ -60,6 +60,6 @@
               .row-fluid
                 .devise-links
                   = render "devise/shared/links"
-          .span5{style: 'background: white; margin: 10px;'}
-            %div{style: 'height: 100%;'}
-              %p Search Coming Soon
+        .span5{style: 'background: white; margin: 10px;'}
+          %div{style: 'height: 100%;'}
+            %p Search Coming Soon

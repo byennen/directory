@@ -7,7 +7,8 @@ MetalsDirectory::Application.routes.draw do
   get 'privacy', to: 'pages#privacy', as: 'privacy'
   get 'terms', to: 'pages#terms', as: 'terms'
 
-  root :to => "home#index"
+  root :to => "pages#home"
+
   devise_for :users, :controllers => {registrations: 'registrations', confirmations: 'confirmations'}
   resources :registration_steps
   resources :companies
@@ -17,6 +18,6 @@ MetalsDirectory::Application.routes.draw do
     resources :companies
     resources :categories
     resources :users
-    root to: 'companies#index'
+    root to: 'companies#home'
   end
 end
