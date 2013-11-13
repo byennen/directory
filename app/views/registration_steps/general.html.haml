@@ -36,6 +36,7 @@
             = f.input :state, label: "State"
             = f.input :zip, label: "ZIP Code"
             .control-group
+              %label.control-label Country
               .controls
                 = country_select("company", "country", [ "United States" ])
             = f.input :website, label: "Website"
