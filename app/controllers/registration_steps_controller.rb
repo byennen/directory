@@ -2,7 +2,7 @@ class RegistrationStepsController < ApplicationController
   before_filter :authenticate_user!
 
   include Wicked::Wizard
-  steps :start, :general, :branches, :logo, :category_selections, :print_and_online_selections, :checkout, :thank_you
+  steps :start, :general, :branches, :category_selections, :logo, :print_and_online_selections, :checkout, :thank_you
 
   def show
     @user = current_user
@@ -20,15 +20,15 @@ class RegistrationStepsController < ApplicationController
       @company = Company.find session[:company_id]
       @company.attributes = params[:branch]
       @company.save
-    when :logo
-      @company = Company.find session[:company_id]
-      @company.attributes = company_params
-      @company.save
     when :category_selections
       @user.attributes = params[:user_category_selections]
       @equipment_categories = Category.where(category_type: 'Equipment')
       @service_categories = Category.where(category_type: 'Service')
       @user.save
+    when :logo
+      @company = Company.find session[:company_id]
+      @company.attributes = company_params
+      @company.save
     when :print_and_online_selections
       @user.attributes = params[:branch]
       @categories = Category.all
