@@ -14,10 +14,4 @@
  *= require layout
 */
 
-
-$gridColumns: 20;
-$gridColumnWidth: 100px;
-$gridGutterWidth: 26px;
-$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
-
 @import "bootstrap";
