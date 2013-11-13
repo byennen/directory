@@ -11,7 +11,7 @@ MetalsDirectory::Application.routes.draw do
 
   devise_for :users, :controllers => {registrations: 'registrations', confirmations: 'confirmations'}
   resources :registration_steps
-  resources :companies
+  resources :companies, only: [:index, :show]
   resources :users
 
   namespace :admin do
