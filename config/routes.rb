@@ -18,6 +18,6 @@ MetalsDirectory::Application.routes.draw do
     resources :companies
     resources :categories
     resources :users
-    root to: 'companies#home'
+    root to: 'companies#index'
   end
 end
