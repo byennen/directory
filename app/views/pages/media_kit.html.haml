@@ -1,25 +1,94 @@
 .container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
   .row-fluid
     .span12
+      #homepage.row-fluid
+        .span2
+          = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+          %h3.act-now
+            %span.act-now-hightlight
+              Act Now!
+            The Deadline to include listins in the print edition is
+            %span.act-now-hightlight
+              May 30th, 2014
+        .span10
+          .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
+            %h1 MEDIA KIT
+            %p
+              To request a printed media kit, a copy of The Metals Directory or other
+              information, contact us at 312-654-2325.
 
-      - if user_signed_in?
-        %h1
-          = current_user.company_name
-          Dashboard
-        %p Show company ads here.
-        %p If registration isn't finished show that here
-        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-      - else
-        #homepage.row-fluid
-          .span2
-            = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
-            %h3.act-now
-              %span.act-now-hightlight
-                Act Now!
-              The Deadline to include listins in the print edition is
-              %span.act-now-hightlight
-                May 30th, 2014
-          .span10
-            .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
-              %h1.search-inside The Metals Directory Media Kit
-              %p coming soon...
+            %h4 Circulation
+            %p
+              The Metals Directory is published annually in June, both in print and online. It is
+              distributed to the combined circulation of Modern Metals and FFJournal and replaces the June issue of each.
+
+            %h4 Bonus Distribution
+            %p
+              Additional copies of The Metals Directory will be distributed throughout the year at
+              various trade shows.
+
+            %h4 Print Display Advertising
+            %p
+              %br
+              %strong 1) Category Tab Pages
+              %br
+              %br
+              Published on 100 lb. stock, tab pages are a great way for advertisers to "stand out." There will be a total of 8 tab page positions available for advertisers. Categories are as follows: Equipment, Materials, Services and Company Contacts. Advertising will be available on a first come basis.
+              %br
+              %br
+              %strong 2) Cover Ads
+              %br
+              %br
+              %strong 3) Display Advertising
+              %br
+              %br
+              Please contact your Sales Rep for display rate information.
+
+            %p
+              %strong Display Advertiser Bonuses:
+              As a display advertiser, your company name will appear in boldface type in the directory listings. Each time your name appears, your display ad will
+              be cross-referenced by page number. Plus, a live link to your website will be placed on www.themetalsdirectory.com.
+              %br
+              %br
+              %strong 4) Company Logos
+              %br
+              %br
+              Stop the reader's eye at your listing in the pages of the directory and promote your company with a 1-inch or 2-inch logo. buy a print company logo and get an online company logo for FREE.
+              %br
+              %br
+              1) Gold Package(color)*	 2-1/8” (W) x 1” (D) - $500	 2-1/8” (W) x 2” (D) - $675
+              %br
+              %br
+              2) Silver Package(b/w)*	 2-1/8” (W) x 1” (D) - $325	 2-1/8” (W) x 2” (D) - $525
+              %br
+              %br
+              *If you choose one of the above packages, you have the option to add a product category logo for an additional $75 each.
+              %br
+              %br
+              See example of Company Logo (link to PDF)
+              %br
+              See example of Product Category Logo (link to PDF)
+              %br
+              %br
+              %strong 5) Category Sponsorships
+              %br
+              %br
+              Put your message in front of potential customers right when they're searching for what you have to offer both in print and online.
+              %br
+              See example of Category Sponsors (link to PDF)
+              %br
+              %br
+              %strong 6) Classified Ads
+              %br
+              %br
+              This is the place to post a job listing, sell new or used equipment, sell new or used software and/or your services. Our sizes range from 2-1/8"(W) x 1"(D) to a full page.
+              %br
+              Contact 312-654-2325 for more information
+            %p
+              Mechanical Specs/Print Specs/Digital Requirements
+            %p
+              For more information, contact Carlotta Lacy at 312/654-2318 or
+              = mail_to 'carlotta@modernmetals.com'
+            %p
+              = link_to 'See Mechanical Specs'
+

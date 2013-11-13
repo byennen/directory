@@ -22,30 +22,43 @@
       .span2.pull-right
         %h3.pull-right STEP
 
-  .row-fluid
-    .span12{style: 'margin-bottom: 40px;'}
-      %h4 NEW LISTING
-      %p
-        Fill out...
-  .row-fluid
+  .row-fluid{style: 'margin-top: 40px;'}
     .span12
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
-        = f.input :company_name
-        = f.input :sub_company_name
-        = f.input :address_1
-        = f.input :address_2
-        = f.input :city
-        = f.input :state
-        = f.input :zip
-        .control-group
-          .controls
-            = country_select("company", "country", [ "United States" ])
-        %hr
-        = f.input :website
-        = f.input :phone_1
-        = f.input :phone_2
-        = f.input :fax
-        .form-actions
-          %button.btn.btn-primary.pull-right
-            Continue
-            %i.icon-arrow-right
+        .row-fluid
+          .span6
+            = f.input :company_name, label: "Company Name"
+            = f.input :sub_company_name, label: "Sub Company Name"
+            = f.input :contact_name, label: "Contact Name"
+            = f.input :address_1, label: "Address 1"
+            = f.input :address_2, label: "Address 2"
+            = f.input :city, label: "City"
+            = f.input :state, label: "State"
+            = f.input :zip, label: "ZIP Code"
+            .control-group
+              %label.control-label Country
+              .controls
+                = country_select("company", "country", [ "United States" ])
+            = f.input :website, label: "Website"
+            = f.input :phone_1, label: "Phone 1"
+            = f.input :phone_2, label: "Phone 2"
+            = f.input :phone_2, label: "Fax"
+
+          .span6
+            %p 
+            Update/Register your company for The Metals Directory
+            %p
+            PLEASE ONLY ONE LISTING PER COMPANY. You can check to see if someone has already registered by doing a search.
+            %p
+            You will be able to list all branch locations when you register your headquarter location. 
+            DO NOT submit a new listing for each branch location.
+            %p
+            Only the headquarter location is going to be in print (due to space), branch locations will be posted online only. 
+            ***For Metal Service Centers only: please include all your branch locations for inclusion in the print version of the Regional Metals Directories.
+            
+        .row-fluid
+          .span12
+            .form-actions
+              %button.btn.btn-primary.pull-right
+                Continue
+                %i.icon-arrow-right
