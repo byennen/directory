@@ -4,7 +4,7 @@
 .content
   .row-fluid
     .span4
-      %h1 REGISTRATION
+      %h1 REGISTRATION UPGRADE
 
     .span8
       .span7.pull-right
@@ -30,7 +30,7 @@
     .span6{style: 'margin-bottom: 40px;'}
       = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
         %h4 CATEGORY LOGO SELECTION (PRINT)
-        %p Company logos are $50...
+        %p Company Logo Are $75
         = hidden_field_tag "user[category_ids][]", nil
         - @categories.each do |category|
           = check_box "user[category_ids]", category.id
@@ -42,7 +42,7 @@
   .row-fluid
     .span6{style: 'margin-bottom: 40px;'}
       %h4 CATEGORY SPONSORSHIP (ONLINE)
-      %p $400...
+      %p $400
       = hidden_field_tag "user[category_ids][]", nil
       - @categories.each do |category|
         = check_box "user[category_ids]", category.id
@@ -51,5 +51,7 @@
       .category-sponsorship-cost
         %strong
           Total Cost
-
-  = link_to 'Continue', wizard_path(:checkout), class: 'btn btn-primary pull-right'
+  .row-fluid
+    .span12
+      .form-actions
+        = link_to 'Continue', wizard_path(:checkout), class: 'btn btn-primary pull-right'

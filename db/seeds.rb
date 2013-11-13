@@ -15,7 +15,7 @@ LogoPackage.create(name: 'GOLD, 2 INCH LOGO')
 LogoPackage.create(name: 'GOLD, 1 INCH LOGO')
 LogoPackage.create(name: 'SILVER, 2 INCH LOGO')
 LogoPackage.create(name: 'SILVER, 1 INCH LOGO')
-LogoPackage.create(name: 'BRONZE, NO LOGO')
+LogoPackage.create(name: 'FREE LISTING, NO LOGO')
 
 
 puts 'Create Categories'
