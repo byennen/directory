@@ -1,357 +1,662 @@
 http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
   .row-fluid
     .span12
-
-      - if user_signed_in?
-        %h1
-          = current_user.company_name
-          Dashboard
-        %p Show company ads here.
-        %p If registration isn't finished show that here
-        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-      - else
-        #homepage.row-fluid
-          .span2
-            = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
-            %h3.act-now
-              %span.act-now-hightlight
-                Act Now!
-              The Deadline to include listins in the print edition is
-              %span.act-now-hightlight
-                May 30th, 2014
-          .span10
-            .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
-              %h1.search-inside Trade and Professional Association Directory
-              %p The following organizations are dedicated to advancing the metalworking industry by providing resources, promoting products and keeping companies informed. The Metals Directory offers this contact information both in print and online and made every effort to ensure accuracy.
-              %br
-              .row-fluid
-                .span4
-                  %strong ASM INTERNATIONAL
-                  %p 
-                    9639 Kinsman Rd., Materials Park, OH 44073
-                    %br
-                    440/338-5151, fax: 440/338-4634
-                    %a{:href => 'http://www.asminternational.org'}www.asminternational.org
-
+      #homepage.row-fluid
+        .span2
+          = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+          %h3.act-now
+            %span.act-now-hightlight
+              Act Now!
+            The Deadline to include listins in the print edition is
+            %span.act-now-hightlight
+              May 30th, 2014
+        .span10
+          .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
+            %h1.search-inside Trade and Professional Association Directory
+            %p The following organizations are dedicated to advancing the metalworking industry by providing resources, promoting products and keeping companies informed. The Metals Directory offers this contact information both in print and online and made every effort to ensure accuracy.
+            %br
+            .row-fluid
+              .span4
+                %strong ASM INTERNATIONAL
+                %p
+                  9639 Kinsman Rd., Materials Park, OH 44073
                   %br
+                  440/338-5151, fax: 440/338-4634
+                  %a{:href => 'http://www.asminternational.org'}www.asminternational.org
 
-                  %strong ALUMINUM ANODIZERS COUNCIL
-                  %p 
-                    1000 N. Rand Rd., Ste. 214 Wauconda, IL 60084-3102
-                    %br
-                    847/526-2010, fax: 847/526-3993
-                    %a{:href => 'http://www.asminternational.org'}www.asminternational.org
+                %br
 
+                %strong ALUMINUM ANODIZERS COUNCIL
+                %p
+                  1000 N. Rand Rd., Ste. 214 Wauconda, IL 60084-3102
                   %br
+                  847/526-2010, fax: 847/526-3993
+                  %a{:href => 'http://www.asminternational.org'}www.asminternational.org
 
+                %br
+
+                %strong THE ALUMINUM ASSOCIATION INC.
+                %p
+                  1525 Wilson Blvd., Ste. 600, Arlington, VA 22209
+                  %br
+                  703/358-2960, fax: 703/358-2961
+                  %a{:href => 'www.aluminum.org'}www.aluminum.org
+
+<<<<<<< HEAD
                   %strong THE ALUMINUM ASSOCIATION INC.
                   %p 
                     1525 Wilson Blvd., Ste. 600, Arlington, VA 22209
                     %br
                     703/358-2960, fax: 703/358-2961
                     %a{:href => 'http://www.aluminum.org'}www.aluminum.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong ALUMINUM EXTRUDERS COUNCIL (AEC)
+                %p
+                  1000 N. Rand Rd., Ste. 214 Wauconda, IL 60084-3102
                   %br
+                  847/526-2010, fax: 847/526-3993
+                  %a{:href => 'www.aec.org'}www.aec.org
 
+<<<<<<< HEAD
                   %strong ALUMINUM EXTRUDERS COUNCIL (AEC)
                   %p 
                     1000 N. Rand Rd., Ste. 214 Wauconda, IL 60084-3102
                     %br
                     847/526-2010, fax: 847/526-3993
                     %a{:href => 'http://www.aec.org'}www.aec.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN ARCHITECTURAL MANUFACTURERS ASSOCIATION (AAMA)
+                %p
+                  1827 Walden Office Sq., Ste. 550 Schaumburg, IL 60173-4268
                   %br
+                  847/303-5664, fax: 847/303-5774
+                  %a{:href => 'www.aamanet.org'}www.aamanet.org
 
+<<<<<<< HEAD
                   %strong AMERICAN ARCHITECTURAL MANUFACTURERS ASSOCIATION (AAMA)
                   %p 
                     1827 Walden Office Sq., Ste. 550 Schaumburg, IL 60173-4268
                     %br
                     847/303-5664, fax: 847/303-5774
                     %a{:href => 'http://www.aamanet.org'}www.aamanet.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN FOUNDRY SOCIETY (AFS)
+                %p
+                  P.O. Box 6185, Carefree, AZ 85377-6185
                   %br
+                  480/419-0137, fax: 480/419-0138
+                  %a{:href => 'www.afsinc.org'}www.afsinc.org
 
+<<<<<<< HEAD
                   %strong AMERICAN FOUNDRY SOCIETY (AFS)
                   %p 
                     P.O. Box 6185, Carefree, AZ 85377-6185
                     %br
                     480/419-0137, fax: 480/419-0138
                     %a{:href => 'http://www.afsinc.org'}www.afsinc.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN GALVANIZERS ASSOCIATION (AGA)
+                %p
+                  6881 S. Holly Cir., Ste. 108, Centennial, CO 80112
                   %br
+                  800/468-7732, fax: 720/554-0909
+                  %a{:href => 'www.galvanizeit.org'}www.galvanizeit.org
 
+<<<<<<< HEAD
                   %strong AMERICAN GALVANIZERS ASSOCIATION (AGA)
                   %p 
                     6881 S. Holly Cir., Ste. 108, Centennial, CO 80112
                     %br
                     800/468-7732, fax: 720/554-0909
                     %a{:href => 'http://www.galvanizeit.org'}www.galvanizeit.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN INSTITUTE FOR INTERNATIONAL STEEL INC. (AIIS)
+                %p
+                  701 W. Broad St., Ste. 301, Falls Church, VA 22046
                   %br
+                  703/245-8075, fax: 703/610-0215
+                  %a{:href => 'www.aiis.org'}www.aiis.org
 
+<<<<<<< HEAD
                   %strong AMERICAN INSTITUTE FOR INTERNATIONAL STEEL INC. (AIIS)
                   %p 
                     701 W. Broad St., Ste. 301, Falls Church, VA 22046
                     %br
                     703/245-8075, fax: 703/610-0215
                     %a{:href => 'http://www.aiis.org'}www.aiis.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN INSTITUTE OF STEEL CONSTRUCTION (AISC)
+                %p
+                  1 E. Wacker Dr., Ste. 700, Chicago, IL 60601-1802
                   %br
+                  312/670-2400, fax: 312/670-5403
+                  %a{:href => 'www.aisc.org'}www.aisc.org
 
+<<<<<<< HEAD
                   %strong AMERICAN INSTITUTE OF STEEL CONSTRUCTION (AISC)
                   %p 
                     1 E. Wacker Dr., Ste. 700, Chicago, IL 60601-1802
                     %br
                     312/670-2400, fax: 312/670-5403
                     %a{:href => 'http://www.aisc.org'}www.aisc.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN IRON AND STEEL INSTITUTE (AISI)
+                %p
+                  25 Massachusetts Ave. NW, Ste. 800, Washington, D.C. 20001
                   %br
+                  202/452-7100, fax: 202/463-6573
+                  %a{:href => 'www.steel.org'}www.steel.org
 
+<<<<<<< HEAD
                   %strong AMERICAN IRON AND STEEL INSTITUTE (AISI)
                   %p 
                     25 Massachusetts Ave. NW, Ste. 800, Washington, D.C. 20001
                     %br
                     202/452-7100, fax: 202/463-6573
                     %a{:href => 'http://www.steel.org'}www.steel.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI)
+                %p
+                  1899 L St. NW, 11th Fl., Washington, D.C. 20036
                   %br
+                  202/293-8020, fax: 202/293-9287
+                  %a{:href => 'www.ansi.org'}www.ansi.org
 
+<<<<<<< HEAD
                   %strong AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI)
                   %p 
                     1899 L St. NW, 11th Fl., Washington, D.C. 20036
                     %br
                     202/293-8020, fax: 202/293-9287
                     %a{:href => 'http://www.ansi.org'}www.ansi.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong THE AMERICAN SOCIETY OF MECHANICAL ENGINEERS (ASME INTERNATIONAL)
+                %p
+                  2 Park Ave., New York, NY 10016-5990
                   %br
+                  800/843-2763, fax: 973/882-1717
+                  %a{:href => 'www.asme.org'}www.asme.org
 
+<<<<<<< HEAD
                   %strong THE AMERICAN SOCIETY OF MECHANICAL ENGINEERS (ASME INTERNATIONAL)
                   %p 
                     2 Park Ave., New York, NY 10016-5990
                     %br
                     800/843-2763, fax: 973/882-1717
                     %a{:href => 'http://www.asme.org'}www.asme.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong AMERICAN SOCIETY FOR TESTING AND MATERIALS (ASTM INTERNATIONAL)
+                %p
+                  100 Barr Harbor Dr., P.O. Box C700, West Conshohocken, PA 19428-2959
                   %br
+                  610/832-9500, fax: 610/832-9555
+                  %a{:href => 'www.astm.org'}www.astm.org
 
+<<<<<<< HEAD
                   %strong AMERICAN SOCIETY FOR TESTING AND MATERIALS (ASTM INTERNATIONAL)
                   %p 
                     100 Barr Harbor Dr., P.O. Box C700, West Conshohocken, PA 19428-2959
                     %br
                     610/832-9500, fax: 610/832-9555
                     %a{:href => 'http://www.astm.org'}www.astm.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+
+                %strong AMERICAN WELDING SOCIETY (AWS)
+                %p
+                  8669 Doral Blvd., Ste.130, Doral, FL 33166
                   %br
-  
+                  800/443-9353, fax: 305/443-7559
+                  %a{:href => 'www.aws.org'}www.aws.org
 
+<<<<<<< HEAD
                   %strong AMERICAN WELDING SOCIETY (AWS)
                   %p 
                     8669 Doral Blvd., Ste.130, Doral, FL 33166
                     %br
                     800/443-9353, fax: 305/443-7559
                     %a{:href => 'http://www.aws.org'}www.aws.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+
+                %strong GALVALUME SHEET PRODUCERS OF NORTH AMERICA
+                %p
+                  1111 Main St., Ste. 545, Vancouver, WA 98660
                   %br
-  
+                  360/750-5791, fax: 360/750-5936
+                  %a{:href => 'www.steelroofing.com'}www.steelroofing.com
 
+                %br
+
+<<<<<<< HEAD
                   %strong GALVALUME SHEET PRODUCERS OF NORTH AMERICA
                   %p 
                     1111 Main St., Ste. 545, Vancouver, WA 98660
                     %br
                     360/750-5791, fax: 360/750-5936
                     %a{:href => 'http://www.steelroofing.com'}www.steelroofing.com
+=======
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong HOIST MANUFACTURERS INSTITUTE
+                %p
+                  8720 Red Oak Blvd., Ste. 201, Charlotte, NC 28217-3992
                   %br
-  
+                  704/676-1190, fax: 704/676-1199
+                  %a{:href => 'www.mhia.org/hmi'}www.mhia.org/hmi
 
+                %br
+
+<<<<<<< HEAD
                   %strong HOIST MANUFACTURERS INSTITUTE
                   %p 
                     8720 Red Oak Blvd., Ste. 201, Charlotte, NC 28217-3992
                     %br
                     704/676-1190, fax: 704/676-1199
                     %a{:href => 'http://www.mhia.org/hmi'}www.mhia.org/hmi
+=======
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INDUSTRIA NACIONAL DE AUTOPARTES A.C. (INA)
+                %p
+                  Av. Col. del Valle, No. 607, Col. del Valle, Mexico, D.F., C.P. 03100 Mexico
                   %br
-  
+                  (52-55) 5682-5862, fax: (52-55) 5669-3842
+                  %a{:href => 'www.ina.com.mx'}www.ina.com.mx
+                %br
 
+<<<<<<< HEAD
                   %strong INDUSTRIA NACIONAL DE AUTOPARTES A.C. (INA)
                   %p 
                     Av. Col. del Valle, No. 607, Col. del Valle, Mexico, D.F., C.P. 03100 Mexico
                     %br
                     (52-55) 5682-5862, fax: (52-55) 5669-3842
                     %a{:href => 'http://www.ina.com.mx'}www.ina.com.mx
+=======
+                %strong INDUSTRIAL FASTENERS INSTITUTE (IFI)
+                %p
+                  6363 Oak Tree Blvd., Independence, OH 44131-2500
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
                   %br
+                  216/241-1482, fax: 216/241-5901
+                  %a{:href => 'www.indfast.org'}www.indfast.org
 
+<<<<<<< HEAD
                   %strong INDUSTRIAL FASTENERS INSTITUTE (IFI)
                   %p 
                     6363 Oak Tree Blvd., Independence, OH 44131-2500
                     %br
                     216/241-1482, fax: 216/241-5901
                     %a{:href => 'http://www.indfast.org'}www.indfast.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INSTITUTE OF SCRAP RECYCLING INDUSTRIES (ISRI)
+                %p
+                  1615 L St. NW, Ste. 600, Washington, D.C. 20036-5610
                   %br
+                  202/662-8500, fax: 202/626-0900
+                  %a{:href => 'www.isri.org'}www.isri.org
 
+<<<<<<< HEAD
                   %strong INSTITUTE OF SCRAP RECYCLING INDUSTRIES (ISRI)
                   %p 
                     1615 L St. NW, Ste. 600, Washington, D.C. 20036-5610
                     %br
                     202/662-8500, fax: 202/626-0900
                     %a{:href => 'http://www.isri.org'}www.isri.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INTERNATIONAL ALUMINIUM INSTITUTE (IAI)
+                %p
+                  New Zealand House, Haymarket, London SW1Y 4TE United Kingdom
                   %br
+                  44 (0)20 7930 0528, fax: 44 (0)20 7321 0183
+                  %a{:href => 'www.world-aluminium.org'}www.world-aluminium.org
 
+<<<<<<< HEAD
                   %strong INTERNATIONAL ALUMINIUM INSTITUTE (IAI)
                   %p 
                     New Zealand House, Haymarket, London SW1Y 4TE United Kingdom
                     %br
                     44 (0)20 7930 0528, fax: 44 (0)20 7321 0183
                     %a{:href => 'http://www.world-aluminium.org'}www.world-aluminium.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INTERNATIONAL MAGNESIUM ASSOCIATION (IMA)
+                %p
+                  1000 N. Rand Rd., Ste. 214, Wauconda, IL 60084-3102
                   %br
+                  847/526-2010, fax: 847/526-3993
+                  %a{:href => 'www.intlmag.org'}www.intlmag.org
 
+<<<<<<< HEAD
                   %strong INTERNATIONAL MAGNESIUM ASSOCIATION (IMA)
                   %p 
                     1000 N. Rand Rd., Ste. 214, Wauconda, IL 60084-3102
                     %br
                     847/526-2010, fax: 847/526-3993
                     %a{:href => 'http://www.intlmag.org'}www.intlmag.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INTERNATIONAL TITANIUM ASSOCIATION
+                %p
+                  11674 Huron St., Ste. 100, Northglenn, CO 80234
                   %br
+                  303/404-2221, fax: 303/404-9111
+                  %a{:href => 'www.titanium.org'}www.titanium.org
 
+<<<<<<< HEAD
                   %strong INTERNATIONAL TITANIUM ASSOCIATION
                   %p 
                     11674 Huron St., Ste. 100, Northglenn, CO 80234
                     %br
                     303/404-2221, fax: 303/404-9111
                     %a{:href => 'http://www.titanium.org'}www.titanium.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INTERNATIONAL ZINC ASSOCIATION–AMERICA (AZA)
+                %p
+                  1822 E. NC Highway 54, Ste. 120, Durham, NC 27713
                   %br
+                  919/361-4647, fax: 919/361-1957
+                  %a{:href => 'www.zinc.org'}www.zinc.org
 
+<<<<<<< HEAD
                   %strong INTERNATIONAL ZINC ASSOCIATION–AMERICA (AZA)
                   %p 
                     1822 E. NC Highway 54, Ste. 120, Durham, NC 27713
                     %br
                     919/361-4647, fax: 919/361-1957
                     %a{:href => 'http://www.zinc.org'}www.zinc.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong INVESTMENT CASTING INSTITUTE (ICI)
+                %p
+                  136 Summit Ave., Montvale, NJ 07645-1720
                   %br
+                  201/573-9770, fax: 201/573-9771
+                  %a{:href => 'www.investmentcasting.org'}www.investmentcasting.org
 
+<<<<<<< HEAD
                   %strong INVESTMENT CASTING INSTITUTE (ICI)
                   %p 
                     136 Summit Ave., Montvale, NJ 07645-1720
                     %br
                     201/573-9770, fax: 201/573-9771
                     %a{:href => 'http://www.investmentcasting.org'}www.investmentcasting.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong MANUFACTURERS ALLIANCE (MAPI)
+                %p
+                  1600 Wilson Blvd., 11th Fl., Arlington, VA 22209-2594
                   %br
+                  703/841-9000, fax: 703/841-9514
+                  %a{:href => 'www.mapi.net'}www.mapi.net
 
+<<<<<<< HEAD
                   %strong MANUFACTURERS ALLIANCE (MAPI)
                   %p 
                     1600 Wilson Blvd., 11th Fl., Arlington, VA 22209-2594
                     %br
                     703/841-9000, fax: 703/841-9514
                     %a{:href => 'http://www.mapi.net'}www.mapi.net
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong MATERIAL HANDLING INDUSTRY OF AMERICA (MHIA)
+                %p
+                  8720 Red Oak Blvd., Ste. 201, %p Charlotte, NC 28217-3992
                   %br
+                  704/676-1190, fax: 704/676-1199
+                  %a{:href => 'www.mhia.org'}www.mhia.org
 
+<<<<<<< HEAD
                   %strong MATERIAL HANDLING INDUSTRY OF AMERICA (MHIA)
                   %p 
                     8720 Red Oak Blvd., Ste. 201, %p Charlotte, NC 28217-3992
                     %br
                     704/676-1190, fax: 704/676-1199
                     %a{:href => 'http://www.mhia.org'}www.mhia.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong METAL BUILDING MANUFACTURERS ASSOCIATION (MBMA)
+                %p
+                  1300 Sumner Ave., Cleveland, OH 44115-2851
                   %br
+                  216/241-7333, fax: 216/241-0105
+                  %a{:href => 'www.mbma.com'}www.mbma.com
 
+<<<<<<< HEAD
                   %strong METAL BUILDING MANUFACTURERS ASSOCIATION (MBMA)
                   %p 
                     1300 Sumner Ave., Cleveland, OH 44115-2851
                     %br
                     216/241-7333, fax: 216/241-0105
                     %a{:href => 'http://www.mbma.com'}www.mbma.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong METAL CONSTRUCTION ASSOCIATION (MCA)
+                %p
+                  4700 W. Lake Ave., Glenview, IL 60025
                   %br
+                  847/375-4718, fax: 847/375-6488
+                  %a{:href => 'www.metalconstruction.org'}www.metalconstruction.org
 
+<<<<<<< HEAD
                   %strong METAL CONSTRUCTION ASSOCIATION (MCA)
                   %p 
                     4700 W. Lake Ave., Glenview, IL 60025
                     %br
                     847/375-4718, fax: 847/375-6488
                     %a{:href => 'http://www.metalconstruction.org'}www.metalconstruction.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong METAL POWDER INDUSTRIES FEDERATION (MPIF)
+                %p
+                  105 College Rd. E., Princeton, NJ 08540
                   %br
+                  609/452-7700, fax: 609/987-8523
+                  %a{:href => 'www.mpif.org'}www.mpif.org
 
+<<<<<<< HEAD
                   %strong METAL POWDER INDUSTRIES FEDERATION (MPIF)
                   %p 
                     105 College Rd. E., Princeton, NJ 08540
                     %br
                     609/452-7700, fax: 609/987-8523
                     %a{:href => 'http://www.mpif.org'}www.mpif.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL MANUFACTURERS ASSOCIATION (SMA)
+                %p
+                  1150 Connecticut Ave. NW, Ste. 715, Washington, D.C. 20036
                   %br
+                  202/296-1515, fax: 202/296-2506
+                  %a{:href => 'www.steelnet.org'}www.steelnet.org
 
+<<<<<<< HEAD
                   %strong STEEL MANUFACTURERS ASSOCIATION (SMA)
                   %p 
                     1150 Connecticut Ave. NW, Ste. 715, Washington, D.C. 20036
                     %br
                     202/296-1515, fax: 202/296-2506
                     %a{:href => 'http://www.steelnet.org'}www.steelnet.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL RECYCLING INSTITUTE (SRI)
+                %p
+                  680 Andersen Dr., Pittsburgh, PA 15220-2700
                   %br
+                  412/922-2772, fax: 412/922-3213
+                  %a{:href => 'www.recycle-steel.org'}www.recycle-steel.org
 
+<<<<<<< HEAD
                   %strong STEEL RECYCLING INSTITUTE (SRI)
                   %p 
                     680 Andersen Dr., Pittsburgh, PA 15220-2700
                     %br
                     412/922-2772, fax: 412/922-3213
                     %a{:href => 'http://www.recycle-steel.org'}www.recycle-steel.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL TANK INSTITUTE/STEEL PLATE FABRICATORS ASSOCIATION (STI/SPFA)
+                %p
+                  944 Donata Ct., Lake Zurich, IL 60047
                   %br
+                  847/438-8265, fax: 847/438-8766
+                  %a{:href => 'www.steeltank.com'}www.steeltank.com
 
+<<<<<<< HEAD
                   %strong STEEL TANK INSTITUTE/STEEL PLATE FABRICATORS ASSOCIATION (STI/SPFA)
                   %p 
                     944 Donata Ct., Lake Zurich, IL 60047
                     %br
                     847/438-8265, fax: 847/438-8766
                     %a{:href => 'http://www.steeltank.com'}www.steeltank.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL TUBE INSTITUTE OF NORTH AMERICA (STINA)
+                %p
+                  2516 Waukegan Rd., Ste. 172, Glenview, IL 60025
                   %br
+                  847/461-1701, fax: 847/660-7981
+                  %a{:href => 'www.steeltubeinstitute.org'}www.steeltubeinstitute.org
 
+<<<<<<< HEAD
                   %strong STEEL TUBE INSTITUTE OF NORTH AMERICA (STINA)
                   %p 
                     2516 Waukegan Rd., Ste. 172, Glenview, IL 60025
                     %br
                     847/461-1701, fax: 847/660-7981
                     %a{:href => 'http://www.steeltubeinstitute.org'}www.steeltubeinstitute.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong TOOLING & MANUFACTURING ASSOCIATION (TMA)
+                %p
+                  1177 S. Dee Rd., Park Ridge, IL 60068
                   %br
+                  847/825-1120, fax: 847/825-0041
+                  %a{:href => 'www.tmanet.com'}www.tmanet.com
 
+<<<<<<< HEAD
                   %strong TOOLING & MANUFACTURING ASSOCIATION (TMA)
                   %p 
                     1177 S. Dee Rd., Park Ridge, IL 60068
                     %br
                     847/825-1120, fax: 847/825-0041
                     %a{:href => 'http://www.tmanet.com'}www.tmanet.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong TUBE & PIPE ASSOCIATION INTERNATIONAL (TPA)
+                %p
+                  833 Featherstone Rd., Rockford, IL 61107
                   %br
+                  815/399-8700, fax: 815/484-7700
+                  %a{:href => 'www.fmanet.org/members/tpa-membership.cfm'}www.fmanet.org/members/tpa-membership.cfm
 
+<<<<<<< HEAD
                   %strong TUBE & PIPE ASSOCIATION INTERNATIONAL (TPA)
                   %p 
                     833 Featherstone Rd., Rockford, IL 61107
                     %br
                     815/399-8700, fax: 815/484-7700
                     %a{:href => 'http://www.fmanet.org/members/tpa-membership.cfm'}www.fmanet.org/members/tpa-membership.cfm
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
-                  %br
+                %strong WORLD STEEL ASSOCIATION (WSA)
+                %p
+                  Rue Colonel Bourg 120, B-1140, Brussels, Belgium
+                  011 32 2 702 8900, fax: 011 32 2 702 8899
+                  %a{:href => 'www.worldsteel.org'}www.worldsteel.org
 
+<<<<<<< HEAD
                   %strong WORLD STEEL ASSOCIATION (WSA)
                   %p 
                     Rue Colonel Bourg 120, B-1140, Brussels, Belgium
                     011 32 2 702 8900, fax: 011 32 2 702 8899
                     %a{:href => 'http://www.worldsteel.org'}www.worldsteel.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+              .span4
+                %strong American Wire Producers Association (AWPA)
+                %p
+                  801 N. Fairfax St., Ste 211, Alexandria, VA 223114-1757
                   %br
+                  703/299-4434, fax: 703/299.9233
+                  %a{:href => 'http://www.awpa.org'}www.awpa.org
 
+<<<<<<< HEAD
                 .span4
                   %strong American Wire Producers Association (AWPA)
                   %p 
@@ -359,63 +664,127 @@ http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-b
                     %br
                     703/299-4434, fax: 703/299.9233
                     %a{:href => 'http://http://www.awpa.org'}www.awpa.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong ASSOCIATION FOR IRON & STEEL TECHNOLOGY (AIST)
+                %p
+                  186 Thorn Hill Rd., Warrendale, PA 15086-7528
                   %br
+                  724/814-3000, fax: 724/814-3001
+                  %a{:href => 'www.aist.org'}www.aist.org
 
+<<<<<<< HEAD
                   %strong ASSOCIATION FOR IRON & STEEL TECHNOLOGY (AIST)
                   %p 
                     186 Thorn Hill Rd., Warrendale, PA 15086-7528
                     %br
                     724/814-3000, fax: 724/814-3001
                     %a{:href => 'http://www.aist.org'}www.aist.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong ASSOCIATION FOR MANUFACTURING EXCELLENCE (AME)
+                %p
+                  3701 Algonquin Rd., Ste. 225, Rolling Meadows, IL 60008-3127
                   %br
+                  224/232-5980, fax: 224/232-5981
+                  %a{:href => 'www.ame.org'}www.ame.org
 
+<<<<<<< HEAD
                   %strong ASSOCIATION FOR MANUFACTURING EXCELLENCE (AME)
                   %p 
                     3701 Algonquin Rd., Ste. 225, Rolling Meadows, IL 60008-3127
                     %br
                     224/232-5980, fax: 224/232-5981
                     %a{:href => 'http://www.ame.org'}www.ame.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong ASSOCIATION FOR MANUFACTURING TECHNOLOGY (AMT)
+                %p
+                  7901 Westpark Dr., McLean, VA 22102-4206
                   %br
+                  800/524-0475, fax: 703/893-1151
+                  %a{:href => 'www.amtonline.org'}www.amtonline.org
 
+<<<<<<< HEAD
                   %strong ASSOCIATION FOR MANUFACTURING TECHNOLOGY (AMT)
                   %p 
                     7901 Westpark Dr., McLean, VA 22102-4206
                     %br
                     800/524-0475, fax: 703/893-1151
                     %a{:href => 'http://www.amtonline.org'}www.amtonline.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong ASSOCIATION OF STEEL DISTRIBUTORS (ASD)
+                %p
+                  330 N. Wabash Ave., #2000, Chicago, IL 60611
                   %br
+                  312/673-5793, fax: 312/527-6705
+                  %a{:href => 'ww.steeldistributors.org'}www.steeldistributors.org
 
+<<<<<<< HEAD
                   %strong ASSOCIATION OF STEEL DISTRIBUTORS (ASD)
                   %p 
                     330 N. Wabash Ave., #2000, Chicago, IL 60611
                     %br
                     312/673-5793, fax: 312/527-6705
                     %a{:href => 'http://www.steeldistributors.org'}www.steeldistributors.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong ASSOCIATION OF WOMEN IN THE METAL INDUSTRIES (AWMI)
+                %p
+                  19 Mantua Rd., Mount Royal, NJ 08061
                   %br
+                  856/423-3201, fax: 856/423-3420
+                  %a{:href => 'www.awmi.org'}www.awmi.org
 
+<<<<<<< HEAD
                   %strong ASSOCIATION OF WOMEN IN THE METAL INDUSTRIES (AWMI)
                   %p 
                     19 Mantua Rd., Mount Royal, NJ 08061
                     %br
                     856/423-3201, fax: 856/423-3420
                     %a{:href => 'http://www.awmi.org'}www.awmi.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CALIFORNIA CAST METALS ASSOCIATION (CCMA)
+                %p
+                  2971 Warren Ln., El Dorado Hills, CA 95762
                   %br
+                  916/933-3062, fax: 916/933-3072
+                  %a{:href => 'www.foundryccma.com'}www.foundryccma.com
 
+<<<<<<< HEAD
                   %strong CALIFORNIA CAST METALS ASSOCIATION (CCMA)
                   %p 
                     2971 Warren Ln., El Dorado Hills, CA 95762
                     %br
                     916/933-3062, fax: 916/933-3072
                     %a{:href => 'http://www.foundryccma.com'}www.foundryccma.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CÁMARA NACIONAL DE LA INDUSTRIA DEL HIERRO Y DEL ACERO (MEXICAN IRON AND STEEL PRODUCERS ASSOCIATION)
+                %p
+                  Amores 338, Col. del Valle, Mexico, D.F., C.P. 03100 Mexico
                   %br
+                  52-55) 5448-8160, fax: (52-55) 5687-0517
+                  %p
+                  %a{:href => 'www.canacero.org.mx'}www.canacero.org.mx
 
+<<<<<<< HEAD
                   %strong CÁMARA NACIONAL DE LA INDUSTRIA DEL HIERRO Y DEL ACERO (MEXICAN IRON AND STEEL PRODUCERS ASSOCIATION)
                   %p 
                     Amores 338, Col. del Valle, Mexico, D.F., C.P. 03100 Mexico
@@ -423,117 +792,235 @@ http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-b
                     52-55) 5448-8160, fax: (52-55) 5687-0517
                     %p
                     %a{:href => 'http://www.canacero.org.mx'}www.canacero.org.mx
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CANADIAN COPPER & BRASS DEVELOPMENT ASSOCIATION (CCBDA)
+                %p
+                  65 Overlea Blvd., Ste. 210, Toronto, ON M4H 1P1 Canada
                   %br
+                  416/391-5599, fax: 416/391-3823
+                  %a{:href => 'www.coppercanada.ca'}www.coppercanada.ca
 
+<<<<<<< HEAD
                   %strong CANADIAN COPPER & BRASS DEVELOPMENT ASSOCIATION (CCBDA)
                   %p 
                     65 Overlea Blvd., Ste. 210, Toronto, ON M4H 1P1 Canada
                     %br
                     416/391-5599, fax: 416/391-3823
                     %a{:href => 'http://www.coppercanada.ca'}www.coppercanada.ca
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CANADIAN INSTITUTE OF STEEL CONSTRUCTION (CISC)
+                %p
+                  3760 14th Ave., Ste. 200, Markham, ON L3R 3T7 Canada
                   %br
+                  905/946-0864, fax: 905/946-8574
+                  %a{:href => 'www.cisc-icca.ca'}www.cisc-icca.ca
 
+<<<<<<< HEAD
                   %strong CANADIAN INSTITUTE OF STEEL CONSTRUCTION (CISC)
                   %p 
                     3760 14th Ave., Ste. 200, Markham, ON L3R 3T7 Canada
                     %br
                     905/946-0864, fax: 905/946-8574
                     %a{:href => 'http://www.cisc-icca.ca'}www.cisc-icca.ca
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CANADIAN STEEL PRODUCERS ASSOCIATION (CSPA)
+                %p
+                  350 Sparks St., Ste. 906, Ottawa, ON K1R 7S8 Canada
                   %br
+                  613/238-6049, fax: 613/238-1832
+                  %a{:href => 'www.canadiansteel.ca'}www.canadiansteel.ca
 
+<<<<<<< HEAD
                   %strong CANADIAN STEEL PRODUCERS ASSOCIATION (CSPA)
                   %p 
                     350 Sparks St., Ste. 906, Ottawa, ON K1R 7S8 Canada
                     %br
                     613/238-6049, fax: 613/238-1832
                     %a{:href => 'http://www.canadiansteel.ca'}www.canadiansteel.ca
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CAST METALS INSTITUTE (CMI)
+                %p
+                  1695 N. Penny Ln., Schaumburg, IL 60173
                   %br
+                  800/537-4237, fax: 847/824-7848
+                  %a{:href => 'www.castmetals.com'}www.castmetals.com
 
+<<<<<<< HEAD
                   %strong CAST METALS INSTITUTE (CMI)
                   %p 
                     1695 N. Penny Ln., Schaumburg, IL 60173
                     %br
                     800/537-4237, fax: 847/824-7848
                     %a{:href => 'http://www.castmetals.com'}www.castmetals.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong COLD-FORMED STEEL ENGINEERS INSTITUTE (CFSEI)
+                %p
+                  25 Massachusetts Ave. NW, Ste. 800, Washington, D.C. 20001
                   %br
+                  202/263-4488, fax: 202/452-1039
+                  %a{:href => 'www.cfsei.com'}www.cfsei.com
 
+<<<<<<< HEAD
                   %strong COLD-FORMED STEEL ENGINEERS INSTITUTE (CFSEI)
                   %p 
                     25 Massachusetts Ave. NW, Ste. 800, Washington, D.C. 20001
                     %br
                     202/263-4488, fax: 202/452-1039
                     %a{:href => 'http://www.cfsei.com'}www.cfsei.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong METALS SERVICE CENTER INSTITUTE (MSCI)
+                %p
+                  4201 Euclid Ave., Rolling Meadows, IL 60008
                   %br
+                  847/485-3000, fax: 847/485-3001
+                  %a{:href => 'www.msci.org'}www.msci.org
 
+<<<<<<< HEAD
                   %strong METALS SERVICE CENTER INSTITUTE (MSCI)
                   %p 
                     4201 Euclid Ave., Rolling Meadows, IL 60008
                     %br
                     847/485-3000, fax: 847/485-3001
                     %a{:href => 'http://www.msci.org'}www.msci.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong METAL TREATING INSTITUTE (MTI)
+                %p
+                  504 Osceola Ave., Jacksonville Beach, FL 32250
                   %br
+                  904/249-0448, fax: 904/249-0459
+                  %a{:href => 'www.heattreat.net'}www.heattreat.net
 
+<<<<<<< HEAD
                   %strong METAL TREATING INSTITUTE (MTI)
                   %p 
                     504 Osceola Ave., Jacksonville Beach, FL 32250
                     %br
                     904/249-0448, fax: 904/249-0459
                     %a{:href => 'http://www.heattreat.net'}www.heattreat.net
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong THE MINERALS, METALS & MATERIALS SOCIETY (TMS)
+                %p
+                  184 Thorn Hill Rd., Warrendale, PA 15086-7514
                   %br
+                  724/776-9000, fax: 724/776-3770
+                  %a{:href => 'www.tms.org'}www.tms.org
 
+<<<<<<< HEAD
                   %strong THE MINERALS, METALS & MATERIALS SOCIETY (TMS)
                   %p 
                     184 Thorn Hill Rd., Warrendale, PA 15086-7514
                     %br
                     724/776-9000, fax: 724/776-3770
                     %a{:href => 'http://www.tms.org'}www.tms.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong MOTOR & EQUIPMENT MANUFACTURERS ASSOCIATION (MEMA)
+                %p
+                  10 Laboratory Dr., Research Triangle Park, NC 27709-3966
                   %br
+                  919/549-4800, fax: 919/406-1465
+                  %a{:href => 'www.mema.org'}www.mema.org
 
+<<<<<<< HEAD
                   %strong MOTOR & EQUIPMENT MANUFACTURERS ASSOCIATION (MEMA)
                   %p 
                     10 Laboratory Dr., Research Triangle Park, NC 27709-3966
                     %br
                     919/549-4800, fax: 919/406-1465
                     %a{:href => 'http://www.mema.org'}www.mema.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL ASSOCIATION FOR SURFACE FINISHING (NASF)
+                %p
+                  1155 15th St. NW, Ste. 500, Washington, D.C. 20005
                   %br
+                  202/457-8404, fax: 202/530-0659
+                  %a{:href => 'www.nasf.org'}www.nasf.org
 
+<<<<<<< HEAD
                   %strong NATIONAL ASSOCIATION FOR SURFACE FINISHING (NASF)
                   %p 
                     1155 15th St. NW, Ste. 500, Washington, D.C. 20005
                     %br
                     202/457-8404, fax: 202/530-0659
                     %a{:href => 'http://www.nasf.org'}www.nasf.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL ASSOCIATION OF ARCHITECTURAL METAL MANUFACTURERS (NAAMM)
+                %p
+                  800 Roosevelt Rd., Bldg. C, Ste. 312, Glen Ellyn, IL 60137
                   %br
+                  630/942-6591, fax: 630/790-3095
+                  %a{:href => 'www.naamm.org'}www.naamm.org
 
+<<<<<<< HEAD
                   %strong NATIONAL ASSOCIATION OF ARCHITECTURAL METAL MANUFACTURERS (NAAMM)
                   %p 
                     800 Roosevelt Rd., Bldg. C, Ste. 312, Glen Ellyn, IL 60137
                     %br
                     630/942-6591, fax: 630/790-3095
                     %a{:href => 'http://www.naamm.org'}www.naamm.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL ASSOCIATION OF MANUFACTURERS (NAM)
+                %p
+                  733 10th St. NW, Ste. 700, Washington, D.C. 20001
                   %br
+                  202/637-3000, fax: 202/637-3182
+                  %a{:href => 'www.nam.org'}www.nam.org
 
+<<<<<<< HEAD
                   %strong NATIONAL ASSOCIATION OF MANUFACTURERS (NAM)
                   %p 
                     733 10th St. NW, Ste. 700, Washington, D.C. 20001
                     %br
                     202/637-3000, fax: 202/637-3182
                     %a{:href => 'http://www.nam.org'}www.nam.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                = image_tag('naspd.png')
+                %strong NATIONAL ASSOCIATION OF STEEL PIPE DISTRIBUTORS (NASPD)
+                %p
+                  1501 E. Mockingbird Ln., Ste. 307, Victoria, TX 77904
                   %br
+                  361/574-7878, fax: 832/201-9479
+                  %a{:href => 'www.naspd.com'}www.naspd.com
 
+<<<<<<< HEAD
                   = image_tag('naspd.png') 
                   %strong NATIONAL ASSOCIATION OF STEEL PIPE DISTRIBUTORS (NASPD)
                   %p 
@@ -541,64 +1028,130 @@ http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-b
                     %br
                     361/574-7878, fax: 832/201-9479
                     %a{:href => 'http://www.naspd.com'}www.naspd.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL COIL COATING ASSOCIATION (NCCA)
+                %p
+                  1300 Sumner Ave., Cleveland, OH 44115-2851
                   %br
+                  216/241-7333, fax: 216/241-0105
+                  %a{:href => 'www.coilcoating.org'}www.coilcoating.org
 
+<<<<<<< HEAD
                   %strong NATIONAL COIL COATING ASSOCIATION (NCCA)
                   %p 
                     1300 Sumner Ave., Cleveland, OH 44115-2851
                     %br
                     216/241-7333, fax: 216/241-0105
                     %a{:href => 'http://www.coilcoating.org'}www.coilcoating.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL CORRUGATED STEEL PIPE ASSOCIATION (NCSPA)
+                %p
+                  14070 Proton Rd., Ste. 100 LB 9, Dallas, TX 75244
                   %br
+                  972/850-1907, fax: 972/490-4219
+                  %a{:href => 'www.ncspa.org'}www.ncspa.org
 
+<<<<<<< HEAD
                   %strong NATIONAL CORRUGATED STEEL PIPE ASSOCIATION (NCSPA)
                   %p 
                     14070 Proton Rd., Ste. 100 LB 9, Dallas, TX 75244
                     %br
                     972/850-1907, fax: 972/490-4219
                     %a{:href => 'http://www.ncspa.org'}www.ncspa.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL ROOFING CONTRACTORS ASSOCIATION (NRCA)
+                %p
+                  10255 W. Higgins Rd., Ste. 600, Rosemont, IL 60018-5607
                   %br
+                  847/299-9070, fax: 847/299-1183
+                  %a{:href => 'www.nrca.net'}www.nrca.net
 
+<<<<<<< HEAD
                   %strong NATIONAL ROOFING CONTRACTORS ASSOCIATION (NRCA)
                   %p 
                     10255 W. Higgins Rd., Ste. 600, Rosemont, IL 60018-5607
                     %br
                     847/299-9070, fax: 847/299-1183
                     %a{:href => 'http://www.nrca.net'}www.nrca.net
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL SOCIETY OF PROFESSIONAL ENGINEERS (NSPE)
+                %p
+                  1420 King St., Alexandria, VA 22314-2794
                   %br
+                  703/684-2800, fax: 703/836-4875
+                  %a{:href => 'www.nspe.org'}www.nspe.org
 
+<<<<<<< HEAD
                   %strong NATIONAL SOCIETY OF PROFESSIONAL ENGINEERS (NSPE)
                   %p 
                     1420 King St., Alexandria, VA 22314-2794
                     %br
                     703/684-2800, fax: 703/836-4875
                     %a{:href => 'http://www.nspe.org'}www.nspe.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NATIONAL TOOLING & MACHINING ASSOCIATION (NTMA)
+                %p
+                  1357 Rockside Rd., Cleveland, OH 44134
                   %br
+                  800/248-6862, fax: 216/264-2840
+                  %a{:href => 'www.ntma.org'}www.ntma.org
 
+<<<<<<< HEAD
                   %strong NATIONAL TOOLING & MACHINING ASSOCIATION (NTMA)
                   %p 
                     1357 Rockside Rd., Cleveland, OH 44134
                     %br
                     800/248-6862, fax: 216/264-2840
                     %a{:href => 'http://www.ntma.org'}www.ntma.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NON-FERROUS FOUNDERS’ SOCIETY (NFFS)
+                %p
+                  1480 Renaissance Dr., Ste. 310, Park Ridge, IL 60068
                   %br
+                  847/299-0950, fax: 847/299-3598
+                  %a{:href => 'www.nffs.org'}www.nffs.org
 
+                %br
+
+<<<<<<< HEAD
                   %strong NON-FERROUS FOUNDERS’ SOCIETY (NFFS)
                   %p 
                     1480 Renaissance Dr., Ste. 310, Park Ridge, IL 60068
                     %br
                     847/299-0950, fax: 847/299-3598
                     %a{:href => 'http://www.nffs.org'}www.nffs.org
+=======
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+              .span4
+                %strong CONCRETE REINFORCING STEEL INSTITUTE (CRSI)
+                %p
+                  933 N. Plum Grove Rd., Schaumburg, IL 60173-4758
                   %br
+                  847/517-1200, fax: 847/517-1206
+                  %a{:href => 'www.crsi.org'}www.crsi.org
 
+                %br
 
+<<<<<<< HEAD
                 .span4
                   %strong CONCRETE REINFORCING STEEL INSTITUTE (CRSI)
                   %p 
@@ -607,35 +1160,71 @@ http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-b
                     847/517-1200, fax: 847/517-1206
                     %a{:href => 'http://www.crsi.org'}www.crsi.org
 
+=======
+                %strong CONSUMING INDUSTRIES TRADE ACTION COALITION (CITAC)
+                %p
+                  2000 K St. NW, Ste. 500, Washington, D.C. 20036
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
                   %br
+                  202/828-1714, fax: 202/857-4844
+                  %a{:href => 'www.citac.info'}www.citac.info
 
+<<<<<<< HEAD
                   %strong CONSUMING INDUSTRIES TRADE ACTION COALITION (CITAC)
                   %p 
                     2000 K St. NW, Ste. 500, Washington, D.C. 20036
                     %br
                     202/828-1714, fax: 202/857-4844
                     %a{:href => 'http://www.citac.info'}www.citac.info
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong COPPER & BRASS SERVICENTER ASSOCIATION (CBSA)
+                %p
+                  6734 W. 121st. St., Overland Park, KS 66209
                   %br
+                  913/396-0697, fax: 913/345-1006
+                  %a{:href => 'www.copper-brass.org'}www.copper-brass.org
 
+<<<<<<< HEAD
                   %strong COPPER & BRASS SERVICENTER ASSOCIATION (CBSA)
                   %p 
                     6734 W. 121st. St., Overland Park, KS 66209
                     %br
                     913/396-0697, fax: 913/345-1006
                     %a{:href => 'http://www.copper-brass.org'}www.copper-brass.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong COPPER DEVELOPMENT ASSOCIATION (CDA)
+                %p
+                  260 Madison Ave., New York, NY 10016
                   %br
+                  212/251-7200, fax: 212/251-7234
+                  %a{:href => 'www.copper.org'}www.copper.org
 
+<<<<<<< HEAD
                   %strong COPPER DEVELOPMENT ASSOCIATION (CDA)
                   %p 
                     260 Madison Ave., New York, NY 10016
                     %br
                     212/251-7200, fax: 212/251-7234
                     %a{:href => 'http://www.copper.org'}www.copper.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                = image_tag('cru.png')
+                %strong CRU EVENTS (CRU)
+                %p
+                  Chancery House, Second Floor, 53-64 Chancery Ln., London WC2A 1QS United Kingdom
                   %br
+                  44 (0)20 7903 2033, fax: 44 (0)20 7837 0976
+                  %a{:href => 'www.cruevents.com'}www.cruevents.com
 
+<<<<<<< HEAD
                   = image_tag('cru.png')
                   %strong CRU EVENTS (CRU)
                   %p 
@@ -643,211 +1232,429 @@ http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-b
                     %br
                     44 (0)20 7903 2033, fax: 44 (0)20 7837 0976
                     %a{:href => 'http://www.cruevents.com'}www.cruevents.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong CUSTOM ROLL FORMING INSTITUTE (CRFI)
+                %p
+                  6363 Oak Tree Blvd., Independence, OH 44131-2500
                   %br
+                  216/901-8800, fax: 216/901-9190
+                  %a{:href => 'www.pma.org/divisions/custom-roll-forming'}www.pma.org/divisions/custom-roll-forming
 
+<<<<<<< HEAD
                   %strong CUSTOM ROLL FORMING INSTITUTE (CRFI)
                   %p 
                     6363 Oak Tree Blvd., Independence, OH 44131-2500
                     %br
                     216/901-8800, fax: 216/901-9190
                     %a{:href => 'http://www.pma.org/divisions/custom-roll-forming'}www.pma.org/divisions/custom-roll-forming
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong EUROPEAN ALUMINIUM ASSOCIATION (EAA)
+                %p
+                  Av. de Broqueville 12, B-1150 Brussels, Belgium
                   %br
+                  32 (0)2 775 63 63, fax: 32 (0)2 779 05 31
+                  %a{:href => 'www.alueurope.eu'}www.alueurope.eu
 
+<<<<<<< HEAD
                   %strong EUROPEAN ALUMINIUM ASSOCIATION (EAA)
                   %p 
                     Av. de Broqueville 12, B-1150 Brussels, Belgium
                     %br
                     32 (0)2 775 63 63, fax: 32 (0)2 779 05 31
                     %a{:href => 'http://www.alueurope.eu'}www.alueurope.eu
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong EXPANDED METAL MANUFACTURERS ASSOCIATION (EMMA)
+                %p
+                  800 Roosevelt Rd., Bldg. C, Ste. 312, Glen Ellyn, IL 60137
                   %br
+                  630/942-6591, fax: 630/790-3095
+                  %a{:href => 'www.emma-assoc.org'}www.emma-assoc.org
 
+<<<<<<< HEAD
                   %strong EXPANDED METAL MANUFACTURERS ASSOCIATION (EMMA)
                   %p 
                     800 Roosevelt Rd., Bldg. C, Ste. 312, Glen Ellyn, IL 60137
                     %br
                     630/942-6591, fax: 630/790-3095
                     %a{:href => 'http://www.emma-assoc.org'}www.emma-assoc.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong EXTRUSION TECHNOLOGY FOR ALUMINUM PROFILES FOUNDATION (ET FOUNDATION)
+                %p
+                  1000 N. Rand Rd., Ste. 214, Wauconda, IL 60084-3102
                   %br
+                  847/526-2010, fax: 847/526-3993
+                  %a{:href => 'www.etfoundation.org'}www.etfoundation.org
 
+<<<<<<< HEAD
                   %strong EXTRUSION TECHNOLOGY FOR ALUMINUM PROFILES FOUNDATION (ET FOUNDATION)
                   %p 
                     1000 N. Rand Rd., Ste. 214, Wauconda, IL 60084-3102
                     %br
                     847/526-2010, fax: 847/526-3993
                     %a{:href => 'http://www.etfoundation.org'}www.etfoundation.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong FABRICATORS & MANUFACTURERS ASSOCIATION INTERNATIONAL (FMA)
+                %p
+                  833 Featherstone Rd., Rockford, IL 61107
                   %br
+                  815/399-8700, fax: 815/484-7700
+                  %a{:href => 'www.fmanet.org'}www.fmanet.org
 
+<<<<<<< HEAD
                   %strong FABRICATORS & MANUFACTURERS ASSOCIATION INTERNATIONAL (FMA)
                   %p 
                     833 Featherstone Rd., Rockford, IL 61107
                     %br
                     815/399-8700, fax: 815/484-7700
                     %a{:href => 'http://www.fmanet.org'}www.fmanet.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong FORGING INDUSTRY ASSOCIATION (FIA)
+                %p
+                  1111 Superior Ave., Ste. 615, Cleveland, OH 44114
                   %br
+                  216/781-6260, fax: 216/781-0102
+                  %a{:href => 'www.forging.org'}www.forging.org
 
+<<<<<<< HEAD
                   %strong FORGING INDUSTRY ASSOCIATION (FIA)
                   %p 
                     1111 Superior Ave., Ste. 615, Cleveland, OH 44114
                     %br
                     216/781-6260, fax: 216/781-0102
                     %a{:href => 'http://www.forging.org'}www.forging.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong FOUNDRY EDUCATIONAL FOUNDATION (FEF)
+                %p
+                  1695 N. Penny Ln., Schaumburg, IL 60173
                   %br
+                  847/490-9200, fax: 847/890-6270
+                  %a{:href => 'www.fefinc.org'}www.fefinc.org
 
+<<<<<<< HEAD
                   %strong FOUNDRY EDUCATIONAL FOUNDATION (FEF)
                   %p 
                     1695 N. Penny Ln., Schaumburg, IL 60173
                     %br
                     847/490-9200, fax: 847/890-6270
                     %a{:href => 'http://www.fefinc.org'}www.fefinc.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong NORTH AMERICAN DIE CASTING ASSOCIATION (NADCA)
+                %p
+                  241 Holbrook Dr., Wheeling, IL 60090
                   %br
+                  847/279-0001, fax: 847/279-0002
+                  %a{:href => 'www.diecasting.org'}www.diecasting.org
 
+<<<<<<< HEAD
                   %strong NORTH AMERICAN DIE CASTING ASSOCIATION (NADCA)
                   %p 
                     241 Holbrook Dr., Wheeling, IL 60090
                     %br
                     847/279-0001, fax: 847/279-0002
                     %a{:href => 'http://www.diecasting.org'}www.diecasting.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong POWDER COATING INSTITUTE (PCI)
+                %p
+                  2170 Buckthorne Pl., Ste. 250, The Woodlands, TX 77380
                   %br
+                  800/988-COAT, fax: 832/585-0220
+                  %a{:href => 'www.powdercoating.org'}www.powdercoating.org
 
+<<<<<<< HEAD
                   %strong POWDER COATING INSTITUTE (PCI)
                   %p 
                     2170 Buckthorne Pl., Ste. 250, The Woodlands, TX 77380
                     %br
                     800/988-COAT, fax: 832/585-0220
                     %a{:href => 'http://www.powdercoating.org'}www.powdercoating.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong PRECISION MACHINED PRODUCTS ASSOCIATION (PMPA)
+                %p
+                  6700 W. Snowville Rd., Brecksville, OH 44141
                   %br
+                  440/526-0300, fax: 440/526-5803
+                  %a{:href => 'www.pmpa.org'}www.pmpa.org
 
+<<<<<<< HEAD
                   %strong PRECISION MACHINED PRODUCTS ASSOCIATION (PMPA)
                   %p 
                     6700 W. Snowville Rd., Brecksville, OH 44141
                     %br
                     440/526-0300, fax: 440/526-5803
                     %a{:href => 'http://www.pmpa.org'}www.pmpa.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong PRECISION METALFORMING ASSOCIATION (PMA)
+                %p
+                  6363 Oak Tree Blvd., Independence, OH 44131-2500
                   %br
+                  216/901-8800, fax: 216/901-9190
+                  %a{:href => 'www.pma.org'}www.pma.org
 
+<<<<<<< HEAD
                   %strong PRECISION METALFORMING ASSOCIATION (PMA)
                   %p 
                     6363 Oak Tree Blvd., Independence, OH 44131-2500
                     %br
                     216/901-8800, fax: 216/901-9190
                     %a{:href => 'http://www.pma.org'}www.pma.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong REFRACTORY METALS ASSOCIATION (RMA)
+                %p
+                  105 College Rd. E., Princeton, NJ 08540
                   %br
+                  609/452-7700, fax: 609/987-8523
+                  %a{:href => 'www.mpif.org/aboutmpif/rma.asp?linkid=33'}www.mpif.org/aboutmpif/rma.asp?linkid=33
 
+<<<<<<< HEAD
                   %strong REFRACTORY METALS ASSOCIATION (RMA)
                   %p 
                     105 College Rd. E., Princeton, NJ 08540
                     %br
                     609/452-7700, fax: 609/987-8523
                     %a{:href => 'http://www.mpif.org/aboutmpif/rma.asp?linkid=33'}www.mpif.org/aboutmpif/rma.asp?linkid=33
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong REUSABLE INDUSTRIAL PACKAGING ASSOCIATION (RIPA)
+                %p
+                  51 Monroe St., Ste. 812, Rockville, MD 20850
                   %br
+                  301/577-3786, fax: 301/577-6476
+                  %a{:href => 'www.reusablepackaging.org'}www.reusablepackaging.org
 
+<<<<<<< HEAD
                   %strong REUSABLE INDUSTRIAL PACKAGING ASSOCIATION (RIPA)
                   %p 
                     51 Monroe St., Ste. 812, Rockville, MD 20850
                     %br
                     301/577-3786, fax: 301/577-6476
                     %a{:href => 'http://www.reusablepackaging.org'}www.reusablepackaging.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong SCRA APPLIED R&D APPLIED RESEARCH CENTER
+                %p
+                  5300 International Blvd., Charleston, SC 29418-6937
                   %br
+                  843/760-3200, fax: 843/760-3797
+                  %a{:href => 'www.scra.org'}www.scra.org
 
+<<<<<<< HEAD
                   %strong SCRA APPLIED R&D APPLIED RESEARCH CENTER
                   %p 
                     5300 International Blvd., Charleston, SC 29418-6937
                     %br
                     843/760-3200, fax: 843/760-3797
                     %a{:href => 'http://www.scra.org'}www.scra.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong SEMICONDUCTOR EQUIPMENT AND MATERIALS INTERNATIONAL (SEMI)
+                %p
+                  081 Zanker Rd., San Jose, CA 95134
                   %br
+                  408/943-6900, fax: 408/428-9600
+                  %a{:href => 'www.semi.org'}www.semi.org
 
+<<<<<<< HEAD
                   %strong SEMICONDUCTOR EQUIPMENT AND MATERIALS INTERNATIONAL (SEMI)
                   %p 
                     081 Zanker Rd., San Jose, CA 95134
                     %br
                     408/943-6900, fax: 408/428-9600
                     %a{:href => 'http://www.semi.org'}www.semi.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong SHEET METAL & AIR CONDITIONING CONTRACTORS’ NATIONAL ASSOCIATION (SMACNA)
+                %p
+                  4201 Lafayette Center Dr., Chantilly, VA 20151-1219
                   %br
+                  703/803-2980, fax: 703/803-3732
+                  %a{:href => 'www.smacna.org'}www.smacna.org
 
+<<<<<<< HEAD
                   %strong SHEET METAL & AIR CONDITIONING CONTRACTORS’ NATIONAL ASSOCIATION (SMACNA)
                   %p 
                     4201 Lafayette Center Dr., Chantilly, VA 20151-1219
                     %br
                     703/803-2980, fax: 703/803-3732
                     %a{:href => 'http://www.smacna.org'}www.smacna.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong SOCIETY OF AUTOMOTIVE ENGINEERS (SAE)
+                %p
+                  400 Commonwealth Dr., Warrendale, PA 15096-0001
                   %br
+                  724/776-4841, fax: 724/776-0790
+                  %a{:href => 'www.sae.org'}www.sae.org
 
+<<<<<<< HEAD
                   %strong SOCIETY OF AUTOMOTIVE ENGINEERS (SAE)
                   %p 
                     400 Commonwealth Dr., Warrendale, PA 15096-0001
                     %br
                     724/776-4841, fax: 724/776-0790
                     %a{:href => 'http://www.sae.org'}www.sae.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong SOCIETY OF MANUFACTURING ENGINEERS (SME)
+                %p
+                  1 SME Dr., Dearborn, MI 48128
                   %br
+                  800/733-4763, fax: 313/425-3400
+                  %a{:href => 'www.sme.org'}www.sme.org
 
+<<<<<<< HEAD
                   %strong SOCIETY OF MANUFACTURING ENGINEERS (SME)
                   %p 
                     1 SME Dr., Dearborn, MI 48128
                     %br
                     800/733-4763, fax: 313/425-3400
                     %a{:href => 'http://www.sme.org'}www.sme.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong SPECIALTY STEEL INDUSTRY OF NORTH AMERICA (SSINA)
+                %p
+                  3050 K St. NW, Washington, D.C. 20007
                   %br
+                  800/982-0355, fax: 202/342-8451
+                  %a{:href => 'www.ssina.com'}www.ssina.com
 
+<<<<<<< HEAD
                   %strong SPECIALTY STEEL INDUSTRY OF NORTH AMERICA (SSINA)
                   %p 
                     3050 K St. NW, Washington, D.C. 20007
                     %br
                     800/982-0355, fax: 202/342-8451
                     %a{:href => 'http://www.ssina.com'}www.ssina.com
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL DECK INSTITUTE (SDI)
+                %p
+                  P.O. Box 426, Glenshaw, PA 15116
                   %br
+                  412/487-3325, fax: 412/487-3326
+                  %a{:href => 'www.sdi.org'}www.sdi.org
 
+<<<<<<< HEAD
                   %strong STEEL DECK INSTITUTE (SDI)
                   %p 
                     P.O. Box 426, Glenshaw, PA 15116
                     %br
                     412/487-3325, fax: 412/487-3326
                     %a{:href => 'http://www.sdi.org'}www.sdi.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL DOOR INSTITUTE (SDI)
+                %p
+                  30200 Detroit Rd., Westlake, OH 44145
                   %br
+                  440/899-0010, fax: 440/892-1404
+                  %a{:href => 'www.steeldoor.org'}www.steeldoor.org
 
+<<<<<<< HEAD
                   %strong STEEL DOOR INSTITUTE (SDI)
                   %p 
                     30200 Detroit Rd., Westlake, OH 44145
                     %br
                     440/899-0010, fax: 440/892-1404
                     %a{:href => 'http://www.steeldoor.org'}www.steeldoor.org
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL ERECTORS ASSOCIATION OF AMERICA (SEAA)
+                %p
+                  2216 W. Meadowview Rd., Ste. 115, Greensboro, NC 27407
                   %br
+                  336/294-8880, fax: 413/208-6936
+                  %a{:href => 'www.seaa.net'}www.seaa.net
 
+<<<<<<< HEAD
                   %strong STEEL ERECTORS ASSOCIATION OF AMERICA (SEAA)
                   %p 
                     2216 W. Meadowview Rd., Ste. 115, Greensboro, NC 27407
                     %br
                     336/294-8880, fax: 413/208-6936
                     %a{:href => 'http://www.seaa.net'}www.seaa.net
+=======
+                %br
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f
 
+                %strong STEEL FOUNDERS’ SOCIETY OF AMERICA (SFSA)
+                %p
+                  780 McArdle Dr., Unit G, Crystal Lake, IL 60014
                   %br
+                  815/455-8240, fax: 815/455-8241
+                  %a{:href => 'www.sfsa.org'}www.sfsa.org
 
-                  %strong STEEL FOUNDERS’ SOCIETY OF AMERICA (SFSA)
-                  %p 
-                    780 McArdle Dr., Unit G, Crystal Lake, IL 60014
+                %br
+
+            %h1.search-inside Alliances and Co-ops:
+            %br
+              .row-fluid
+                .span4
+                  = image_tag('steel_alliance.png')
+                  %p
+                    %strong NORTH AMERICAN STEEL ALLIANCE (NASA)
+                  %p
+                    30448 Rancho Viejo Rd., Ste. 250, San Juan Capistrano, CA 92675
                     %br
+                    949/240-0100, fax: 949/240-0106
+                    %a{:href => 'www.steelalliance.com'}www.steelalliance.com
+                    %br
+<<<<<<< HEAD
                     815/455-8240, fax: 815/455-8241
                     %a{:href => 'http://www.sfsa.org'}www.sfsa.org
 
@@ -867,3 +1674,6 @@ http://.container{style: 'background: #CCC; border-top: 1px solid #333; border-b
                       %a{:href => 'http://www.steelalliance.com'}www.steelalliance.com
                       %br
                       %strong See Advertisement On Services Tab 2
+=======
+                    %strong See Advertisement On Services Tab 2
+>>>>>>> d7c8d24f16144931af152f0921e433547fd3b79f

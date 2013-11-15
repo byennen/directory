@@ -7,11 +7,12 @@ MetalsDirectory::Application.routes.draw do
   get 'privacy', to: 'pages#privacy', as: 'privacy'
   get 'terms', to: 'pages#terms', as: 'terms'
 
-  root :to => "home#index"
-  devise_for :users, :controllers => {registrations: 'registrations', confirmations: 'confirmations'}
   resources :registration_steps
-  resources :companies
-  resources :users
+  resources :companies, only: [:index, :show]
+
+  root :to => "pages#home"
+
+  devise_for :users, :controllers => {registrations: 'registrations', confirmations: 'confirmations'}
 
   namespace :admin do
     resources :companies

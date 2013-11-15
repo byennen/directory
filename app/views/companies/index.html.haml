@@ -1,0 +1,25 @@
+%h1 Companies
+
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Contact name
+      %th Company name
+      %th City
+      %th State
+      %th Zip
+      %th Country
+      %th Phone
+      %th Logo package
+  %tbody
+    - @companies.each do |company|
+      %tr
+        %td= company.contact_name
+        %td= company.company_name
+        %td= company.city
+        %td= company.state
+        %td= company.zip
+        %td= company.country
+        %td= company.phone_1
+        %td= company.logo_package_id

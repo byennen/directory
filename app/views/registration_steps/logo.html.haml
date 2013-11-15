@@ -4,21 +4,21 @@
 .content
   .row-fluid
     .span4
-      %h1 REGISTRATION
+      %h1 REGISTRATION UPGRADE
 
     .span8
-      .span6.pull-right
+      .span7.pull-right
         %ul.inline.steps
           %li
             %span.badge.badge-info 1
           %li
             %span.badge.badge-info 2
           %li
-            %span.badge.badge-inverse 3
+            %span.badge.badge-info 3
           %li
-            %span.badge 4
+            %span.badge.badge-info 4
           %li
-            %span.badge 5
+            %span.badge.badge-inverse 5
           %li
             %span.badge 6
           %li
@@ -30,7 +30,9 @@
     .span12{style: 'margin-bottom: 40px;'}
       %h4 SELECT LOGO PACKAGE: PRINT
       %p
-        The Metals Directory gives your company....
+        Stop the reader’s eye at your listing in the pages of the directory and promote your company with a 1-inch or 2-inch logo. Buy a print company logo and get an online company logo fro FREE.
+      %p
+        Click for an example page of logos with listings. (We will have a link to a sample page)
   .row-fluid
     = simple_form_for(@company, :method => :put, url: wizard_path) do |f|
       .row-fluid
@@ -51,8 +53,9 @@
               F:
               = @company.fax
             %p= @company.website
-
-        .form-actions
-          %button.btn.btn-primary.pull-right
-            Continue
-            %i.icon-arrow-right
+      .row-fluid
+        .span12
+          .form-actions
+            %button.btn.btn-primary.pull-right
+              Continue
+              %i.icon-arrow-right

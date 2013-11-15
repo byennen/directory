@@ -9,15 +9,15 @@
       = csrf_meta_tags
       = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
-    #left-background{style: "background-image: url(/assets/bg-left.jpg); width: 754px; height: 700px; position: absolute; top: 0; left: 0; z-index: 1;"}
+    #left-background{style: "background-image: url(/assets/bg-left.jpg); width: 754px; height: 700px; position: absolute; top: 0; left: 0; z-home: 1;"}
     %header
       .container
-        .logo{style: 'position: relative; z-index: 1; float: left; width: 209px; height: 87px;'}
+        .logo{style: 'position: relative; z-home: 1; float: left; width: 209px; height: 87px;'}
           = link_to image_tag('logo.png'), root_path
-        .slogan.pull-right{style: 'z-index: 1; position: relative;'}
+        .slogan.pull-right{style: 'z-home: 1; position: relative;'}
           %h1{style: 'font-size: 16px;'}
             %em THE SOURCEBOOK FOR THE METALS INDUSTRY
-    #main{:role => "main", style: 'position: relative; z-index: 100;'}
+    #main{:role => "main", style: 'position: relative; z-home: 100;'}
       = render 'layouts/navigation'
       = render 'layouts/top_banner'
       .container

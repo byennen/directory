@@ -10,7 +10,7 @@
       %h1 REGISTRATION
 
     .span8
-      .span6.pull-right
+      .span7.pull-right
         %ul.inline.steps
           %li
             %span.badge.badge-info 1
@@ -19,9 +19,9 @@
           %li
             %span.badge.badge-info 3
           %li
-            %span.badge.badge-info 4
+            %span.badge.badge-inverse 4
           %li
-            %span.badge.badge-inverse 5
+            %span.badge 5
           %li
             %span.badge 6
           %li
@@ -38,13 +38,13 @@
         - @service_categories = Category.where(category_type: 'Service')
         - @material_categories = Category.where(category_type: 'Material')
 
-        %h5 EQUIPMENT CATEGORIES
+        %h5 EQUIPMENT SALES CATEGORIES
         = hidden_field_tag "user[category_ids][]", nil
         - @equipment_categories.each do |category|
           = check_box "user[category_ids]", category.id
           = label_tag dom_id(category), category.name
 
-        %h5 MATERIALS
+        %h5 MATERIALS CATEGORIES
         %p Choose materials...
         = hidden_field_tag "user[category_ids][]", nil
         - @material_categories.each do |category|
@@ -61,7 +61,4 @@
 
 
       .form-actions
-        = link_to 'Continue', wizard_path(:print_and_online_selections), class: 'btn btn-primary pull-right'
-        -#%button.btn.btn-primary.pull-right
-        -#  Continue
-        -#  %i.icon-arrow-right
+        = link_to 'Continue', wizard_path(:logo), class: 'btn btn-primary pull-right'

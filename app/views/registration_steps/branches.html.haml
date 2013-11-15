@@ -10,16 +10,16 @@
       %h1 REGISTRATION
 
     .span8
-      .span6.pull-right
+      .span7.pull-right
         %ul.inline.steps
           %li
             %span.badge.badge-info 1
           %li
             %span.badge.badge-info 2
           %li
-            %span.badge.badge-info 3
+            %span.badge.badge-inverse 3
           %li
-            %span.badge.badge-inverse 4
+            %span.badge 4
           %li
             %span.badge 5
           %li
@@ -32,7 +32,7 @@
   .row-fluid
     .span12{style: 'margin-bottom: 40px;'}
       %h4 BRANCH LOCATION (ONLINE ONLY)
-      %p Branch locations only...
+      %p Print for Regional Directories
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
         = f.simple_fields_for :branch do |builder|
           = render 'branch_fields', f: builder
