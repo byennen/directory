@@ -38,6 +38,8 @@ class RegistrationStepsController < ApplicationController
       @user.create_stripe_customer(params[:user][:stripe_card_token])
       if @order.save && @order.charge!
         flash[:notice] = "Thank you for your order!"
+      else
+        flash[:error] = "Error"
       end
     end
 
