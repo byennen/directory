@@ -18,13 +18,11 @@ class RegistrationStepsController < ApplicationController
       session[:company_id] = @company.id
     when :branches
       @company = Company.find session[:company_id]
-      @company.attributes = params[:branch]
+      @company.attributes = company_params
       @company.save
     when :category_selections
-      @user.attributes = params[:user_category_selections]
-      @equipment_categories = Category.where(category_type: 'Equipment')
-      @service_categories = Category.where(category_type: 'Service')
-      @user.save
+      @company.attributes = params[:user_category_selections]
+      @company.save
     when :logo
       @company = Company.find session[:company_id]
       @company.attributes = company_params
@@ -83,18 +81,11 @@ class RegistrationStepsController < ApplicationController
     params.require(:user).permit(:stripe_card_token)
   end
 
-  #def company_params
-  #  params.require(:company).permit(company_attributes: [:company_name, :sub_company_name, :address_1,
-  #                                                       :address_2, :city, :state, :zip, :country,
-  #                                                       :website, :phone_1, :phone_2, :fax, :logo,
-  #                                                       :logo_package_id],
-  #                                  branches_attributes: [:name, :address_1, :address_2, :city, :state,
-  #                                                        :zip, :country, :phone_1, :phone_2, :fax])
-  #end
+
 
   def company_params
     params.require(:company).permit(:contact_name, :company_name, :sub_company_name, :address_1, :address_2,
-                                    :city, :state, :zip, :country, :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo,
-                                    branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
+                                    :city, :state, :zip, :country, :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo, :branch,
+                                    branches_attributes: [:id, :branch_name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
   end
 end
