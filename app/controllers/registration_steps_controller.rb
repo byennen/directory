@@ -14,6 +14,7 @@ class RegistrationStepsController < ApplicationController
     case step
     when :general
       @company = Company.new(company_params)
+      @company.user_id = current_user.id
       @company.save
       session[:company_id] = @company.id
     when :branches
@@ -21,7 +22,8 @@ class RegistrationStepsController < ApplicationController
       @company.attributes = company_params
       @company.save
     when :category_selections
-      @company.attributes = params[:user_category_selections]
+      @company = Company.find session[:company_id]
+      @company.attributes = company_params
       @company.save
     when :logo
       @company = Company.find session[:company_id]
@@ -42,33 +44,6 @@ class RegistrationStepsController < ApplicationController
     end
 
     render_wizard @company
-
-    #case steps
-    #when :general
-    #  @company = Company.new
-    #  @company = Company.update(company_params)
-    #end
-    #when :logo
-    #
-    #when :branches
-    #  @company.attributes = params[:branch]
-    #  @company.save
-    #when :category_selections
-    #  @user.attributes = params[:user_category_selections]
-    #  @equipment_categories = Category.where(category_type: 'Equipment')
-    #  @service_categories = Category.where(category_type: 'Service')
-    #  @user.save
-    #when :print_and_online_selections
-    #  @user.attributes = params[:branch]
-    #  @categories = Category.all
-    #  @user.save
-    #when :checkout
-    #  @order = @user.orders.new
-    #  @user.create_stripe_customer(params[:user][:stripe_card_token])
-    #  if @order.save && @order.charge!
-    #    flash[:notice] = "Thank you for your order!"
-    #  end
-    #end
   end
 
   private
@@ -81,11 +56,42 @@ class RegistrationStepsController < ApplicationController
     params.require(:user).permit(:stripe_card_token)
   end
 
-
-
   def company_params
-    params.require(:company).permit(:contact_name, :company_name, :sub_company_name, :address_1, :address_2,
-                                    :city, :state, :zip, :country, :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo, :branch,
-                                    branches_attributes: [:id, :branch_name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
+    params.require(:company).permit(:contact_name,
+                                    :company_name,
+                                    :sub_company_name,
+                                    :address_1,
+                                    :address_2,
+                                    :city,
+                                    :state,
+                                    :zip,
+                                    :country,
+                                    :website,
+                                    :phone_1,
+                                    :phone_2,
+                                    :fax,
+                                    :logo_package_id,
+                                    :logo,
+                                    branches_attributes: [
+                                      :id,
+                                      :company_id,
+                                      :branch_name,
+                                      :address_1,
+                                      :address_2,
+                                      :city,
+                                      :state,
+                                      :zip,
+                                      :country,
+                                      :phone_1,
+                                      :phone_2,
+                                      :fax,
+                                      :_destroy
+                                      ],
+                                    company_equipment_selection_ids: [],
+                                    company_material_selection_ids: [],
+                                    company_service_selection_ids: []
+    )
+
   end
+
 end

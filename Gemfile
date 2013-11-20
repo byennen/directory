@@ -26,6 +26,7 @@ gem 'font-awesome-rails'
 gem 'stripe'
 gem "jquery-fileupload-rails"
 gem "binding_of_caller"
+gem 'multi-select-rails'
 
 
 group :development do

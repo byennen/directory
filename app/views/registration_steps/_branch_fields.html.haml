@@ -12,7 +12,7 @@
     = f.input :phone_1
     = f.input :phone_2
     = f.input :fax
-    = f.hidden_field :_destroy
+    = f.hidden_field :_destroy, value: 'false'
     .control-group
       .controls
         = link_to "remove", '#', class: "remove_fields btn btn-danger"
