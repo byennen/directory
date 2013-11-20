@@ -19,4 +19,4 @@
 //= require add_fields
 //= require multi-select
 //= require plugins/jquery.quicksearch
-//= require category_selections_search
+//= require category_selections

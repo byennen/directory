@@ -33,40 +33,23 @@
     .span12{style: 'margin-bottom: 40px;'}
 
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-vertical' }) do |f|
+
         %h4 CATEGORY SELECTION
         %p Choose equipment, materials...
 
-        %h5 EQUIPMENT SALES CATEGORIES
-        = f.association :company_equipment_selections, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        %label.checkbox
+          %strong If you are a Metal Service Center / Distributor or Metal Products check this.
+          %input#metal_service_center_or_distributor_checkbox{type: "checkbox"}
+
+        #equipment_sales_categories
+          %h5 EQUIPMENT SALES CATEGORIES
+          = f.association :company_equipment_selections, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
 
         %h5 MATERIALS CATEGORIES
         = f.association :company_material_selections, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
 
         %h5 SERVICE CATEGORIES
         = f.association :company_service_selections, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-
-        -#-#= f.collection :category, :collection => Category.where(category_type: 'Equipment'), :label_method => "EQUIPMENT SALES CATEGORIES", :value_method => :id
-        -#= hidden_field_tag "company[category_ids][]", nil
-        -#- @equipment_categories.each do |category|
-        -#  = check_box "company[category_ids]", category.id
-        -#  = label_tag dom_id(category), category.name
-        -#  -#= f.input :category, :as => :boolean, :label => "#{category.name}", :inline_label => true
-        -#
-        -#%h5 MATERIALS CATEGORIES
-        -#%p Choose materials...
-        -#= hidden_field_tag "company[category_ids][]", nil
-        -#- @material_categories.each do |category|
-        -#  = check_box "company[category_ids]", category.id
-        -#  = label_tag dom_id(category), category.name
-        -#
-        -#%h5 SERVICE CATEGORIES
-        -#%p Choose services...
-        -#= hidden_field_tag "company[category_ids][]", nil
-        -#- @service_categories.each do |category|
-        -#  = check_box "company[category_ids]", category.id
-        -#  = label_tag dom_id(category), category.name
-
-
 
         .form-actions
           %button.btn.btn-primary.pull-right

@@ -10,3 +10,6 @@ $ ->
           that.$selectableUl.focus()
           false
       )
+
+  $("#metal_service_center_or_distributor_checkbox").click ->
+    $("#equipment_sales_categories").toggle()

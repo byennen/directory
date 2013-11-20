@@ -6,7 +6,7 @@ class RegistrationStepsController < ApplicationController
 
   def show
     @user = current_user
-    @company = Company.new
+    @company = Company.find session[:company_id] || Company.new
     render_wizard
   end
 
@@ -20,15 +20,12 @@ class RegistrationStepsController < ApplicationController
     when :branches
       @company = Company.find session[:company_id]
       @company.attributes = company_params
-      @company.save
     when :category_selections
       @company = Company.find session[:company_id]
       @company.attributes = company_params
-      @company.save
     when :logo
       @company = Company.find session[:company_id]
       @company.attributes = company_params
-      @company.save
     when :print_and_online_selections
       @user.attributes = params[:branch]
       @categories = Category.all
