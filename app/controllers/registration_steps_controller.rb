@@ -102,7 +102,9 @@ class RegistrationStepsController < ApplicationController
                                     equipment_ids: [],
                                     material_ids: [],
                                     service_ids: [],
-                                    equipment_printable_ids: []
+                                    equipment_printable_ids: [],
+                                    material_printable_ids: [],
+                                    service_printable_ids: []
     )
 
   end

@@ -34,6 +34,10 @@
 
         %h5 Material Categories
         = f.association :material_printables, collection: @material_categories, label: false, as: :check_boxes
+
+        %h5 Service Categories
+        = f.association :service_printables, collection: @service_categories, label: false, as: :check_boxes
+
       .span6
         .category-logo-selection-cost
           %strong
