@@ -16,6 +16,9 @@ class RegistrationStepsController < ApplicationController
       @company = Company.find session[:company_id]
     when :logo
       @company = Company.find session[:company_id]
+    when :print_and_online_selections
+      @company = Company.find session[:company_id]
+      @categories = @company.equipments + @company.materials + @company.services
     end
 
     render_wizard
@@ -38,7 +41,8 @@ class RegistrationStepsController < ApplicationController
       @company = Company.find session[:company_id]
       @company.attributes = company_params
     when :print_and_online_selections
-
+      @company = Company.find session[:company_id]
+      @company.attributes = company_params
     when :checkout
       @order = @user.orders.new
       @user.create_stripe_customer(params[:user][:stripe_card_token])

@@ -1,6 +1,3 @@
--#move this
-- @categories = Category.all
-
 .content
   .row-fluid
     .span4
@@ -28,29 +25,29 @@
 
   .row-fluid
     .span6{style: 'margin-bottom: 40px;'}
-      = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
+      = simple_form_for(@company, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
         %h4 CATEGORY LOGO SELECTION (PRINT)
         %p Company Logo Are $75
-        = hidden_field_tag "user[category_ids][]", nil
+        = f.association :equipments, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+
         - @categories.each do |category|
-          = check_box "user[category_ids]", category.id
-          = label_tag dom_id(category), category.name
+          = category.name
+
     .span6
       .category-logo-selection-cost
         %strong
           Total Cost
+
   .row-fluid
     .span6{style: 'margin-bottom: 40px;'}
       %h4 CATEGORY SPONSORSHIP (ONLINE)
       %p $400
-      = hidden_field_tag "user[category_ids][]", nil
-      - @categories.each do |category|
-        = check_box "user[category_ids]", category.id
-        = label_tag dom_id(category), category.name
+
     .span6
       .category-sponsorship-cost
         %strong
           Total Cost
+
   .row-fluid
     .span12
       .form-actions
