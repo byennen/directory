@@ -8,7 +8,7 @@
       %h1 PAYMENT OPTIONS
       #stripe_error.alert.alert-error{style: "display:none"}
       = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
-        = f.input :bill_me_later
+        -#= f.input :bill_me_later
         = f.error_notification
         = display_base_errors resource
         #stripe_error

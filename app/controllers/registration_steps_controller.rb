@@ -18,7 +18,9 @@ class RegistrationStepsController < ApplicationController
       @company = Company.find session[:company_id]
     when :print_and_online_selections
       @company = Company.find session[:company_id]
-      @categories = @company.equipments + @company.materials + @company.services
+      @equipment_categories = @company.equipments
+      @material_categories = @company.materials
+      @service_categories = @company.services
     end
 
     render_wizard
@@ -99,7 +101,8 @@ class RegistrationStepsController < ApplicationController
                                       ],
                                     equipment_ids: [],
                                     material_ids: [],
-                                    service_ids: []
+                                    service_ids: [],
+                                    equipment_printable_ids: []
     )
 
   end

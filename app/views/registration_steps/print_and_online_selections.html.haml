@@ -23,32 +23,31 @@
       .span2.pull-right
         %h3.pull-right STEP
 
-  .row-fluid
-    .span6{style: 'margin-bottom: 40px;'}
-      = simple_form_for(@company, url: wizard_path, :html => {:class => 'form-horizontal' }) do |f|
+  = simple_form_for(@company, url: wizard_path, method: :put, :html => {:class => 'form-horizontal' }) do |f|
+    .row-fluid
+      .span6{style: 'margin-bottom: 40px;'}
         %h4 CATEGORY LOGO SELECTION (PRINT)
         %p Company Logo Are $75
-        = f.association :equipments, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        = f.association :equipment_printables, collection: @equipment_categories, label: false, :input_html => {class: 'searchable'}
 
-        - @categories.each do |category|
-          = category.name
+      .span6
+        .category-logo-selection-cost
+          %strong
+            Total Cost
 
-    .span6
-      .category-logo-selection-cost
-        %strong
-          Total Cost
+    .row-fluid
+      .span6{style: 'margin-bottom: 40px;'}
+        %h4 CATEGORY SPONSORSHIP (ONLINE)
+        %p $400
 
-  .row-fluid
-    .span6{style: 'margin-bottom: 40px;'}
-      %h4 CATEGORY SPONSORSHIP (ONLINE)
-      %p $400
+      .span6
+        .category-sponsorship-cost
+          %strong
+            Total Cost
 
-    .span6
-      .category-sponsorship-cost
-        %strong
-          Total Cost
-
-  .row-fluid
-    .span12
-      .form-actions
-        = link_to 'Continue', wizard_path(:checkout), class: 'btn btn-primary pull-right'
+    .row-fluid
+      .span12
+        .form-actions
+          %button.btn.btn-primary.pull-right
+            Continue
+            %i.icon-arrow-right
