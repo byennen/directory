@@ -23,13 +23,17 @@
       .span2.pull-right
         %h3.pull-right STEP
 
-  = simple_form_for(@company, url: wizard_path, method: :put, :html => {:class => 'form-horizontal' }) do |f|
+  = simple_form_for(@company, url: wizard_path, method: :put, :html => {:class => 'form-vertical' }) do |f|
     .row-fluid
       .span6{style: 'margin-bottom: 40px;'}
         %h4 CATEGORY LOGO SELECTION (PRINT)
         %p Company Logo Are $75
-        = f.association :equipment_printables, collection: @equipment_categories, label: false, :input_html => {class: 'searchable'}
 
+        %h5 Equipment Categories
+        = f.association :equipment_printables, collection: @equipment_categories, label: false, as: :check_boxes
+
+        %h5 Material Categories
+        = f.association :material_printables, collection: @material_categories, label: false, as: :check_boxes
       .span6
         .category-logo-selection-cost
           %strong
