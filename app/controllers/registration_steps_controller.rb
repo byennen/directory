@@ -6,7 +6,18 @@ class RegistrationStepsController < ApplicationController
 
   def show
     @user = current_user
-    @company = Company.find session[:company_id] || Company.new
+
+    case step
+    when :general
+      @company = Company.new
+    when :branches
+      @company = Company.find session[:company_id]
+    when :category_selections
+      @company = Company.find session[:company_id]
+    when :logo
+      @company = Company.find session[:company_id]
+    end
+
     render_wizard
   end
 
@@ -27,9 +38,7 @@ class RegistrationStepsController < ApplicationController
       @company = Company.find session[:company_id]
       @company.attributes = company_params
     when :print_and_online_selections
-      @user.attributes = params[:branch]
-      @categories = Category.all
-      @user.save
+
     when :checkout
       @order = @user.orders.new
       @user.create_stripe_customer(params[:user][:stripe_card_token])
@@ -84,9 +93,9 @@ class RegistrationStepsController < ApplicationController
                                       :fax,
                                       :_destroy
                                       ],
-                                    company_equipment_selection_ids: [],
-                                    company_material_selection_ids: [],
-                                    company_service_selection_ids: []
+                                    equipment_ids: [],
+                                    material_ids: [],
+                                    service_ids: []
     )
 
   end
