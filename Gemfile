@@ -24,10 +24,12 @@ gem 'carrierwave'
 gem 'money'
 gem 'font-awesome-rails'
 gem 'stripe'
-gem "jquery-fileupload-rails"
 gem "binding_of_caller"
 gem 'multi-select-rails'
 
+group :assets do
+  gem 'jquery-fileupload-rails'
+end
 
 group :development do
   gem 'better_errors'

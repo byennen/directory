@@ -34,15 +34,23 @@
       %p
         Click for an example page of logos with listings. (We will have a link to a sample page)
   .row-fluid
-    = simple_form_for(@company, :method => :put, url: wizard_path) do |f|
+    = simple_form_for(@company, remote: true, url: wizard_path) do |f|
       .row-fluid
         .span6
           = f.input :logo_package_id, collection: LogoPackage.all.sort_by(&:price_cents)
-          = f.file_field :logo, multiple: true, name: "user[logo]"
+          = f.file_field :logo, multiple: true, name: "company[logo]"
+
+          %script#template-upload{type: "text/x-tmpl"}
+            :cdata
+              <div class="upload">
+              {%=o.name%}
+              <div class="progress"><div class="bar" style="width: 0%"></div></div>
+              </div>
 
         .span6
           .thumbnail
             #logo
+            = image_tag @company.logo
             %h5= @company.company_name
             %p
               = @company.address_1
