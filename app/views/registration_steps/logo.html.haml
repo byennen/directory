@@ -16,11 +16,9 @@
           %li
             %span.badge.badge-info 3
           %li
-            %span.badge.badge-info 4
+            %span.badge.badge-inverse 4
           %li
-            %span.badge.badge-inverse 5
-          %li
-            %span.badge 6
+            %span.badge 5
           %li
             %span.badge CONFIRM
       .span2.pull-right
@@ -64,6 +62,7 @@
       .row-fluid
         .span12
           .form-actions
-            %button.btn.btn-primary.pull-right
-              Continue
-              %i.icon-arrow-right
+            = link_to 'Continue', next_wizard_path
+            -#%button.btn.btn-primary.pull-right
+            -#  Continue
+            -#  %i.icon-arrow-right

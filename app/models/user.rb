@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :company
+  has_one :company
 
   attr_accessor :stripe_card_token
 
@@ -10,7 +10,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  after_create :create_current_users_company
+
   def admin?
     has_role?(:admin)
+  end
+
+  def create_current_users_company
+    Company.create(user_id: self.id)
   end
 end

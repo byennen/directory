@@ -6,9 +6,11 @@ MetalsDirectory::Application.routes.draw do
   get 'contact', to: 'pages#contact', as: 'contact'
   get 'privacy', to: 'pages#privacy', as: 'privacy'
   get 'terms', to: 'pages#terms', as: 'terms'
+  get 'sign-up-now', to: 'pages#start', as: 'start'
 
-  resources :registration_steps
-  resources :companies, only: [:index, :show]
+  resources :companies do
+    resources :registration_steps, path: 'registration-steps'
+  end
 
   root :to => "pages#home"
 

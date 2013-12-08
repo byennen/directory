@@ -2,22 +2,14 @@ class RegistrationStepsController < ApplicationController
   before_filter :authenticate_user!
 
   include Wicked::Wizard
-  steps :start, :general, :branches, :category_selections, :logo, :print_and_online_selections, :checkout, :thank_you
+  steps :general, :branches, :category_selections, :logo, :print_and_online_selections, :checkout, :thank_you
 
   def show
     @user = current_user
+    @company = Company.find(params[:company_id])
 
     case step
-    when :general
-      @company = Company.new
-    when :branches
-      @company = Company.find session[:company_id]
-    when :category_selections
-      @company = Company.find session[:company_id]
-    when :logo
-      @company = Company.find session[:company_id]
     when :print_and_online_selections
-      @company = Company.find session[:company_id]
       @equipment_categories = @company.equipments
       @material_categories = @company.materials
       @service_categories = @company.services
@@ -27,24 +19,9 @@ class RegistrationStepsController < ApplicationController
   end
 
   def update
+    @company = Company.find(params[:company_id])
+    @company.attributes = company_params
     case step
-    when :general
-      @company = Company.new(company_params)
-      @company.user_id = current_user.id
-      @company.save
-      session[:company_id] = @company.id
-    when :branches
-      @company = Company.find session[:company_id]
-      @company.attributes = company_params
-    when :category_selections
-      @company = Company.find session[:company_id]
-      @company.attributes = company_params
-    when :logo
-      @company = Company.find session[:company_id]
-      @company.attributes = company_params
-    when :print_and_online_selections
-      @company = Company.find session[:company_id]
-      @company.attributes = company_params
     when :checkout
       @order = @user.orders.new
       @user.create_stripe_customer(params[:user][:stripe_card_token])

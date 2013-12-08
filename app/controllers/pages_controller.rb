@@ -19,4 +19,8 @@ class PagesController < ApplicationController
 
   def privacy
   end
+
+  def start
+    @company = Company.new
+  end
 end

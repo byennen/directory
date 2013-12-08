@@ -12,13 +12,12 @@
               May 30th, 2014
         .span10
           .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
-            %h1.heading SIGN UP
-            = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+            %h1.heading RESEND CONFIRMATION INSTRUCTIONS
+            = simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
               = f.error_notification
+              = f.full_error :confirmation_token
               .form-inputs
                 = f.input :email, :required => true, :autofocus => true
-                = f.input :password, :required => true
-                = f.input :password_confirmation, :required => true
               .form-actions
-                = f.button :submit, "Sign up"
+                = f.button :submit, "Resend confirmation instructions"
             = render "devise/shared/links"

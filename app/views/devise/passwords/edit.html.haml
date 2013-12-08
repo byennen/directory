@@ -12,13 +12,14 @@
               May 30th, 2014
         .span10
           .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
-            %h1.heading SIGN UP
-            = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+            %h1.heading CHANGE YOUR PASSWORD
+            = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
               = f.error_notification
+              = f.input :reset_password_token, :as => :hidden
+              = f.full_error :reset_password_token
               .form-inputs
-                = f.input :email, :required => true, :autofocus => true
-                = f.input :password, :required => true
-                = f.input :password_confirmation, :required => true
+                = f.input :password, :label => "New password", :required => true, :autofocus => true
+                = f.input :password_confirmation, :label => "Confirm your new password", :required => true
               .form-actions
-                = f.button :submit, "Sign up"
+                = f.button :submit, "Change my password"
             = render "devise/shared/links"

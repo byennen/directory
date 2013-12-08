@@ -114,7 +114,7 @@ GEM
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
-    haml (4.0.3)
+    haml (4.1.0.alpha.2)
       tilt
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
@@ -230,7 +230,7 @@ GEM
     sendgrid (1.2.0)
       json
       json
-    sexp_processor (4.2.1)
+    sexp_processor (4.4.0)
     simple_form (3.0.0.rc)
       actionpack (>= 4.0.0.rc1, < 4.1)
       activemodel (>= 4.0.0.rc1, < 4.1)
