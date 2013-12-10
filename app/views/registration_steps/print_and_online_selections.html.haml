@@ -46,13 +46,13 @@
         %h4 CATEGORY SPONSORSHIP (ONLINE)
         %p $400
         %h5 Equipment Categories
-        = f.association :equipment_online_printables, collection: @equipment_categories, label: false, as: :check_boxes
+        = f.association :equipment_online_onlineables, collection: @equipment_categories, label: false, as: :check_boxes
 
         %h5 Material Categories
-        = f.association :material_online_printables, collection: @material_categories, label: false, as: :check_boxes
+        = f.association :material_online_onlineables, collection: @material_categories, label: false, as: :check_boxes
 
         %h5 Service Categories
-        = f.association :service_online_printables, collection: @service_categories, label: false, as: :check_boxes
+        = f.association :service_online_onlineables, collection: @service_categories, label: false, as: :check_boxes
 
       .span6
         .category-sponsorship-cost

@@ -1,5 +1,5 @@
 class Equipment < ActiveRecord::Base
-  has_many :company_equipment_selections
-  has_many :companies, through: :company_equipment_selections
-  has_many :company_print_selections, :as => :printable
+  has_many :categories, as: :categorizable
+  has_many :print_selections, :as => :printable
+  has_many :online_selections, :as => :onlineable
 end

@@ -10,9 +10,9 @@ class RegistrationStepsController < ApplicationController
 
     case step
     when :print_and_online_selections
-      @equipment_categories = @company.equipments
-      @material_categories = @company.materials
-      @service_categories = @company.services
+      @equipment_categories = @company.equipment_categorizables
+      @material_categories = @company.material_categorizables
+      @service_categories = @company.service_categorizables
     end
 
     render_wizard
@@ -76,15 +76,15 @@ class RegistrationStepsController < ApplicationController
                                       :fax,
                                       :_destroy
                                       ],
-                                    equipment_ids: [],
-                                    material_ids: [],
-                                    service_ids: [],
+                                    equipment_categorizable_ids: [],
+                                    material_categorizable_ids: [],
+                                    service_categorizable_ids: [],
                                     equipment_print_printable_ids: [],
                                     material_print_printable_ids: [],
                                     service_print_printable_ids: [],
-                                    equipment_online_printable_ids: [],
-                                    material_online_printable_ids: [],
-                                    service_online_printable_ids: []
+                                    equipment_online_onlineable_ids: [],
+                                    material_online_onlineable_ids: [],
+                                    service_online_onlineable_ids: [],
     )
 
   end

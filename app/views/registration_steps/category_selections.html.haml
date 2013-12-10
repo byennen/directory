@@ -41,13 +41,12 @@
 
         #equipment_sales_categories
           %h5 EQUIPMENT SALES CATEGORIES
-          = f.association :equipments, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-
+          = f.association :equipment_categorizables, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
         %h5 MATERIALS CATEGORIES
-        = f.association :materials, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        = f.association :material_categorizables, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
 
         %h5 SERVICE CATEGORIES
-        = f.association :services, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        = f.association :service_categorizables, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
 
         .form-actions
           %button.btn.btn-primary.pull-right
