@@ -25,4 +25,8 @@ class Company < ActiveRecord::Base
   accepts_nested_attributes_for :branches, allow_destroy: true
 
   validates :company_name, uniqueness: true, allow_blank: true
+
+  def self.search_letter(letter)
+    where("lower(company_name) like ?", "#{letter.downcase}%")
+  end
 end

@@ -3,6 +3,8 @@ class CompaniesController < ApplicationController
   def index
     if params[:search].blank?
       @companies = Company.where("company_name is not null").page(params[:page]).per(15)
+    elsif letter = params[:search][:letter]
+      @companies = Company.search_letter(letter).page(params[:page]).per(15)
     elsif params[:search][:term] && params[:search][:cat].blank?
       @companies = Company.search "*#{params[:search][:term]}*", page: params[:page], per_page: 15
     else

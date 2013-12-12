@@ -46,9 +46,9 @@
     Company name search:
     %br
     - (0..9).each do |i|
-      = link_to i, "javascript:;"
+      = link_to i, "/companies?search[letter]=#{i}"
     %br
     - ('a'..'z').each do |a|
-      = link_to a, "javascript:;" 
+      = link_to a, "/companies?search[letter]=#{a}"
 .span12
 = javascript_include_tag 'search'
