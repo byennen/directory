@@ -28,6 +28,10 @@ gem "jquery-fileupload-rails"
 gem "binding_of_caller"
 gem 'multi-select-rails'
 
+gem 'mysql2'
+gem 'thinking-sphinx'
+
+gem 'kaminari'
 
 group :development do
   gem 'better_errors'

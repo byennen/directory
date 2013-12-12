@@ -62,7 +62,4 @@
                   = render "devise/shared/links"
         .span5{style: 'background: white; margin: 10px;'}
           %div{style: 'height: 100%;'}
-            %p Search Coming Soon
-            %strong Until Search is complete you can look here:
-            %br
-            = link_to "Search Index", companies_path
+            = render "/companies/search_widget"

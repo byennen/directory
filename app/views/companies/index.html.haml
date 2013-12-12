@@ -1,5 +1,5 @@
-%h1 Companies
-
+.span12
+  %h1.left Companies
 
 %table.table.table-hover
   %thead
@@ -23,3 +23,5 @@
         %td= company.country
         %td= company.phone_1
         %td= company.logo_package_id
+
+.span12=paginate @companies

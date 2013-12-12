@@ -1,0 +1,59 @@
+.span12.top
+.span12
+  .span3 &nbsp;
+  .span7
+    Keyword search:
+.span12
+  .span3 &nbsp;
+  .span7
+    = text_field_tag :term
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-keyword"
+.span12
+  .span3 &nbsp;
+  .span7
+    Category search:
+.span12
+  .span3
+    %strong EQUIPMENT
+  .span7= text_field_tag :equipment
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-cat", data: {cat: 'equipment'}
+.span12
+  .span3
+    %strong MATERIALS
+  .span7= text_field_tag :material
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-cat", data: {cat: 'material'}
+.span12
+  .span3
+    %strong SERVICES
+  .span7= text_field_tag :service
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-cat", data: {cat: 'service'}
+.span12
+  .span3 &nbsp;
+  .span7
+    Location search:
+.span12
+  .span3 &nbsp;
+  .span7
+    = text_field_tag :state, "", placeholder: "State"
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-state"
+.span12.search-country
+  .span3 &nbsp;
+  .span7
+    = country_select("company", "country", [ "" ])
+.span12
+  .span3 &nbsp
+  .span7
+    Company name search:
+    %br
+    - (0..9).each do |i|
+      = link_to i, "/companies?search[letter]=#{i}"
+    %br
+    - ('a'..'z').each do |a|
+      = link_to a, "/companies?search[letter]=#{a}"
+.span12
+= javascript_include_tag 'search'
