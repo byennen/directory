@@ -77,6 +77,8 @@ pickle-email-*.html
 
 # Ignore application configuration
 /config/application.yml
+/config/development.sphinx.conf
+/confug/application.yml
 
 public/uploads/*
 public/assets/*

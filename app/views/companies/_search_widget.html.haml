@@ -1,26 +1,54 @@
-.span10
-  .span4 &nbsp;
-  .span6
+.span12.top
+.span12
+  .span3 &nbsp;
+  .span7
     Keyword search:
+.span12
+  .span3 &nbsp;
+  .span7
     = text_field_tag :term
-.span10
-  .span4 &nbsp;
-  .span6
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-keyword"
+.span12
+  .span3 &nbsp;
+  .span7
     Category search:
-.span10
-  .span4
+.span12
+  .span3
     %strong EQUIPMENT
-  .span6= text_field_tag :equipment
-.span10
-  .span4
+  .span7= text_field_tag :equipment
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary"
+.span12
+  .span3
     %strong MATERIALS
-  .span6= text_field_tag :material
-.span10
-  .span4
+  .span7= text_field_tag :material
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary"
+.span12
+  .span3
     %strong SERVICES
-  .span6= text_field_tag :service
-.span10
-  .span4 &nbsp;
-  .span6
+  .span7= text_field_tag :service
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary"
+.span12
+  .span3 &nbsp;
+  .span7
     Location search:
-    = text_field_tag :materials
+    = text_field_tag :state, "", placeholder: "State"
+.span12
+  .span3 &nbsp;
+  .span7
+    = country_select("company", "country", [ "United States" ])
+.span12
+  .span3 &nbsp
+  .span7
+    Company name search:
+    %br
+    - (0..9).each do |i|
+      = link_to i, "javascript:;"
+    %br
+    - ('a'..'z').each do |a|
+      = link_to a, "javascript:;" 
+.span12
+= javascript_include_tag 'search'
