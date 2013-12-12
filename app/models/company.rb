@@ -26,7 +26,15 @@ class Company < ActiveRecord::Base
 
   validates :company_name, uniqueness: true, allow_blank: true
 
-  def self.search_letter(letter)
-    where("lower(company_name) like ?", "#{letter.downcase}%")
+  class << self
+    def search_letter(letter)
+      where("lower(company_name) like ?", "#{letter.downcase}%")
+    end
+    def search_country(country)
+      where(country: country)
+    end
+    def search_state(state)
+      where("lower(state) like ?", "%#{state.downcase}%")
+    end
   end
 end

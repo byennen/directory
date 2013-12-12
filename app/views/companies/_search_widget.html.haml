@@ -35,11 +35,16 @@
   .span3 &nbsp;
   .span7
     Location search:
-    = text_field_tag :state, "", placeholder: "State"
 .span12
   .span3 &nbsp;
   .span7
-    = country_select("company", "country", [ "United States" ])
+    = text_field_tag :state, "", placeholder: "State"
+  .span1.no-lmar
+    = link_to "<i class='icon-white icon-circle-arrow-right'></i>".html_safe, "javascript:;", class: "btn btn-primary search-state"
+.span12.search-country
+  .span3 &nbsp;
+  .span7
+    = country_select("company", "country", [ "" ])
 .span12
   .span3 &nbsp
   .span7
