@@ -1,15 +1,10 @@
-# Add account credentials and API keys here.
-# See http://railsapps.github.io/rails-environment-variables.html
-# This file should be listed in .gitignore to keep your settings secret!
-# Each entry sets a local environment variable and overrides ENV variables in the Unix shell.
-# For example, setting:
-# GMAIL_USERNAME: Your_Gmail_Username
-# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
-# Add application configuration variables here, as shown below.
-#
-SENDGRID_USERNAME: Your_Username
-SENDGRID_PASSWORD: Your_Password
+SENDGRID_USERNAME: themetalsdirectory
+SENDGRID_PASSWORD: o8GVm04M
 ADMIN_NAME: First User
-ADMIN_EMAIL: admin@trendpublishing.com
+ADMIN_EMAIL: admin@themetalsdirectory.com
 ADMIN_PASSWORD: trend2013
-ROLES: [admin, user, VIP]
+ROLES: [admin, paid_member, member]
+STAGING_USERNAME: trend
+STAGING_PASSWORD: trend2013
+STRIPE_API_KEY: sk_test_Wv99VKOpHbtqKWgshCNH6hF5
+STRIPE_PUBLIC_KEY: pk_test_tnWw0lcp88LbFYWoBKkgcDMn

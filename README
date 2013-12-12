@@ -1,2 +1,9 @@
 Metals Directory
 ========================
+
+Getting started
+
+Sphinx setup
+brew install sphinx --mysql --pgsql
+rake ts:index
+rake ts:start

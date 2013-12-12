@@ -1,2 +1,9 @@
 h1. Metals Directory
 
+h2. Getting started
+
+h3. Sphinx setup
+brew install sphinx --mysql --pgsql
+rake ts:index
+rake ts:start
+
