@@ -7,26 +7,27 @@
     .span12{style: 'margin-bottom: 40px;'}
       %h1 PAYMENT OPTIONS
       #stripe_error.alert.alert-error{style: "display:none"}
-      = simple_form_for(@company  , url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
-        -#%label.checkbox
-        -#%strong Bill Me Later
-        -#= f.input :bill_me_later
+      = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
+        = check_box_tag :bill_me_later
+        %span Bill me later
         = f.error_notification
         = display_base_errors resource
-        #stripe_error
-          %noscript JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
-        .field
-          = label_tag :card_number, "Credit Card Number"
-          = text_field_tag :card_number, nil, name: nil
-        .field
-          = label_tag :card_code, "Card Security Code (CVV)"
-          = text_field_tag :card_code, nil, name: nil
-        .field
-          = label_tag :card_month, "Card Expiration"
-          = select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}
-          = select_year nil, {start_year: Date.today.year, end_year: Date.today.year+10}, {name: nil, id: "card_year"}
-        = f.hidden_field :stripe_card_token
+        #card-form
+          #stripe_error
+            %noscript JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
+          .field.top
+            = label_tag :card_number, "Credit Card Number"
+            = text_field_tag :card_number, nil, name: nil
+          .field
+            = label_tag :card_code, "Card Security Code (CVV)"
+            = text_field_tag :card_code, nil, name: nil
+          .field
+            = label_tag :card_month, "Card Expiration"
+            = select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}
+            = select_year nil, {start_year: Date.today.year, end_year: Date.today.year+10}, {name: nil, id: "card_year"}
+          = f.hidden_field :stripe_card_token
         .row-fluid
           .span12
             .form-actions
-              = link_to 'Finsh', wizard_path(:checkout), class: 'btn btn-primary pull-right'
+              %span.submit-step= link_to 'Finish', wizard_path(:checkout), class: 'btn btn-primary pull-right'
+              %span.skip-step.hide= link_to "Finish", wizard_path(:thank_you), class: 'btn btn-primary pull-right'

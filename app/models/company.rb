@@ -10,6 +10,11 @@ class Company < ActiveRecord::Base
   has_many :material_categorizables, through: :categories, source: :categorizable, source_type: 'Material'
   has_many :service_categorizables, through: :categories, source: :categorizable, source_type: 'Service'
 
+  has_many :sub_categories
+  has_many :equipment_sub_categorizables, through: :sub_categories, source: :sub_categorizable, source_type: 'Equipment'
+  has_many :material_sub_categorizables, through: :sub_categories, source: :sub_categorizable, source_type: 'Material'
+  has_many :service_sub_categorizables, through: :sub_categories, source: :sub_categorizable, source_type: 'Service'
+
   has_many :print_selections
   has_many :equipment_print_printables, through: :print_selections, source: :printable, source_type: 'Equipment'
   has_many :material_print_printables, through: :print_selections, source: :printable, source_type: 'Material'
