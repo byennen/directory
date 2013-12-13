@@ -17,7 +17,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :fax
       t.integer :logo_package_id
       t.string :logo
-
+      t.string :stripe_card_token
       t.timestamps
     end
   end

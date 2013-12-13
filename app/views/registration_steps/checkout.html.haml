@@ -7,7 +7,9 @@
     .span12{style: 'margin-bottom: 40px;'}
       %h1 PAYMENT OPTIONS
       #stripe_error.alert.alert-error{style: "display:none"}
-      = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
+      = simple_form_for(@company  , url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
+        -#%label.checkbox
+        -#%strong Bill Me Later
         -#= f.input :bill_me_later
         = f.error_notification
         = display_base_errors resource

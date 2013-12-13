@@ -12,7 +12,6 @@ class CreateBranches < ActiveRecord::Migration
       t.string  :phone_1
       t.string  :phone_2
       t.string  :fax
-
       t.timestamps
     end
   end
