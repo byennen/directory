@@ -58,8 +58,8 @@
         .span6.top
           %h5 SERVICE SUB-CATEGORIES
           = f.association :service_sub_categorizables, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-
-        .form-actions
-          %button.btn.btn-primary.pull-right
-            Continue
-            %i.icon-arrow-right
+        .span12
+          .form-actions
+            %button.btn.btn-primary.pull-right
+              Continue
+              %i.icon-arrow-right
