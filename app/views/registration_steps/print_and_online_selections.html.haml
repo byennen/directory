@@ -23,28 +23,30 @@
 
   = simple_form_for(@company, url: wizard_path, method: :put, :html => {:class => 'form-vertical' }) do |f|
     .row-fluid
-      .span6{style: 'margin-bottom: 40px;'}
+      .span12
         %h4 CATEGORY LOGO SELECTION (PRINT)
         %p Company Logo Are $75
-
+    .row-fluid
+      #print_selections.span6
         %h5 Equipment Categories
-        = f.association :equipment_print_printables, collection: @equipment_categories, label: false, as: :check_boxes
+        = f.association :equipment_print_printables, collection: @equipment_categories, label: false, as: :check_boxes, value: "75.00"
 
         %h5 Material Categories
-        = f.association :material_print_printables, collection: @material_categories, label: false, as: :check_boxes
+        = f.association :material_print_printables, collection: @material_categories, label: false, as: :check_boxes, value: "75.00"
 
         %h5 Service Categories
-        = f.association :service_print_printables, collection: @service_categories, label: false, as: :check_boxes
+        = f.association :service_print_printables, collection: @service_categories, label: false, as: :check_boxes, value: "1"
 
-      .span6
-        .category-logo-selection-cost
-          %strong
-            Total Cost
+      .selection_cost_box.span6
+        %strong.total_cost TOTAL COST
+        %input#print_selections_cost{value: '$0.00'}
 
     .row-fluid
-      .span6{style: 'margin-bottom: 40px;'}
+      .span12
         %h4 CATEGORY SPONSORSHIP (ONLINE)
         %p $400
+    .row-fluid
+      #online_selections.span6
         %h5 Equipment Categories
         = f.association :equipment_online_onlineables, collection: @equipment_categories, label: false, as: :check_boxes
 
@@ -54,10 +56,9 @@
         %h5 Service Categories
         = f.association :service_online_onlineables, collection: @service_categories, label: false, as: :check_boxes
 
-      .span6
-        .category-sponsorship-cost
-          %strong
-            Total Cost
+      .selection_cost_box.span6
+        %strong.total_cost TOTAL COST
+        %input#online_selections_cost{value: '$0.00'}
 
     .row-fluid
       .span12

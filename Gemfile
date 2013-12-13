@@ -28,7 +28,7 @@ gem "jquery-fileupload-rails"
 gem "binding_of_caller"
 gem 'multi-select-rails'
 
-gem 'mysql2'
+gem 'mysql2' #required for think-sphinx
 gem 'thinking-sphinx'
 
 gem 'kaminari'
