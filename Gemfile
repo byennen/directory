@@ -30,6 +30,7 @@ gem 'multi-select-rails'
 
 gem 'mysql2' #required for think-sphinx
 gem 'thinking-sphinx'
+gem 'flying-sphinx'
 
 gem 'kaminari'
 
