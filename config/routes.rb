@@ -19,6 +19,7 @@ MetalsDirectory::Application.routes.draw do
   namespace :admin do
     resources :companies
     resources :categories
+    resources :orders
     resources :users
     root to: 'companies#index'
   end
