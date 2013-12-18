@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 
   def charge!
     Stripe::Charge.create(
-        :amount => "4000",
+        :amount => price_cents,
         :currency => "usd",
         :customer => user.stripe_customer_token,
         :description => "Charge for Event Title Here"

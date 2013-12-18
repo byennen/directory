@@ -31,6 +31,10 @@ class Company < ActiveRecord::Base
 
   validates :company_name, uniqueness: true, allow_blank: true
 
+  def total_amount
+    print_selections.count*75 + online_selections.count*400
+  end
+
   class << self
     def search_letter(letter)
       where("lower(company_name) like ?", "#{letter.downcase}%")

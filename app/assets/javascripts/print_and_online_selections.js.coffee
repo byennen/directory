@@ -1,4 +1,6 @@
 $ ->
+  update_print_total()
+  update_online_total()
   $("#print_selections :checkbox").click (event) ->
     update_print_total()
 

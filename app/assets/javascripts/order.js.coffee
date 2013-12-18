@@ -15,13 +15,9 @@ order =
       if $(this).is(":checked")
         $("#card-form").addClass('hide')
         $(this).closest("form").removeClass("order_form")
-        $(".submit-step").addClass("hide")
-        $(".skip-step").removeClass("hide")
       else
         $("#card-form").removeClass('hide')
         $(this).closest("form").addClass("order_form")
-        $(".submit-step").removeClass("hide")
-        $(".skip-step").addClass("hide")
         
   processCard: ->
     card =

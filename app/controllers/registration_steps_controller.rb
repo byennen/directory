@@ -20,15 +20,23 @@ class RegistrationStepsController < ApplicationController
 
   def update
     @company = Company.find(params[:company_id])
-    @company.attributes = company_params
+    @company.attributes = company_params if params[:company]
     case step
     when :checkout
-      @order = @user.orders.new
-      @user.create_stripe_customer(params[:user][:stripe_card_token])
-      if @order.save && @order.charge!
-        flash[:notice] = "Thank you for your order!"
+      @order = current_user.orders.new(bill_me_later: params[:bill_me_later], price_cents: params[:price])
+      if @order.save 
+        if @order.bill_me_later
+          flash[:notice] = "Thank you for your order!"
+        else
+          current_user.create_stripe_customer(params[:user][:stripe_card_token])
+          if @order.charge!
+            flash[:notice] = "Thank you for your order!"
+          else
+            flash[:error] = @order.errors.full_messages.join(", ")
+          end
+        end
       else
-        flash[:error] = "Error"
+        flash[:error] = @order.errors.full_messages.join(", ")
       end
     end
 

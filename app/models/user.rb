@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_one :company
+  has_many :orders
 
   attr_accessor :stripe_card_token
 

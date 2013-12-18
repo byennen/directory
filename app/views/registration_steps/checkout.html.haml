@@ -8,7 +8,10 @@
       %h1 PAYMENT OPTIONS
       #stripe_error.alert.alert-error{style: "display:none"}
       = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
+        .field
+          Total amount: <strong>$#{@company.total_amount}</strong>
         = check_box_tag :bill_me_later
+        = hidden_field_tag :price, @company.total_amount*100
         %span Bill me later
         = f.error_notification
         = display_base_errors resource
@@ -29,5 +32,6 @@
         .row-fluid
           .span12
             .form-actions
-              %span.submit-step= link_to 'Finish', wizard_path(:checkout), class: 'btn btn-primary pull-right'
-              %span.skip-step.hide= link_to "Finish", wizard_path(:thank_you), class: 'btn btn-primary pull-right'
+              %button.btn.btn-primary.pull-right
+                Continue
+                %i.icon-arrow-right
