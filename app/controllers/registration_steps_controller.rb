@@ -31,7 +31,7 @@ class RegistrationStepsController < ApplicationController
       @order.price_cents = params[:price]
       @order.user_id = current_user.id
       if @order.save 
-        if @order.bill_me_later
+        if @order.bill_me_later || @order.price_cents=="0"
           flash[:notice] = "Thank you for your order! You may need to update payment later"
         else
           current_user.create_stripe_customer(params[:user][:stripe_card_token])

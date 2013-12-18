@@ -9,6 +9,8 @@ class Order < ActiveRecord::Base
         :customer => user.stripe_customer_id,
         :description => "#{user.email} Charge for #{company.company_name}"})
       update_attribute :bill_me_later, nil
+      NotificationMailer.user_notice_order(self).deliver
+      NotificationMailer.admin_notice_order(self).deliver
     end
   end
 
