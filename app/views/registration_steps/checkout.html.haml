@@ -6,7 +6,7 @@
   .row-fluid
     .span12{style: 'margin-bottom: 40px;'}
       %h1 PAYMENT OPTIONS
-      #stripe_error.alert.alert-error{style: "display:none"}
+      #stripe_error.alert.alert-error.hide
       = simple_form_for(@user, url: wizard_path, :html => {:class => 'form-horizontal order_form' }) do |f|
         .field
           Total amount: <strong>$#{@company.total_amount}</strong>

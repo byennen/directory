@@ -2,6 +2,7 @@ class Company < ActiveRecord::Base
   belongs_to :user
 
   has_one :logo_package
+  has_one :order
 
   has_many :branches
 

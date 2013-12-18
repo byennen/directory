@@ -20,4 +20,20 @@ class User < ActiveRecord::Base
   def create_current_users_company
     Company.create(user_id: self.id)
   end
+
+  def create_stripe_customer(token)
+    if stripe_customer.blank?
+      customer = Stripe::Customer.create(:card => token, :description => email)
+      update_attribute :stripe_customer_id, customer.id if customer
+    end
+  end
+
+  def stripe_customer
+    begin
+      Stripe::Customer.retrieve(stripe_customer_id)
+    rescue
+      nil
+    end
+  end
+
 end
