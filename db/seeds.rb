@@ -11,10 +11,10 @@ user.confirm!
 user.add_role :admin
 
 puts 'Create Logo Packages'
-LogoPackage.where(name: 'GOLD, 2 INCH LOGO').first_or_create
-LogoPackage.where(name: 'GOLD, 1 INCH LOGO').first_or_create
-LogoPackage.where(name: 'SILVER, 2 INCH LOGO').first_or_create
-LogoPackage.where(name: 'SILVER, 1 INCH LOGO').first_or_create
+LogoPackage.where(name: 'GOLD, 2 INCH LOGO 4 4-color logo').first_or_create
+LogoPackage.where(name: 'GOLD, 1 INCH LOGO 4-color logo').first_or_create
+LogoPackage.where(name: 'SILVER, 2 INCH LOGO B/W logo').first_or_create
+LogoPackage.where(name: 'SILVER, 1 INCH LOGO B/W logo').first_or_create
 LogoPackage.where(name: 'FREE LISTING, NO LOGO').first_or_create
 
 puts 'Create Equipment Categories'
