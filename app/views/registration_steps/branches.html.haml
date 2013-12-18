@@ -28,7 +28,9 @@
   .row-fluid
     .span12
       %h4 BRANCH LOCATION (ONLINE ONLY)
-      %p Print for Regional Directories
+      %p Print for 
+        %strong 
+          %em Regional Directories
       = simple_form_for(@company, url: wizard_path, :method => :put, :html => {:class => 'form-horizontal' }) do |f|
         -#= f.simple_fields_for :branch do |builder|
         -#  = render 'branch_fields', f: builder
