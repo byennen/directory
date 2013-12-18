@@ -7,24 +7,38 @@
           %h3.act-now
             %span.act-now-hightlight
               Act Now!
-            The Deadline to include listins in the print edition is
+            The Deadline to include listings in the print edition is
             %span.act-now-hightlight
               May 30th, 2014
         .span10
           .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
             %h1.heading MEDIA KIT
             %p
-              To request a printed media kit, a copy of The Metals Directory or other
+              To request a printed media kit, a copy of 
+              %strong 
+                %em The Metals Directory
+              or other
               information, contact us at 312-654-2325.
 
             %h4 Circulation
             %p
-              The Metals Directory is published annually in June, both in print and online. It is
-              distributed to the combined circulation of Modern Metals and FFJournal and replaces the June issue of each.
+              %strong 
+                %em The Metals Directory
+              is published annually in June, both in print and online. It is
+              distributed to the combined circulation of 
+              %strong 
+                %em Modern Metals 
+              and 
+              %strong
+                %em FFJournal 
+              and replaces the June issue of each.
 
             %h4 Bonus Distribution
             %p
-              Additional copies of The Metals Directory will be distributed throughout the year at
+              Additional copies of 
+              %strong 
+                %em The Metals Directory
+              will be distributed throughout the year at
               various trade shows.
 
             %h4 Print Display Advertising
@@ -65,7 +79,7 @@
               *If you choose one of the above packages, you have the option to add a product category logo for an additional $75 each.
               %br
               %br
-              See example of Company Logo (link to PDF)
+              = link_to('See example of Company Logo', asset_path("company_contact_logo.pdf"))
               %br
               See example of Product Category Logo (link to PDF)
               %br
@@ -75,7 +89,7 @@
               %br
               Put your message in front of potential customers right when they're searching for what you have to offer both in print and online.
               %br
-              See example of Category Sponsors (link to PDF)
+              = link_to('See example of Category Sponsors', asset_path("category_logo.pdf"))
               %br
               %br
               %strong 6) Classified Ads
@@ -85,10 +99,12 @@
               %br
               Contact 312-654-2325 for more information
             %p
-              Mechanical Specs/Print Specs/Digital Requirements
+              %strong
+                %h4 
+                  Mechanical Specs/Print Specs/Digital Requirements
+              %p
+              = link_to 'See Mechanical Specs', "http://staging.themetalsdirectory.com/media-kit"
             %p
               For more information, contact Carlotta Lacy at 312/654-2318 or
               = mail_to 'carlotta@modernmetals.com'
-            %p
-              = link_to 'See Mechanical Specs'
 
