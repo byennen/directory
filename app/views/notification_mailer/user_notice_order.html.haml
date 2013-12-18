@@ -1,0 +1,41 @@
+%h3 You have purchase an order at Metals Directory
+%strong Order email: 
+= @user.email
+%br
+%strong Company Name: 
+= @company.company_name
+%br
+- unless @company.equipment_print_printables.blank?
+  %p
+    %strong Equipment Print Selections
+    %br
+    = @company.equipment_print_printables.map(&:name).join(", ")
+- unless @company.material_print_printables.blank?
+  %p
+    %strong Material Print Selections
+    %br
+    = @company.material_print_printables.map(&:name).join(", ")
+- unless @company.service_print_printables.blank?
+  %p
+    %strong Equipment Print Selections
+    %br
+    - @company.service_print_printables.map(&:name).join(", ")
+
+- unless @company.equipment_online_onlineables.blank?
+  %p
+    %strong Equipment Online Selections
+    %br
+    = @company.equipment_online_onlineables.map(&:name).join(", ")
+- unless @company.material_online_onlineables.blank?
+  %p
+    %strong Material Online Selections
+    %br
+    = @company.material_online_onlineables.map(&:name).join(", ")
+- unless @company.service_online_onlineables.blank?
+  %p
+    %strong Equipment Online Selections
+    %br
+    = @company.service_online_onlineables.each.map(&:name).join(", ")
+%p
+  %strong Total:
+  = "$#{@order.price}"
