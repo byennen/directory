@@ -1,5 +1,5 @@
 class Admin::CompaniesController < Admin::ApplicationController
-  load_and_authorize_resource
+
   before_action :set_company, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :edit]
 
@@ -26,7 +26,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   # POST /companies
   # POST /companies.json
   def create
-    @company = Company.new(company_params)
+    @company = current_user.companies.build(company_params)
 
     respond_to do |format|
       if @company.save
