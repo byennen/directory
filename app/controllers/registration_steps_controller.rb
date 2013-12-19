@@ -1,12 +1,11 @@
 class RegistrationStepsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :ensure_company
 
   include Wicked::Wizard
   steps :general, :branches, :category_selections, :logo, :print_and_online_selections, :checkout, :thank_you
 
   def show
     @user = current_user
-    @company = Company.find(params[:company_id])
     if @company.order && !@company.order.bill_me_later
       redirect_to @company
     else
@@ -22,7 +21,6 @@ class RegistrationStepsController < ApplicationController
   end
 
   def update
-    @company = Company.find(params[:company_id])
     @company.attributes = company_params if params[:company]
     case step
     when :checkout
@@ -50,6 +48,10 @@ class RegistrationStepsController < ApplicationController
   end
 
   private
+  def ensure_company
+    @company = Company.find(params[:company_id])
+    redirect_to root_path, notice: "You not an author of this company" unless @company.user == current_user
+  end
 
   def redirect_to_finish_wizard(options = nil)
     redirect_to root_path , notice: "Thank you for signing up."

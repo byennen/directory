@@ -3,6 +3,6 @@ class ConfirmationsController < Devise::ConfirmationsController
 
   def after_confirmation_path_for(resource_name, resource)
     @user = current_user
-    company_registration_steps_path(@user.company)
+    company_registration_steps_path(@user.companies.last)
   end
 end
