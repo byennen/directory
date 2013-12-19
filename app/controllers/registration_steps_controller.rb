@@ -23,6 +23,9 @@ class RegistrationStepsController < ApplicationController
   def update
     @company.attributes = company_params if params[:company]
     case step
+    when :logo
+      @company.save
+      respond_to :js
     when :checkout
       @order = @company.order || @company.build_order
       @order.bill_me_later = params[:bill_me_later]
@@ -42,9 +45,12 @@ class RegistrationStepsController < ApplicationController
       else
         flash[:error] = @order.errors.full_messages.join(", ")
       end
+      render_wizard @company
+    else
+      render_wizard @company
     end
 
-    render_wizard @company
+    
   end
 
   private

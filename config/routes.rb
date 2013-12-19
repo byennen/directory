@@ -10,6 +10,9 @@ MetalsDirectory::Application.routes.draw do
 
   resources :companies do
     resources :registration_steps, path: 'registration-steps'
+    member do
+      get :update_logo_package
+    end
   end
 
   root :to => "pages#home"

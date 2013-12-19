@@ -1,1 +1,1 @@
-$("#logo").append("#{j render(@company)}");
+$("#logo").html("#{escape_javascript(image_tag @company.logo)}");
