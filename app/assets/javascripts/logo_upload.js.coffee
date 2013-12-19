@@ -14,3 +14,7 @@ jQuery ->
       if data.context
         progress = parseInt(data.loaded / data.total * 100, 10)
         data.context.find('.bar').css('width', progress + '%')
+
+  $("#company_logo_package_id").change ->
+    company_id = $("#company_id").val()
+    $.get("/companies/#{company_id}/update_logo_package",{logo_package_id: $(this).val()})

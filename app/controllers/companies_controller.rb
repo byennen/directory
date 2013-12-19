@@ -20,4 +20,9 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
   end
 
+  def update_logo_package
+    @company = Company.find params[:id]
+    @company.update_attribute :logo_package_id, params[:logo_package_id]
+    render nothing: true
+  end
 end

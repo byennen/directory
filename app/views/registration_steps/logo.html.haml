@@ -32,6 +32,7 @@
       %p
         Click for an example page of logos with listings. (We will have a link to a sample page)
   .row-fluid
+    = hidden_field_tag :company_id, @company.id
     = simple_form_for(@company, remote: true, url: wizard_path) do |f|
       .row-fluid
         .span6
@@ -48,7 +49,7 @@
         .span6
           .thumbnail
             #logo
-            = image_tag @company.logo
+              = image_tag @company.logo
             %h5= @company.company_name
             %p
               = @company.address_1
@@ -62,7 +63,10 @@
       .row-fluid
         .span12
           .form-actions
-            = link_to 'Continue', next_wizard_path
+            = link_to next_wizard_path, class: "btn btn-primary pull-right" do
+              Continue
+              %i.icon-arrow-right
             -#%button.btn.btn-primary.pull-right
             -#  Continue
             -#  %i.icon-arrow-right
+= javascript_include_tag "logo_upload"

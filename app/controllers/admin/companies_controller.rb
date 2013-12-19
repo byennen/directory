@@ -1,5 +1,5 @@
 class Admin::CompaniesController < Admin::ApplicationController
-  load_and_authorize_resource
+
   before_action :set_company, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :edit]
 
@@ -26,7 +26,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   # POST /companies
   # POST /companies.json
   def create
-    @company = Company.new(company_params)
+    @company = current_user.companies.build(company_params)
 
     respond_to do |format|
       if @company.save
@@ -78,8 +78,21 @@ class Admin::CompaniesController < Admin::ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_params
-    params.require(:company).permit(:contact_name, :company_name, :sub_company_name, :address_1, :address_2, :city,
-                                    :state, :zip, :country, :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo,
-                                    branches_attributes: [:name, :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2, :fax])
+    params.require(:company).permit(:user_id, :contact_name, :company_name, :sub_company_name,
+                                    :address_1, :address_2, :city, :state, :zip, :country,
+                                    :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo,
+                                    branches_attributes: [
+                                      :id, :company_id, :branch_name,
+                                      :address_1, :address_2, :city, :state, :zip, :country, :phone_1, :phone_2,
+                                      :fax, :_destroy
+                                      ],
+                                    equipment_categorizable_ids: [], material_categorizable_ids: [],
+                                    service_categorizable_ids: [], equipment_sub_categorizable_ids: [],
+                                    material_sub_categorizable_ids: [], service_sub_categorizable_ids: [],
+                                    equipment_print_printable_ids: [], material_print_printable_ids: [],
+                                    service_print_printable_ids: [], equipment_online_onlineable_ids: [],
+                                    material_online_onlineable_ids: [], service_online_onlineable_ids: [],
+    )
+
   end
 end
