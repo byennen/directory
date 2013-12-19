@@ -23,8 +23,21 @@
                   %h1
                     -#= @user.company.company_name if @current_user.company.company_name.present?
                     Welcome
-                  %p Show company ads here.
-                  %p If registration isn't finished show that here
+              .row-fluid
+                .span12{style: 'padding: 10px;'}
+                  .thumbnail
+                    #logo
+                    = image_tag @company.logo
+                    %h5= @company.company_name
+                    %p
+                      = @company.address_1
+                      = @company.address_2
+                    %p
+                      P:
+                      = @company.phone_1
+                      F:
+                      = @company.fax
+                    %p= @company.website
                   = link_to 'Logout', destroy_user_session_path, :method=>'delete'
             - else
               .row-fluid

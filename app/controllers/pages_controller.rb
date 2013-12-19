@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @company = current_user.company
   end
 
   def about
