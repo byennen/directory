@@ -1,0 +1,22 @@
+%h1 Orders
+
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th User Email
+      %th Company
+      %th Total Price
+      %th Paid?
+      %th
+  %tbody
+    - @orders.each do |order|
+      %tr
+        %td= order.user.email if order.user
+        %td= order.company.company_name if order.company
+        %td= "$#{order.price}"
+        %td= order.paid?
+        %td
+          = link_to 'Destroy', admin_order_path(order), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br

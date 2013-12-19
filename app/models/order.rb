@@ -1,20 +1,24 @@
 class Order < ActiveRecord::Base
   belongs_to :user
+  belongs_to :company
 
   def charge!
-    Stripe::Charge.create(
-        :amount => "4000",
+    if Stripe::Charge.create({
+        :amount => price_cents,
         :currency => "usd",
-        :customer => user.stripe_customer_token,
-        :description => "Charge for Event Title Here"
-    )
+        :customer => user.stripe_customer_id,
+        :description => "#{user.email} Charge for #{company.company_name}"})
+      update_attribute :bill_me_later, nil
+      NotificationMailer.user_notice_order(self).deliver
+      NotificationMailer.admin_notice_order(self).deliver
+    end
   end
 
-  def ensure_stripe_customer
-    if stripe_customer_token.nil?
-      logger.debug("stripe card token is #{stripe_card_token}")
-      customer = Stripe::Customer.create(:email => email, :card => stripe_card_token)
-      update_attribute(:stripe_customer_token, customer.id)
-    end
+  def paid?
+    bill_me_later? ? "Bill later" : "Paid" 
+  end
+
+  def price
+    price_cents.to_i/100 unless price_cents.blank?
   end
 end

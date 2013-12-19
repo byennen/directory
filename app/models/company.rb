@@ -2,6 +2,7 @@ class Company < ActiveRecord::Base
   belongs_to :user
 
   has_one :logo_package
+  has_one :order
 
   has_many :branches
 
@@ -30,6 +31,10 @@ class Company < ActiveRecord::Base
   accepts_nested_attributes_for :branches, allow_destroy: true
 
   validates :company_name, uniqueness: true, allow_blank: true
+
+  def total_amount
+    print_selections.count*75 + online_selections.count*400
+  end
 
   class << self
     def search_letter(letter)
