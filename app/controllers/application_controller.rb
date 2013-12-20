@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  before_filter :fetch_settings
+
+  def fetch_settings
+    @settings = Setting.first
+  end
+
 end

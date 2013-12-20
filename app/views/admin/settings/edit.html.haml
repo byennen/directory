@@ -1,0 +1,10 @@
+%h1 Editing setting
+
+= simple_form_for([:admin, @setting]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :print_edition_deadline, :order => [:month, :day, :year]
+
+  .form-actions
+    = f.button :submit
