@@ -1,0 +1,33 @@
+= simple_form_for @company do |f|
+  = f.error_notification
+
+  .form-inputs.span12.no-lmar
+    .span5.left2= f.input :company_name, input_html: {class: 'span12'}, placeholder: 'Trend Publishing'
+    .span5= f.input :sub_company_name, input_html: {class: 'span12'}, placeholder: 'Metals Directory'
+    .span12= f.input :contact_name, input_html: {class: 'span5'}, placeholder: 'Joe Foo'
+    .span5= f.input :address_1, input_html: {class: 'span12'}, placeholder: '625 N. Michigan ave.'
+    .span5= f.input :address_2, input_html: {class: 'span12'}, placeholder: 'Suite 1100'
+    .span3= f.input :city, input_html: {class: 'span12'}, placeholder: 'Chicago'
+    .span3= f.input :state, input_html: {class: 'span12'}, placeholder: 'IL'
+    .span3= f.input :zip, input_html: {class: 'span12'}, placeholder: '60611-3110'
+    .span12
+      .control-group
+        .controls
+          = country_select("company", "country", [ "United States" ])
+    .span12= f.input :website, input_html: {class: 'span5'}, placeholder: 'http://trendpublishing.com'
+    .span3= f.input :phone_1, input_html: {class: 'span12'}, placeholder: '312-555-5555'
+    .span3= f.input :phone_2, input_html: {class: 'span12'}, placeholder: '312-555-5555'
+    .span3= f.input :fax, input_html: {class: 'span12'}, placeholder: '312-555-5555'
+    .span5= f.input :logo_package_id, collection: LogoPackage.all.sort_by(&:price_cents)
+    .span5
+      = f.input :logo
+      = image_tag @company.logo, width: "100px" unless @company.logo.blank?
+    .span12.no-lmar
+      %h2.left2 Branches
+      = f.simple_fields_for :branches do |builder|
+        = render 'branch_fields', f: builder
+      = link_to_add_fields "Add branch", f, :branches
+
+
+  .form-actions.span12.no-lmar
+    = f.button :submit

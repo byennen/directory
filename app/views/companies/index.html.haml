@@ -12,6 +12,7 @@
       %th Country
       %th Phone
       %th Logo package
+      %th
   %tbody
     - @companies.each do |company|
       %tr
@@ -22,6 +23,7 @@
         %td= company.zip
         %td= company.country
         %td= company.phone_1
-        %td= company.logo_package_id
-
+        %td= company.logo_package.name
+        %td
+          = link_to "edit", edit_company_path(company) if company.user == current_user 
 .span12=paginate @companies
