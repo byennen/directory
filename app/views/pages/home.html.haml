@@ -3,14 +3,7 @@
     .span12
       #homepage.row-fluid
         .span2
-          = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
-          %h3.act-now
-            %span.act-now-hightlight
-              Act Now!
-            The Deadline to include a listing in the print edition is
-            %span.act-now-hightlight
-              May 2,
-              = Time.now.year + 1
+          = render 'shared/directory_deadline'
         .span5
           .div{style: 'background: white; margin: 10px 10px 10px 30px;'}
             %h1.search-inside

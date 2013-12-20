@@ -10,6 +10,9 @@ puts 'user: ' << user.email
 user.confirm!
 user.add_role :admin
 
+puts 'Settings'
+Setting.create(print_edition_deadline: '2013-05-02')
+
 puts 'Create Logo Packages'
 LogoPackage.where(name: 'GOLD, 2 INCH LOGO 4-color logo').first_or_create
 LogoPackage.where(name: 'GOLD, 1 INCH LOGO 4-color logo').first_or_create
@@ -18,8 +21,8 @@ LogoPackage.where(name: 'SILVER, 1 INCH LOGO B/W logo').first_or_create
 LogoPackage.where(name: 'FREE LISTING, NO LOGO').first_or_create
 
 puts 'Create Equipment Categories'
-@category_1 = Category.where(name: 'Bending equipment').first_or_create
-SubCategory.where(name: 'Folding machines', category_id: @category_1.id).first_or_create
+#@category_1 = Category.where(name: 'Bending equipment').first_or_create
+#SubCategory.where(name: 'Folding machines', category_id: @category_1.id).first_or_create
 
 #Equipment.where(name: 'Folding machines').first_or_create
 Equipment.where(name: 'Roll benders, angle or sheet/plate').first_or_create
