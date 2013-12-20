@@ -1,27 +1,22 @@
-.span12
-  %h1.left Companies
+.container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
+  .row-fluid
+    .span12
+      #homepage.row-fluid
+        .span2
+          = render 'shared/directory_deadline'
+        .span10
+          .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
+            %h1.heading COMPANIES
+            %table.table.table-hover
+              %thead
+                %tr
+                  %th Name
+                  %th Location
+              %tbody
+                - @companies.each do |company|
+                  %tr
+                    %td= company.company_name
+                    %td= company.city + ' ,' + company.state + ' ' + company.country
 
-%table.table.table-hover
-  %thead
-    %tr
-      %th Contact name
-      %th Company name
-      %th City
-      %th State
-      %th Zip
-      %th Country
-      %th Phone
-      %th Logo package
-  %tbody
-    - @companies.each do |company|
-      %tr
-        %td= company.contact_name
-        %td= company.company_name
-        %td= company.city
-        %td= company.state
-        %td= company.zip
-        %td= company.country
-        %td= company.phone_1
-        %td= company.logo_package_id
 
-.span12=paginate @companies
+            .span12=paginate @companies
