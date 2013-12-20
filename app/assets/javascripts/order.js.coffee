@@ -6,7 +6,8 @@ order =
   setupForm: ->
     $('.order_form').submit ->
       $('input[type=submit]').attr('disabled', true)
-      if $('#card_number').length
+      bill_me_later = $("#bill_me_later").is(":checked")
+      if $('#card_number').length && !bill_me_later
         order.processCard()
         false
       else
@@ -14,10 +15,8 @@ order =
     $("#bill_me_later").click ->
       if $(this).is(":checked")
         $("#card-form").addClass('hide')
-        $(this).closest("form").removeClass("order_form")
       else
         $("#card-form").removeClass('hide')
-        $(this).closest("form").addClass("order_form")
         
   processCard: ->
     card =

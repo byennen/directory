@@ -6,7 +6,7 @@ class RegistrationStepsController < ApplicationController
 
   def show
     @user = current_user
-    if @company.order && !@company.order.bill_me_later
+    if @company.order
       redirect_to @company
     else
       case step
