@@ -32,6 +32,10 @@ class Company < ActiveRecord::Base
 
   validates :company_name, uniqueness: true, allow_blank: true
 
+  def address
+    [city, addr_state, country].reject{ |a| a.blank? }.join(", ")
+  end
+
   def total_amount
     print_selections.count*75 + online_selections.count*400
   end
