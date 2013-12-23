@@ -15,4 +15,20 @@ namespace :dev do
       user.companies.last.service_categorizables << services[i%10]
     end
   end
+
+  task :create_subs => :environment do
+    Equipment.all.each do |c|
+      c.sub_equipments.create(name: "#{c.name} Sub 1")
+      c.sub_equipments.create(name: "#{c.name} Sub 2")
+    end
+    Service.all.each do |c|
+      c.sub_services.create(name: "#{c.name} Sub 1")
+      c.sub_services.create(name: "#{c.name} Sub 2")
+    end
+    Material.all.each do |c|
+      c.sub_materials.create(name: "#{c.name} Sub 1")
+      c.sub_materials.create(name: "#{c.name} Sub 2")
+    end
+  end
+
 end
