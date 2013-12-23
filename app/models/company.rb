@@ -30,8 +30,8 @@ class Company < ActiveRecord::Base
 
   accepts_nested_attributes_for :branches, allow_destroy: true
 
-  scope :complete, -> where state: "thank_you"
-  scope :not_complete, -> where "state <> 'thank_you'"
+  scope :complete, -> {where state: "thank_you"}
+  scope :not_complete, -> {where "state <> 'thank_you'"}
 
   state_machine :state, :initial => :general do
     
