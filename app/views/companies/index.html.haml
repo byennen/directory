@@ -16,7 +16,7 @@
               %tbody
                 - @companies.each do |company|
                   %tr
-                    %td= company.company_name
+                    %td=link_to company.company_name, company
                     %td= company.address
                     %td= link_to "edit", edit_company_path(company) if company.user == current_user
             .span12=paginate @companies
