@@ -18,7 +18,8 @@ class User < ActiveRecord::Base
   end
 
   def create_current_users_company
-    Company.create(user_id: self.id)
+    company = current_user.companies.build
+    company.save(validate: false)
   end
 
   def create_stripe_customer(token)

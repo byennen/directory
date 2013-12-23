@@ -80,7 +80,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_params
     params.require(:company).permit(:user_id, :contact_name, :company_name, :sub_company_name,
-                                    :address_1, :address_2, :city, :state, :zip, :country,
+                                    :address_1, :address_2, :city, :addr_state, :zip, :country,
                                     :website, :phone_1, :phone_2, :fax, :logo_package_id, :logo,
                                     branches_attributes: [
                                       :id, :company_id, :branch_name,
