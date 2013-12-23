@@ -33,6 +33,7 @@ gem 'thinking-sphinx'
 gem 'flying-sphinx'
 
 gem 'kaminari'
+gem 'state_machine'
 
 group :development do
   gem 'better_errors'

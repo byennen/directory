@@ -30,7 +30,29 @@ class Company < ActiveRecord::Base
 
   accepts_nested_attributes_for :branches, allow_destroy: true
 
-  validates :company_name, uniqueness: true, allow_blank: true
+  scope :complete, -> where state: "thank_you"
+  scope :not_complete, -> where "state <> 'thank_you'"
+
+  state_machine :state, :initial => :general do
+    
+    event :next do
+      transition :from => :general,                     :to => :branches
+      transition :from => :branches,                    :to => :category_selections
+      transition :from => :category_selections,         :to => :logo
+      transition :from => :logo,                        :to => :print_and_online_selections
+      transition :from => :print_and_online_selections, :to => :checkout
+      transition :from => :checkout,                    :to => :thank_you
+    end
+
+    state :branches do
+      validates :company_name, uniqueness: true, presence: true
+    end
+
+  end
+
+  def complete?
+    state=='thank_you'
+  end
 
   def total_amount
     print_selections.count*75 + online_selections.count*400
