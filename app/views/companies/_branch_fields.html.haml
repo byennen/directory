@@ -14,5 +14,6 @@
     .span3= f.input :fax, input_html: {class: 'span12'}
     .control-group.span12
       .controls
-        = f.link_to_remove "remove", '#', class: "remove_fields btn btn-danger"
+        = f.hidden_field :_destroy
+        = link_to "remove", '#', class: "remove_fields btn btn-inverse"
     %hr

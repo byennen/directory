@@ -4,7 +4,6 @@
 //= require turbolinks
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
-//= require jquery_nested_form
 //= require add_fields
 //= require multi-select
 //= require plugins/jquery.quicksearch

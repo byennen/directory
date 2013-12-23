@@ -33,7 +33,6 @@ gem 'thinking-sphinx'
 gem 'flying-sphinx'
 
 gem 'kaminari'
-gem 'nested_form'
 
 group :development do
   gem 'better_errors'
