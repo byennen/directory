@@ -23,7 +23,7 @@
         %td= company.zip
         %td= company.country
         %td= company.phone_1
-        %td= company.logo_package.name
+        %td= company.logo_package.name if company.logo_package
         %td
           = link_to "edit", edit_company_path(company) if company.user == current_user 
 .span12=paginate @companies
