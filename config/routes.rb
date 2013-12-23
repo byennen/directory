@@ -14,6 +14,9 @@ MetalsDirectory::Application.routes.draw do
     member do
       get :update_logo_package
     end
+    collection do
+      get :my_companies
+    end
   end
 
   root :to => "pages#home"

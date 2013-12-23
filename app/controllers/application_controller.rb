@@ -13,4 +13,12 @@ class ApplicationController < ActionController::Base
     @settings = Setting.first
   end
 
+  def after_sign_in_path_for(resource)
+    if company = resource.companies.not_complete.last
+      company_registration_steps_path(company)
+    else
+      root_path
+    end
+  end
+
 end

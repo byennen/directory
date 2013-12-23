@@ -39,7 +39,7 @@
 
       .selection_cost_box.span6
         %strong.total_cost TOTAL COST
-        %input#print_selections_cost{value: '$0.00'}
+        %input#print_selections_cost{value: "$#{@company.print_cost}"}
 
     .row-fluid
       .span12
@@ -58,7 +58,7 @@
 
       .selection_cost_box.span6
         %strong.total_cost TOTAL COST
-        %input#online_selections_cost{value: '$0.00'}
+        %input#online_selections_cost{value: "$#{@company.online_cost}"}
 
     .row-fluid
       .span12
