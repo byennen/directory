@@ -43,24 +43,27 @@
           %input#metal_service_center_or_distributor_checkbox{type: "checkbox"}
 
         #equipment_sales_categories
-          .span6.top
+          .span12.top
             %h5 EQUIPMENT SALES CATEGORIES
             = f.association :equipment_categorizables, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-          .span6.top
-            %h5 EQUIPMENT SALES SUB-CATEGORIES
-            = f.association :equipment_sub_categorizables, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-        .span6.no-lmar.top
+          -#.span6.top
+          -#  %h5 EQUIPMENT SALES SUB-CATEGORIES
+          -#  = f.association :equipment_sub_categorizables, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+          -#
+        .span12.no-lmar.top
           %h5 MATERIALS CATEGORIES
           = f.association :material_categorizables, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-        .span6.top
-          %h5 MATERIALS SUB-CATEGORIES
-          = f.association :material_sub_categorizables, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-        .span6.no-lmar.top
+        -#.span6.top
+        -#  %h5 MATERIALS SUB-CATEGORIES
+        -#  = f.association :material_sub_categorizables, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        -#
+        .span12.no-lmar.top
           %h5 SERVICE CATEGORIES
           = f.association :service_categorizables, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-        .span6.top
-          %h5 SERVICE SUB-CATEGORIES
-          = f.association :service_sub_categorizables, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        -#.span6.top
+        -#  %h5 SERVICE SUB-CATEGORIES
+        -#  = f.association :service_sub_categorizables, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
+        -#
         .span12
           .form-actions
             %button.btn.btn-primary.pull-right

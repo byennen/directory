@@ -1,5 +1,6 @@
 MetalsDirectory::Application.routes.draw do
 
+
   get 'about', to: 'pages#about', as: 'about'
   get 'media-kit', to: 'pages#media_kit', as: 'media_kit'
   get 'associations', to: 'pages#associations', as: 'associations'
@@ -24,6 +25,8 @@ MetalsDirectory::Application.routes.draw do
 
   namespace :admin do
     resources :companies
+    get 'settings', to: 'settings#edit', as: 'settings'
+    resources :settings
     #resources :categories
     resources :orders
     resources :users

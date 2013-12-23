@@ -10,6 +10,9 @@ puts 'user: ' << user.email
 user.confirm!
 user.add_role :admin
 
+puts 'Settings'
+Setting.create(print_edition_deadline: '2013-05-02')
+
 puts 'Create Logo Packages'
 LogoPackage.where(name: 'GOLD, 2 INCH LOGO 4-color logo').first_or_create
 LogoPackage.where(name: 'GOLD, 1 INCH LOGO 4-color logo').first_or_create
@@ -18,11 +21,16 @@ LogoPackage.where(name: 'SILVER, 1 INCH LOGO B/W logo').first_or_create
 LogoPackage.where(name: 'FREE LISTING, NO LOGO').first_or_create
 
 puts 'Create Equipment Categories'
-Equipment.where(name: 'Folding machines').first_or_create
+#@category_1 = Category.where(name: 'Bending equipment').first_or_create
+#SubCategory.where(name: 'Folding machines', category_id: @category_1.id).first_or_create
+
+#Equipment.where(name: 'Folding machines').first_or_create
 Equipment.where(name: 'Roll benders, angle or sheet/plate').first_or_create
 Equipment.where(name: 'Sheet/plate, folding').first_or_create
 Equipment.where(name: 'Sheet/plate, panel').first_or_create
 Equipment.where(name: 'Tube & pipe benders').first_or_create
+
+#Casting and forging
 Equipment.where(name: 'Billet cutters').first_or_create
 Equipment.where(name: 'Billet molds').first_or_create
 Equipment.where(name: 'Casting equipment, die').first_or_create #Casting equipment, die
@@ -38,6 +46,8 @@ Equipment.where(name: 'Sensors, molten metal level').first_or_create #Sensors, m
 Equipment.where(name: 'Strip accumulators').first_or_create #Strip accumulators
 Equipment.where(name: 'Strip casting machines, continuous').first_or_create #Strip casting machines, continuous
 Equipment.where(name: 'Strip guides').first_or_create #Strip guides
+
+#Coil processing
 Equipment.where(name: 'Blanking lines').first_or_create #Blanking lines
 Equipment.where(name: 'Blanking machines').first_or_create #Blanking machines
 Equipment.where(name: 'Coil cars').first_or_create #Coil cars
@@ -81,6 +91,8 @@ Equipment.where(name: 'Software, coil optimization').first_or_create #Software, 
 Equipment.where(name: 'Straighteners, coil').first_or_create #Straighteners, coil
 Equipment.where(name: 'Tension leveling lines').first_or_create #Tension leveling lines
 Equipment.where(name: 'Uncoilers').first_or_create #Uncoilers
+
+#Heating and cooling
 Equipment.where(name: 'Billet & die heaters').first_or_create #Billet & die heaters
 Equipment.where(name: 'Blowers, fans & exhausters').first_or_create #Blowers, fans & exhausters
 Equipment.where(name: 'Burners, furnace & oven').first_or_create #Burners, furnace & oven
@@ -104,6 +116,8 @@ Equipment.where(name: 'Incinerators').first_or_create #Incinerators
 Equipment.where(name: 'Oven controls, gas').first_or_create #Oven controls, gas
 Equipment.where(name: 'Ovens, coil').first_or_create #Ovens, coil
 Equipment.where(name: 'Ovens, paint baking').first_or_create #Ovens, paint baking
+
+#Metal finishing
 Equipment.where(name: 'Abrasive finishing, arbor machines').first_or_create #Abrasive finishing, arbor machines
 Equipment.where(name: 'Buffing & polishing equipment').first_or_create #Buffing & polishing equipment
 Equipment.where(name: 'Coating lines, roller coating').first_or_create #Coating lines, roller coating
@@ -126,6 +140,8 @@ Equipment.where(name: 'Spray booths').first_or_create #Spray booths
 Equipment.where(name: 'Spray equipment').first_or_create #Spray equipment
 Equipment.where(name: 'Tanks, metal finishing').first_or_create #Tanks, metal finishing
 Equipment.where(name: 'Tapping devices, die-mounted').first_or_create #Tapping devices, die-mounted
+
+#Laser technology
 Equipment.where(name: 'Laser assist gas system').first_or_create #Laser assist gas system
 Equipment.where(name: 'Laser cutting equipment').first_or_create #Laser cutting equipment
 Equipment.where(name: 'Laser cutting equipment, 3-D').first_or_create #Laser cutting equipment, 3-D
@@ -135,6 +151,8 @@ Equipment.where(name: 'Laser cutting equipment, plasma combination').first_or_cr
 Equipment.where(name: 'Laser cutting equipment, punch combination').first_or_create #Laser cutting equipment, punch combination
 Equipment.where(name: 'Laser cutting equipment, special order').first_or_create #Laser cutting equipment, special order
 Equipment.where(name: 'Laser, replacement optics').first_or_create #Laser, replacement optics
+
+#Material handling
 Equipment.where(name: 'Air feeders').first_or_create #Air feeders
 Equipment.where(name: 'Automated storage & retrieval systems').first_or_create #Automated storage & retrieval systems
 Equipment.where(name: 'Baling machines').first_or_create #Baling machines
@@ -162,12 +180,16 @@ Equipment.where(name: 'Strapping equipment').first_or_create #Strapping equipmen
 Equipment.where(name: 'Stretch wrapping equipment').first_or_create #Stretch wrapping equipment
 Equipment.where(name: 'Under-the-hook equipment').first_or_create #Under-the-hook equipment
 Equipment.where(name: 'Vacuum lifts').first_or_create #Vacuum lifts
+
+#Press brakes
 Equipment.where(name: 'Press brake gauges, back/front').first_or_create #Press brake gauges, back/front
 Equipment.where(name: 'Press brakes').first_or_create #Press brakes
 Equipment.where(name: 'Press brakes, electric/servo').first_or_create #Press brakes, electric/servo
 Equipment.where(name: 'Press brakes, hand').first_or_create #Press brakes, hand
 Equipment.where(name: 'Press brakes, hydraulic').first_or_create #Press brakes, hydraulic
 Equipment.where(name: 'Press brakes, mechanical').first_or_create #Press brakes, mechanical
+
+#Presses
 Equipment.where(name: 'Cutoff presses').first_or_create #Cutoff presses
 Equipment.where(name: 'Extrusion press tools').first_or_create #Extrusion press tools
 Equipment.where(name: 'Extrusion pullers').first_or_create #Extrusion pullers
@@ -224,6 +246,8 @@ Equipment.where(name: 'Software, stamping simulation').first_or_create #Software
 Equipment.where(name: 'Stamping presses').first_or_create #Stamping presses
 Equipment.where(name: 'Stamping presses, servo').first_or_create #Stamping presses, servo
 Equipment.where(name: 'Valves, press safety').first_or_create #Valves, press safety
+
+#Punching and drilling
 Equipment.where(name: 'Drilling machines, multiple').first_or_create #Drilling machines, multiple
 Equipment.where(name: 'Punch presses').first_or_create #Punch presses
 Equipment.where(name: 'Punch/shear combinations').first_or_create #Punch/shear combinations
@@ -234,11 +258,15 @@ Equipment.where(name: 'Punching machines & nibblers').first_or_create #Punching 
 Equipment.where(name: 'Turret punch presses, hydraulic').first_or_create #Turret punch presses, hydraulic
 Equipment.where(name: 'Turret punch presses, mechanical').first_or_create #Turret punch presses, mechanical
 Equipment.where(name: 'Turret punch presses, with plasma').first_or_create #Turret punch presses, with plasma
+
+#Robotics
 Equipment.where(name: 'Robot tooling/grippers').first_or_create #Robot tooling/grippers
 Equipment.where(name: 'Robots, industrial').first_or_create #Robots, industrial
 Equipment.where(name: 'Robots, material handling').first_or_create #Robots, material handling
 Equipment.where(name: 'Robots, peripherals').first_or_create #Robots, peripherals
 Equipment.where(name: 'Robots, welding').first_or_create #Robots, welding
+
+#Roll forming
 Equipment.where(name: 'Angle rolls').first_or_create #Angle rolls
 Equipment.where(name: 'Plate rolls').first_or_create #Plate rolls
 Equipment.where(name: 'Roll forming mills').first_or_create #Roll forming mills

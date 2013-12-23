@@ -3,13 +3,7 @@
     .span12
       #homepage.row-fluid
         .span2
-          = image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
-          %h3.act-now
-            %span.act-now-hightlight
-              Act Now!
-            The Deadline to include listings in the print edition is
-            %span.act-now-hightlight
-              May 30th, 2014
+          = render 'shared/directory_deadline'
         .span10
           .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
             %h1.heading MEDIA KIT
@@ -103,7 +97,7 @@
                 %h4 
                   Mechanical Specs/Print Specs/Digital Requirements
               %p
-              = link_to 'See Mechanical Specs', "http://staging.themetalsdirectory.com/media-kit"
+              = link_to('See Mechanical Specs', asset_path("MD-SPECS.pdf"))
             %p
               For more information, contact Carlotta Lacy at 312/654-2318 or
               = mail_to 'carlotta@modernmetals.com'

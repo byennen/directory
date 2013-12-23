@@ -1,0 +1,7 @@
+= image_tag('the-metals-directory-magazine.png', class: 'the-metals-directory-magazine')
+%h3.act-now
+  %span.act-now-hightlight
+    Act Now!
+  The Deadline to include listings in the print edition is
+  %span.act-now-hightlight
+    = @settings.print_edition_deadline.to_formatted_s(:long)
