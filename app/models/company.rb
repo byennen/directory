@@ -58,6 +58,14 @@ class Company < ActiveRecord::Base
     [city, addr_state, country].reject{ |a| a.blank? }.join(", ")
   end
 
+  def print_cost
+    print_selections.count*75
+  end
+
+  def online_cost
+    online_selections.count*400
+  end
+
   def total_amount
     print_selections.count*75 + online_selections.count*400
   end
