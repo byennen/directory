@@ -20,6 +20,10 @@ LogoPackage.where(name: 'SILVER, 2 INCH LOGO B/W logo').first_or_create
 LogoPackage.where(name: 'SILVER, 1 INCH LOGO B/W logo').first_or_create
 LogoPackage.where(name: 'FREE LISTING, NO LOGO').first_or_create
 
+10.times do |i|
+  Company.create(contact_name: 'Demo', company_name: "Demo company ##{i}", sub_company_name: 'Demo', address_1: 'Demo', address_2: 'Demo', city: 'Demo', addr_state: 'Demo', zip: 'Demo', country: 'Demo')
+end
+
 puts 'Create Equipment Categories'
 #@category_1 = Category.where(name: 'Bending equipment').first_or_create
 #SubCategory.where(name: 'Folding machines', category_id: @category_1.id).first_or_create
