@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   end
 
   def create_current_users_company
-    company = current_user.companies.build
+    company = companies.build
     company.save(validate: false)
   end
 
