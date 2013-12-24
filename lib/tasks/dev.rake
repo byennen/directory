@@ -31,4 +31,7 @@ namespace :dev do
     end
   end
 
+  task :update_company_state => :environment do
+    Company.update_all state: 'general'
+  end
 end
