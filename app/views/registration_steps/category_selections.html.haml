@@ -42,10 +42,28 @@
           %strong If you are a Metal Service Center / Distributor or Metal Products check this.
           %input#metal_service_center_or_distributor_checkbox{type: "checkbox"}
 
-        #equipment_sales_categories
+        #equipment_sales_categories.multiple-nested-list
+          .select-ids{data: {name: "company[equipment_categorizable_ids][]"}}
+            - @company.equipment_categorizable_ids.each do |id|
+              = f.hidden_field :equipment_categorizable_ids, multiple: true, value: id
           .span12.top
             %h5 EQUIPMENT SALES CATEGORIES
-            = f.association :equipment_categorizables, collection: Equipment.master.order('name'), label: false, :input_html => {class: 'searchable'}
+            .span4
+              .nested-list.left-list
+                - Equipment.master.each do |e|
+                  .item-row
+                    .item{data: {id: e.id}, class: "#{'disabled' if @company.equipment_categorizables.include?(e)}"}= e.name
+                    .sub-list.hide
+                      - e.sub_equipments.each do |sub|
+                        .item.sub-item{data: {id: sub.id}, class: "#{'disabled' if @company.equipment_categorizables.include?(sub)}"}= sub.name
+            .span1.nested-list-move
+              %i.icon-arrow-right
+            .pan4.no-lmar
+              .nested-list.right-list
+                - @company.equipment_categorizables.each do |eq|
+                  .item{data: {id: eq.id}}=eq.name
+
+            =# f.association :equipment_categorizables, collection: Equipment.master.order('name'), label: false, :input_html => {class: 'searchable'}
           -#.span6.top
           -#  %h5 EQUIPMENT SALES SUB-CATEGORIES
           -#  = f.association :equipment_sub_categorizables, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
