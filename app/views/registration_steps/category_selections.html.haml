@@ -63,25 +63,48 @@
                 - @company.equipment_categorizables.each do |eq|
                   .item{data: {id: eq.id}}=eq.name
 
-            =# f.association :equipment_categorizables, collection: Equipment.master.order('name'), label: false, :input_html => {class: 'searchable'}
-          -#.span6.top
-          -#  %h5 EQUIPMENT SALES SUB-CATEGORIES
-          -#  = f.association :equipment_sub_categorizables, collection: Equipment.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-          -#
-        .span12.no-lmar.top
-          %h5 MATERIALS CATEGORIES
-          = f.association :material_categorizables, collection: Material.master.order('name'), label: false, :input_html => {class: 'searchable'}
-        -#.span6.top
-        -#  %h5 MATERIALS SUB-CATEGORIES
-        -#  = f.association :material_sub_categorizables, collection: Material.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-        -#
-        .span12.no-lmar.top
-          %h5 SERVICE CATEGORIES
-          = f.association :service_categorizables, collection: Service.master.order('name'), label: false, :input_html => {class: 'searchable'}
-        -#.span6.top
-        -#  %h5 SERVICE SUB-CATEGORIES
-        -#  = f.association :service_sub_categorizables, collection: Service.all(order: 'name'), label: false, :input_html => {class: 'searchable'}
-        -#
+        .multiple-nested-list
+          .select-ids{data: {name: "company[material_categorizable_ids][]"}}
+            - @company.material_categorizable_ids.each do |id|
+              = f.hidden_field :material_categorizable_ids, multiple: true, value: id
+          .span12.top
+            %h5 MATERIALS CATEGORIES
+            .span4
+              .nested-list.left-list
+                - Material.master.each do |cat|
+                  .item-row
+                    .item{data: {id: cat.id}, class: "#{'disabled' if @company.material_categorizables.include?(cat)}"}= cat.name
+                    .sub-list.hide
+                      - cat.sub_materials.each do |sub|
+                        .item.sub-item{data: {id: sub.id}, class: "#{'disabled' if @company.material_categorizables.include?(sub)}"}= sub.name
+            .span1.nested-list-move
+              %i.icon-arrow-right
+            .pan4.no-lmar
+              .nested-list.right-list
+                - @company.material_categorizables.each do |cat|
+                  .item{data: {id: cat.id}}=cat.name
+
+        .multiple-nested-list
+          .select-ids{data: {name: "company[service_categorizable_ids][]"}}
+            - @company.service_categorizable_ids.each do |id|
+              = f.hidden_field :service_categorizable_ids, multiple: true, value: id
+          .span12.top
+            %h5 SERVICES CATEGORIES
+            .span4
+              .nested-list.left-list
+                - Service.master.each do |cat|
+                  .item-row
+                    .item{data: {id: cat.id}, class: "#{'disabled' if @company.material_categorizables.include?(cat)}"}= cat.name
+                    .sub-list.hide
+                      - cat.sub_services.each do |sub|
+                        .item.sub-item{data: {id: sub.id}, class: "#{'disabled' if @company.material_categorizables.include?(sub)}"}= sub.name
+            .span1.nested-list-move
+              %i.icon-arrow-right
+            .pan4.no-lmar
+              .nested-list.right-list
+                - @company.service_categorizables.each do |cat|
+                  .item{data: {id: cat.id}}=cat.name
+
         .span12
           .form-actions
             %button.btn.btn-primary.pull-right
