@@ -7,7 +7,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @companies = Company.order(:company_name)
   end
 
   # GET /companies/1
@@ -22,6 +22,9 @@ class Admin::CompaniesController < Admin::ApplicationController
 
   # GET /companies/1/edit
   def edit
+    @equipment_categories = @company.equipment_categorizables
+    @material_categories = @company.material_categorizables
+    @service_categories = @company.service_categorizables
   end
 
   # POST /companies
