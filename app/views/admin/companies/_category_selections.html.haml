@@ -1,0 +1,34 @@
+.span10
+  %h4 CATEGORY LOGO SELECTION (PRINT)
+  %h5 Equipment Categories
+  .control-group.check_boxes.optional
+    #equipment-print.controls
+      = render partial: 'equipment_print'
+
+  %h5 Material Categories
+  .control-group.check_boxes.optional
+    #material-print.controls
+      = render partial: "material_print"
+
+  %h5 Service Categories
+  .control-group.check_boxes.optional
+    #service-print.controls
+      = render partial: "service_print"
+    
+.span10.top
+  %h4  CATEGORY SPONSORSHIP (ONLINE)
+  %h5 Equipment Categories
+  .control-group.check_boxes.optional
+    #equipment-online.controls
+      = render partial: "equipment_online"
+ 
+  %h5 Material Categories
+  .control-group.check_boxes.optional
+    #material-online.controls
+      = render partial: "material_online"
+
+
+  %h5 Service Categories
+  .control-group.check_boxes.optional
+    #service-online.controls
+      = render partial: "service_online"

@@ -1,5 +1,4 @@
 class Admin::CompaniesController < Admin::ApplicationController
-  load_and_authorize_resource
 
   before_action :set_company, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new, :edit]
@@ -18,6 +17,9 @@ class Admin::CompaniesController < Admin::ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
+    @equipment_categories = []
+    @material_categories = []
+    @service_categories = []
   end
 
   # GET /companies/1/edit
@@ -46,6 +48,11 @@ class Admin::CompaniesController < Admin::ApplicationController
   # PATCH/PUT /companies/1
   # PATCH/PUT /companies/1.json
   def update
+    params
+    ['equipment_print_printable_ids', 'material_print_printable_ids', 'service_print_printable_ids',
+      'equipment_online_onlineable_ids', 'material_online_onlineable_ids', 'service_online_onlineable_ids'].each do |cat|
+      params[:company][cat] = [] if params[:company][cat].blank?
+    end
     respond_to do |format|
       if @company.update(company_params)
         format.html { redirect_to admin_companies_path, notice: 'Company was successfully updated.' }
@@ -55,6 +62,19 @@ class Admin::CompaniesController < Admin::ApplicationController
         format.json { render json: @company.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def update_categories
+    @company =  params[:company_id]=='new' ? Company.new : Company.find(params[:company_id])
+    case params[:cat]
+      when 'equipment'
+        @equipment_categories = Equipment.find params[:ids]
+      when 'material'
+        @material_categories = Material.find params[:ids]
+      when 'service'
+        @service_categories = Service.find params[:ids]
+    end
+    respond_to :js
   end
 
   # DELETE /companies/1
@@ -91,8 +111,7 @@ class Admin::CompaniesController < Admin::ApplicationController
                                       :fax, :_destroy
                                       ],
                                     equipment_categorizable_ids: [], material_categorizable_ids: [],
-                                    service_categorizable_ids: [], equipment_sub_categorizable_ids: [],
-                                    material_sub_categorizable_ids: [], service_sub_categorizable_ids: [],
+                                    service_categorizable_ids: [],
                                     equipment_print_printable_ids: [], material_print_printable_ids: [],
                                     service_print_printable_ids: [], equipment_online_onlineable_ids: [],
                                     material_online_onlineable_ids: [], service_online_onlineable_ids: [],

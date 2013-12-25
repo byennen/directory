@@ -33,7 +33,7 @@
         %strong If you are a Metal Service Center / Distributor or Metal Products check this.
         %input#metal_service_center_or_distributor_checkbox{type: "checkbox"}
 
-      #equipment_sales_categories.multiple-nested-list
+      #equipment_sales_categories.multiple-nested-list{data: {cat: "equipment"}}
         .select-ids{data: {name: "company[equipment_categorizable_ids][]"}}
           - @company.equipment_categorizable_ids.each do |id|
             = f.hidden_field :equipment_categorizable_ids, multiple: true, value: id
@@ -54,7 +54,7 @@
               - @company.equipment_categorizables.each do |eq|
                 .item{data: {id: eq.id}}=eq.name
 
-      .multiple-nested-list
+      .multiple-nested-list{data: {cat: "material"}}
         .select-ids{data: {name: "company[material_categorizable_ids][]"}}
           - @company.material_categorizable_ids.each do |id|
             = f.hidden_field :material_categorizable_ids, multiple: true, value: id
@@ -73,9 +73,9 @@
           .pan4.no-lmar
             .nested-list.right-list
               - @company.material_categorizables.each do |cat|
-                .item{data: {id: cat.id}}=cat.name
+                .item.remove-item{data: {id: cat.id}}=cat.name
 
-      .multiple-nested-list
+      .multiple-nested-list{data: {cat: "service"}}
         .select-ids{data: {name: "company[service_categorizable_ids][]"}}
           - @company.service_categorizable_ids.each do |id|
             = f.hidden_field :service_categorizable_ids, multiple: true, value: id
@@ -94,31 +94,11 @@
           .pan4.no-lmar
             .nested-list.right-list
               - @company.service_categorizables.each do |cat|
-                .item{data: {id: cat.id}}=cat.name
+                .item.remove-item{data: {id: cat.id}}=cat.name
 
-    .span10
-      %h4 CATEGORY LOGO SELECTION (PRINT)
-      %h5 Equipment Categories
-      = f.association :equipment_print_printables, collection: @equipment_categories, label: false, as: :check_boxes
-
-      %h5 Material Categories
-      = f.association :material_print_printables, collection: @material_categories, label: false, as: :check_boxes
-
-      %h5 Service Categories
-      = f.association :service_print_printables, collection: @service_categories, label: false, as: :check_boxes
-    
-    .span10.top
-      %h4  CATEGORY SPONSORSHIP (ONLINE)
-      %h5 Equipment Categories
-      = f.association :equipment_online_onlineables, collection: @equipment_categories, label: false, as: :check_boxes
-
-      %h5 Material Categories
-      = f.association :material_online_onlineables, collection: @material_categories, label: false, as: :check_boxes
-
-      %h5 Service Categories
-      = f.association :service_online_onlineables, collection: @service_categories, label: false, as: :check_boxes
+    = render partial: "category_selections", locals: {f: f}
   .form-actions.span12
     = f.button :submit
     = link_to 'Back', admin_companies_path, class: 'btn'
-
-= javascript_include_tag 'category_selections'
+= hidden_field_tag :company_id, @company.id || 'new'
+= javascript_include_tag 'admin/categories', 'category_selections'
