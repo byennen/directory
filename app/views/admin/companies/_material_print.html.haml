@@ -1,0 +1,5 @@
+- @material_categories.each do |cat|
+  %label.checkbox
+    - checked = @company.material_print_printable_ids.include?(cat.id)
+    = check_box :company, :material_print_printable_ids, {checked: checked, multiple: true, include_hidden: false, class: "check_boxes optional"}, cat.id
+    = cat.name

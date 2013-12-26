@@ -1,0 +1,9 @@
+- if @equipment_categories
+  $("#equipment-print").html("#{escape_javascript(render(partial: 'equipment_print'))}");
+  $("#equipment-online").html("#{escape_javascript(render(partial: 'equipment_online'))}");
+- elsif @material_categories 
+  $("#material-print").html("#{escape_javascript(render(partial: 'material_print'))}");
+  $("#material-online").html("#{escape_javascript(render(partial: 'material_online'))}");
+- elsif @service_categories
+  $("#service-print").html("#{escape_javascript(render(partial: 'service_print'))}");
+  $("#service-online").html("#{escape_javascript(render(partial: 'service_online'))}");

@@ -24,7 +24,11 @@ MetalsDirectory::Application.routes.draw do
   devise_for :users, :controllers => {registrations: 'registrations', confirmations: 'confirmations'}
 
   namespace :admin do
-    resources :companies
+    resources :companies do
+      collection do
+        get :update_categories
+      end
+    end
     get 'settings', to: 'settings#edit', as: 'settings'
     resources :settings
     #resources :categories

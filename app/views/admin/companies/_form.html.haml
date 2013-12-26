@@ -26,53 +26,79 @@
       = render 'branch_fields', f: builder
     = link_to_add_fields "Add branch", f, :branches
     %hr
-    / %h3 Equipment Categories
-    
-    / = hidden_field_tag "user[category_ids][]", nil
-    / - @equipment_categories.each do |category|
-    /   = check_box "user[category_ids]", category.id
-    /   = label_tag dom_id(category), category.name
-    
-    / %h5 Materials
-    / = hidden_field_tag "user[category_ids][]", nil
-    / - @material_categories.each do |category|
-    /   = check_box "user[category_ids]", category.id
-    /   = label_tag dom_id(category), category.name
-    
-    / %h5 Services
-    / = hidden_field_tag "user[category_ids][]", nil
-    / - @service_categories.each do |category|
-    /   = check_box "user[category_ids]", category.id
-    /   = label_tag dom_id(category), category.name
-    / %hr
-    / %h3 Category Selections
-    / .row-fluid
-    /   .span6{style: 'margin-bottom: 40px;'}
-    /     %h4 CATEGORY LOGO SELECTION (PRINT)
-    /     %p Company logos are $50...
-    /     = hidden_field_tag "user[category_ids][]", nil
-    /     - @categories.each do |category|
-    /       = check_box "user[category_ids]", category.id
-    /       = label_tag dom_id(category), category.name
-    /   .span6
-    /     .category-logo-selection-cost
-    /       %strong
-    /         Total Cost
-    / .row-fluid
-    /   .span6{style: 'margin-bottom: 40px;'}
-    /     %h4 CATEGORY SPONSORSHIP (ONLINE)
-    /     %p $400...
-    /     = hidden_field_tag "user[category_ids][]", nil
-    /     - @categories.each do |category|
-    /       = check_box "user[category_ids]", category.id
-    /       = label_tag dom_id(category), category.name
-    /   .span6
-    /     .category-sponsorship-cost
-    /       %strong
-    /     Total Cost
 
-  .form-actions
+    %h2 Categories Selection
+    .span12
+      %label.checkbox
+        %strong If you are a Metal Service Center / Distributor or Metal Products check this.
+        %input#metal_service_center_or_distributor_checkbox{type: "checkbox"}
+
+      #equipment_sales_categories.multiple-nested-list{data: {cat: "equipment"}}
+        .select-ids{data: {name: "company[equipment_categorizable_ids][]"}}
+          - @company.equipment_categorizable_ids.each do |id|
+            = f.hidden_field :equipment_categorizable_ids, multiple: true, value: id
+        .span12.top
+          %h5 EQUIPMENT SALES CATEGORIES
+          .span3
+            .nested-list.left-list
+              - Equipment.master.each do |e|
+                .item-row
+                  .item{data: {id: e.id}, class: "#{'disabled' if @company.equipment_categorizables.include?(e)}"}= e.name
+                  .sub-list.hide
+                    - e.sub_equipments.each do |sub|
+                      .item.sub-item{data: {id: sub.id}, class: "#{'disabled' if @company.equipment_categorizables.include?(sub)}"}= sub.name
+          .span1.nested-list-move
+            %i.icon-arrow-right
+          .pan4.no-lmar
+            .nested-list.right-list
+              - @company.equipment_categorizables.each do |eq|
+                .item{data: {id: eq.id}}=eq.name
+
+      .multiple-nested-list{data: {cat: "material"}}
+        .select-ids{data: {name: "company[material_categorizable_ids][]"}}
+          - @company.material_categorizable_ids.each do |id|
+            = f.hidden_field :material_categorizable_ids, multiple: true, value: id
+        .span12
+          %h5 MATERIALS CATEGORIES
+          .span3
+            .nested-list.left-list
+              - Material.master.each do |cat|
+                .item-row
+                  .item{data: {id: cat.id}, class: "#{'disabled' if @company.material_categorizables.include?(cat)}"}= cat.name
+                  .sub-list.hide
+                    - cat.sub_materials.each do |sub|
+                      .item.sub-item{data: {id: sub.id}, class: "#{'disabled' if @company.material_categorizables.include?(sub)}"}= sub.name
+          .span1.nested-list-move
+            %i.icon-arrow-right
+          .pan4.no-lmar
+            .nested-list.right-list
+              - @company.material_categorizables.each do |cat|
+                .item.remove-item{data: {id: cat.id}}=cat.name
+
+      .multiple-nested-list{data: {cat: "service"}}
+        .select-ids{data: {name: "company[service_categorizable_ids][]"}}
+          - @company.service_categorizable_ids.each do |id|
+            = f.hidden_field :service_categorizable_ids, multiple: true, value: id
+        .span12
+          %h5 SERVICES CATEGORIES
+          .span3
+            .nested-list.left-list
+              - Service.master.each do |cat|
+                .item-row
+                  .item{data: {id: cat.id}, class: "#{'disabled' if @company.material_categorizables.include?(cat)}"}= cat.name
+                  .sub-list.hide
+                    - cat.sub_services.each do |sub|
+                      .item.sub-item{data: {id: sub.id}, class: "#{'disabled' if @company.material_categorizables.include?(sub)}"}= sub.name
+          .span1.nested-list-move
+            %i.icon-arrow-right
+          .pan4.no-lmar
+            .nested-list.right-list
+              - @company.service_categorizables.each do |cat|
+                .item.remove-item{data: {id: cat.id}}=cat.name
+
+    = render partial: "category_selections", locals: {f: f}
+  .form-actions.span12
     = f.button :submit
-    |
     = link_to 'Back', admin_companies_path, class: 'btn'
-
+= hidden_field_tag :company_id, @company.id || 'new'
+= javascript_include_tag 'admin/categories', 'category_selections'
