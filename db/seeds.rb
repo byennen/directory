@@ -32,8 +32,9 @@ SubEquipment.where(name: 'Sheet/plate, folding', parent_id: @category_1.id).firs
 SubEquipment.where(name: 'Sheet/plate, panel', parent_id: @category_1.id).first_or_create
 SubEquipment.where(name: 'Tube & pipe benders', parent_id: @category_1.id).first_or_create
 
-##Casting and forging
-#Equipment.where(name: 'Billet cutters').first_or_create
+puts 'Adding Casting and forging'
+@category_2 = Equipment.where(name: 'Casting and forging').first_or_create
+SubEquipment.where(name: 'Billet cutters', parent_id: @category_2.id).first_or_create
 #Equipment.where(name: 'Billet molds').first_or_create
 #Equipment.where(name: 'Casting equipment, die').first_or_create #Casting equipment, die
 #Equipment.where(name: 'Casting equipment, direct chill').first_or_create #Casting equipment, direct chill
