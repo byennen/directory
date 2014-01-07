@@ -97,7 +97,7 @@ SubEquipment.where(name: 'Tension leveling lines', parent_id: @category_3.id).fi
 SubEquipment.where(name: 'Uncoilers', parent_id: @category_3.id).first_or_create #Uncoilers
 
 puts 'Adding Heating and cooling'
-@category_4 = Equipment.where(name: 'Heating and cooling', parent_id: @category_4.id).first_or_create
+@category_4 = Equipment.where(name: 'Heating and cooling').first_or_create
 SubEquipment.where(name: 'Billet & die heaters', parent_id: @category_4.id).first_or_create #Billet & die heaters
 SubEquipment.where(name: 'Blowers, fans & exhausters', parent_id: @category_4.id).first_or_create #Blowers, fans & exhausters
 SubEquipment.where(name: 'Burners, furnace & oven', parent_id: @category_4.id).first_or_create #Burners, furnace & oven
@@ -160,7 +160,7 @@ SubEquipment.where(name: 'Laser cutting equipment, special order', parent_id: @c
 SubEquipment.where(name: 'Laser, replacement optics', parent_id: @category_6.id).first_or_create #Laser, replacement optics
 
 puts 'Adding Material handling'
-@category_7 = Equipment.where(name: 'Material handling', parent_id: @category_7.id).first_or_create
+@category_7 = Equipment.where(name: 'Material handling').first_or_create
 SubEquipment.where(name: 'Air feeders', parent_id: @category_7.id).first_or_create #Air feeders
 SubEquipment.where(name: 'Automated storage & retrieval systems', parent_id: @category_7.id).first_or_create #Automated storage & retrieval systems
 SubEquipment.where(name: 'Baling machines', parent_id: @category_7.id).first_or_create #Baling machines
@@ -198,8 +198,8 @@ SubEquipment.where(name: 'Press brakes, hand', parent_id: @category_8.id).first_
 SubEquipment.where(name: 'Press brakes, hydraulic', parent_id: @category_8.id).first_or_create #Press brakes, hydraulic
 SubEquipment.where(name: 'Press brakes, mechanical', parent_id: @category_8.id).first_or_create #Press brakes, mechanical
 
-puts 'Addinng presses'
-@cateogry_9 = Equipment.where(name: 'Presses').first_or_create
+puts 'Adding presses'
+@category_9 = Equipment.where(name: 'Presses').first_or_create
 SubEquipment.where(name: 'Cutoff presses', parent_id: @category_9.id).first_or_create #Cutoff presses
 SubEquipment.where(name: 'Extrusion press tools', parent_id: @category_9.id).first_or_create #Extrusion press tools
 SubEquipment.where(name: 'Extrusion pullers', parent_id: @category_9.id).first_or_create #Extrusion pullers
@@ -515,7 +515,10 @@ SubEquipment.where(name: 'Waste treatment systems', parent_id: @category_12.id).
 SubEquipment.where(name: 'Winders, traverse', parent_id: @category_12.id).first_or_create #Winders, traverse
 SubEquipment.where(name: 'Wire forming machinery', parent_id: @category_12.id).first_or_create #Wire forming machinery
 
-#puts 'Create Material Categories'
+puts 'Create Material Categories'
+
+puts 'Proprietary metals and other alloys'
+@category_13 = Material.where(name: 'Proprietary metals and other alloys').first_or_create
 #Material.where(name: 'Bar & rod, exotic alloys').first_or_create
 #Material.where(name: 'Bonderized').first_or_create #Bonderized
 #Material.where(name: 'Cobalt').first_or_create #Cobalt
@@ -530,6 +533,8 @@ SubEquipment.where(name: 'Wire forming machinery', parent_id: @category_12.id).f
 #Material.where(name: 'Tube & pipe, alloy').first_or_create #Tube & pipe, alloy
 #Material.where(name: 'Tube & pipe, chrome/moly').first_or_create #Tube & pipe, chrome/moly
 #Material.where(name: 'Tube & pipe, exotic alloys').first_or_create #Tube & pipe, exotic alloys
+
+# Aluminum
 #Material.where(name: 'Bar & rod').first_or_create #Bar & rod
 #Material.where(name: 'Bar & rod, aluminum alloys').first_or_create #Bar & rod, aluminum alloys
 #Material.where(name: 'Bar & rod, extruded').first_or_create #Bar & rod, extruded
@@ -546,11 +551,15 @@ SubEquipment.where(name: 'Wire forming machinery', parent_id: @category_12.id).f
 #Material.where(name: 'Tooling plate').first_or_create #Tooling plate
 #Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
 #Material.where(name: 'Tube & pipe, aluminum alloys').first_or_create #Tube & pipe, aluminum alloys
+
+# Brass
 #Material.where(name: 'Bar & rod').first_or_create #Bar & rod
 #Material.where(name: 'Plate').first_or_create #Plate
 #Material.where(name: 'Sheet & coil').first_or_create #Sheet & coil
 #Material.where(name: 'Strip').first_or_create #Strip
 #Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
+
+# Bronze
 #Material.where(name: 'Bar & rod').first_or_create #Bar & rod
 #Material.where(name: 'Bearing bronze').first_or_create #Bearing bronze
 #Material.where(name: 'Plate').first_or_create #Plate
@@ -740,10 +749,8 @@ SubEquipment.where(name: 'Wire forming machinery', parent_id: @category_12.id).f
 #Material.where(name: 'Rubber products').first_or_create #Rubber products
 #Material.where(name: 'Rust inhibitors').first_or_create #Rust inhibitors
 #Material.where(name: 'Strip coil separators').first_or_create #Strip coil separators
-#
-#
-#
-#puts 'Create Service Categories'
+
+puts 'Create Service Categories'
 #Service.where(name: 'Bar & rod, exotic alloys').first_or_create
 #Service.where(name: 'Consulting, business').first_or_create #Consulting, business
 #Service.where(name: 'Consulting, recruitment').first_or_create #Consulting, recruitment
