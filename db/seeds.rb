@@ -290,637 +290,723 @@ SubEquipment.where(name: 'Rolls, embossing', parent_id: @category_12.id).first_o
 SubEquipment.where(name: 'Rolls, rolling mill', parent_id: @category_12.id).first_or_create #Rolls, rolling mill
 SubEquipment.where(name: 'Rolls, rubber & polyurethane', parent_id: @category_12.id).first_or_create #Rolls, rubber & polyurethane
 SubEquipment.where(name: 'Shape control, rolling mills', parent_id: @category_12.id).first_or_create #Shape control, rolling mills
-SubEquipment.where(name: 'Air purifying systems', parent_id: @category_12.id).first_or_create #Air purifying systems
-SubEquipment.where(name: 'Control systems, pollution', parent_id: @category_12.id).first_or_create #Control systems, pollution
-SubEquipment.where(name: 'Dust collectors', parent_id: @category_12.id).first_or_create #Dust collectors
-SubEquipment.where(name: 'Pollution control systems', parent_id: @category_12.id).first_or_create #Pollution control systems
-SubEquipment.where(name: 'Safety equipment, apparel', parent_id: @category_12.id).first_or_create #Safety equipment, apparel
-SubEquipment.where(name: 'Safety equipment, barriers & machine guards', parent_id: @category_12.id).first_or_create #Safety equipment, barriers & machine guards
-SubEquipment.where(name: 'Safety equipment, brake monitors', parent_id: @category_12.id).first_or_create #Safety equipment, brake monitors
-SubEquipment.where(name: 'Safety equipment, clutches & brakes', parent_id: @category_12.id).first_or_create #Safety equipment, clutches & brakes
-SubEquipment.where(name: 'Safety equipment, floor mats', parent_id: @category_12.id).first_or_create #Safety equipment, floor mats
-SubEquipment.where(name: 'Safety equipment, light curtains', parent_id: @category_12.id).first_or_create #Safety equipment, light curtains
-SubEquipment.where(name: 'Safety equipment, lockout/tagout devices', parent_id: @category_12.id).first_or_create #Safety equipment, lockout/tagout devices
-SubEquipment.where(name: 'Safety equipment, machine guards', parent_id: @category_12.id).first_or_create #Safety equipment, machine guards
-SubEquipment.where(name: 'Safety equipment, palm buttons', parent_id: @category_12.id).first_or_create #Safety equipment, palm buttons
-SubEquipment.where(name: 'Safety equipment, presence-sensing devices', parent_id: @category_12.id).first_or_create #Safety equipment, presence-sensing devices
-SubEquipment.where(name: 'Safety equipment, welding protection', parent_id: @category_12.id).first_or_create #Safety equipment, welding protection
-SubEquipment.where(name: 'Abrasive cutoff machines', parent_id: @category_12.id).first_or_create #Abrasive cutoff machines
-SubEquipment.where(name: 'Air knife, drying', parent_id: @category_12.id).first_or_create #Air knife, drying
-SubEquipment.where(name: 'Cutoff machines, saws', parent_id: @category_12.id).first_or_create #Cutoff machines, saws
-SubEquipment.where(name: 'Cutoff machines, tube & pipe', parent_id: @category_12.id).first_or_create #Cutoff machines, tube & pipe
-SubEquipment.where(name: 'Cutting cells & systems', parent_id: @category_12.id).first_or_create #Cutting cells & systems
-SubEquipment.where(name: 'Flame cutting equipment', parent_id: @category_12.id).first_or_create #Flame cutting equipment
-SubEquipment.where(name: 'Miter cutoff saws, single & double', parent_id: @category_12.id).first_or_create #Miter cutoff saws, single & double
-SubEquipment.where(name: 'Notching machines', parent_id: @category_12.id).first_or_create #Notching machines
-SubEquipment.where(name: 'Oxy-fuel cutting equipment', parent_id: @category_12.id).first_or_create #Oxy-fuel cutting equipment
-SubEquipment.where(name: 'Plasma cutting equipment', parent_id: @category_12.id).first_or_create #Plasma cutting equipment
-SubEquipment.where(name: 'Saw blades, all types', parent_id: @category_12.id).first_or_create #Saw blades, all types
-SubEquipment.where(name: 'Saws, band', parent_id: @category_12.id).first_or_create #Saws, band
-SubEquipment.where(name: 'Saws, bar & billet', parent_id: @category_12.id).first_or_create #Saws, bar & billet
-SubEquipment.where(name: 'Saws, circular', parent_id: @category_12.id).first_or_create #Saws, circular
-SubEquipment.where(name: 'Saws, circular cutoff (cold)', parent_id: @category_12.id).first_or_create #Saws, circular cutoff (cold)
-SubEquipment.where(name: 'Saws, contour', parent_id: @category_12.id).first_or_create #Saws, contour
-SubEquipment.where(name: 'Saws, other', parent_id: @category_12.id).first_or_create #Saws, other
-SubEquipment.where(name: 'Saws/shears, extrusion', parent_id: @category_12.id).first_or_create #Saws/shears, extrusion
-SubEquipment.where(name: 'Shear knives', parent_id: @category_12.id).first_or_create #Shear knives
-SubEquipment.where(name: 'Shearing machines', parent_id: @category_12.id).first_or_create #Shearing machines
-SubEquipment.where(name: 'Shearing machines, flying', parent_id: @category_12.id).first_or_create #Shearing machines, flying
-SubEquipment.where(name: 'Spacers, shear', parent_id: @category_12.id).first_or_create #Spacers, shear
-SubEquipment.where(name: 'Waterjet cutting equipment', parent_id: @category_12.id).first_or_create #Waterjet cutting equipment
-SubEquipment.where(name: 'Bending', parent_id: @category_12.id).first_or_create #Bending
-SubEquipment.where(name: 'CAD/CAM', parent_id: @category_12.id).first_or_create #CAD/CAM
-SubEquipment.where(name: 'ERP/MRP Supply chain management', parent_id: @category_12.id).first_or_create #ERP/MRP Supply chain management
-SubEquipment.where(name: 'Job costing & estimating', parent_id: @category_12.id).first_or_create #Job costing & estimating
-SubEquipment.where(name: 'NC/CNC programming', parent_id: @category_12.id).first_or_create #NC/CNC programming
-SubEquipment.where(name: 'Nesting', parent_id: @category_12.id).first_or_create #Nesting
-SubEquipment.where(name: 'Process planning & scheduling', parent_id: @category_12.id).first_or_create #Process planning & scheduling
-SubEquipment.where(name: 'Sheet metal layout, flat pattern', parent_id: @category_12.id).first_or_create #Sheet metal layout, flat pattern
-SubEquipment.where(name: 'Shop-floor tracking & flow control', parent_id: @category_12.id).first_or_create #Shop-floor tracking & flow control
-SubEquipment.where(name: 'Simulation, process modeling', parent_id: @category_12.id).first_or_create #Simulation, process modeling
-SubEquipment.where(name: 'Tool management & storage', parent_id: @category_12.id).first_or_create #Tool management & storage
-SubEquipment.where(name: 'Carbide dies', parent_id: @category_12.id).first_or_create #Carbide dies
-SubEquipment.where(name: 'Die buttons', parent_id: @category_12.id).first_or_create #Die buttons
-SubEquipment.where(name: 'Die carts/lift tables', parent_id: @category_12.id).first_or_create #Die carts/lift tables
-SubEquipment.where(name: 'Die changing equipment', parent_id: @category_12.id).first_or_create #Die changing equipment
-SubEquipment.where(name: 'Die clamps', parent_id: @category_12.id).first_or_create #Die clamps
-SubEquipment.where(name: 'Die cushions', parent_id: @category_12.id).first_or_create #Die cushions
-SubEquipment.where(name: 'Die design', parent_id: @category_12.id).first_or_create #Die design
-SubEquipment.where(name: 'Die film', parent_id: @category_12.id).first_or_create #Die film
-SubEquipment.where(name: 'Die holders', parent_id: @category_12.id).first_or_create #Die holders
-SubEquipment.where(name: 'Die inserts', parent_id: @category_12.id).first_or_create #Die inserts
-SubEquipment.where(name: 'Die inserts', parent_id: @category_12.id).first_or_create #Die lifters
-SubEquipment.where(name: 'Die lubrication systems', parent_id: @category_12.id).first_or_create #Die lubrication systems
-SubEquipment.where(name: 'Die pins', parent_id: @category_12.id).first_or_create #Die pins
-SubEquipment.where(name: 'Die protection systems', parent_id: @category_12.id).first_or_create #Die protection systems
-SubEquipment.where(name: 'Die separators', parent_id: @category_12.id).first_or_create #Die separators
-SubEquipment.where(name: 'Die sets & accessories', parent_id: @category_12.id).first_or_create #Die sets & accessories
-SubEquipment.where(name: 'Die springs', parent_id: @category_12.id).first_or_create #Die springs
-SubEquipment.where(name: 'Die storage & retrieval systems', parent_id: @category_12.id).first_or_create #Die storage & retrieval systems
-SubEquipment.where(name: 'Die transfer, handling systems', parent_id: @category_12.id).first_or_create #Die transfer, handling systems
-SubEquipment.where(name: 'Dies, blank & form', parent_id: @category_12.id).first_or_create #Dies, blank & form
-SubEquipment.where(name: 'Dies, blanking', parent_id: @category_12.id).first_or_create #Dies, blanking
-SubEquipment.where(name: 'Dies, drawing/forming', parent_id: @category_12.id).first_or_create #Dies, drawing/forming
-SubEquipment.where(name: 'Dies, extrusion', parent_id: @category_12.id).first_or_create #Dies, extrusion
-SubEquipment.where(name: 'Dies, permanent mold casting', parent_id: @category_12.id).first_or_create #Dies, permanent mold casting
-SubEquipment.where(name: 'Dies, piercing & notching', parent_id: @category_12.id).first_or_create #Dies, piercing & notching
-SubEquipment.where(name: 'Dies, progressive', parent_id: @category_12.id).first_or_create #Dies, progressive
-SubEquipment.where(name: 'Dies, punch press', parent_id: @category_12.id).first_or_create #Dies, punch press
-SubEquipment.where(name: 'Dies, roll forming', parent_id: @category_12.id).first_or_create #Dies, roll forming
-SubEquipment.where(name: 'Quick die change systems', parent_id: @category_12.id).first_or_create #Quick die change systems
-SubEquipment.where(name: 'Tooling, bending', parent_id: @category_12.id).first_or_create #Tooling, bending
-SubEquipment.where(name: 'Tooling, ceramic', parent_id: @category_12.id).first_or_create #Tooling, ceramic
-SubEquipment.where(name: 'Tooling, die casting', parent_id: @category_12.id).first_or_create #Tooling, die casting
-SubEquipment.where(name: 'Tooling, extrusion', parent_id: @category_12.id).first_or_create #Tooling, extrusion
-SubEquipment.where(name: 'Tooling, ironworker', parent_id: @category_12.id).first_or_create #Tooling, ironworker
-SubEquipment.where(name: 'Tooling, press brake', parent_id: @category_12.id).first_or_create #Tooling, press brake
-SubEquipment.where(name: 'Tooling, presses', parent_id: @category_12.id).first_or_create #Tooling, presses
-SubEquipment.where(name: 'Tooling, punch & die sets', parent_id: @category_12.id).first_or_create #Tooling, punch & die sets
-SubEquipment.where(name: 'Tooling, roll forming', parent_id: @category_12.id).first_or_create #Tooling, roll forming
-SubEquipment.where(name: 'Tooling, short-run', parent_id: @category_12.id).first_or_create #Tooling, short-run
-SubEquipment.where(name: 'Tooling, tube & pipe mills', parent_id: @category_12.id).first_or_create #Tooling, tube & pipe mills
-SubEquipment.where(name: 'Tooling, tube bending', parent_id: @category_12.id).first_or_create #Tooling, tube bending
-SubEquipment.where(name: 'Tooling, turret punch press', parent_id: @category_12.id).first_or_create #Tooling, turret punch press
-SubEquipment.where(name: 'Tooling, unitized', parent_id: @category_12.id).first_or_create #Tooling, unitized
-SubEquipment.where(name: 'Tooling, urethane', parent_id: @category_12.id).first_or_create #Tooling, urethane
-SubEquipment.where(name: 'Tools, carbide cutting', parent_id: @category_12.id).first_or_create #Tools, carbide cutting
-SubEquipment.where(name: 'Tube perforating machines', parent_id: @category_12.id).first_or_create #Tube perforating machines
-SubEquipment.where(name: 'Tungsten carbide tooling', parent_id: @category_12.id).first_or_create #Tungsten carbide tooling
-SubEquipment.where(name: 'Cold draw equipment', parent_id: @category_12.id).first_or_create #Cold draw equipment
-SubEquipment.where(name: 'Drawbenches', parent_id: @category_12.id).first_or_create #Drawbenches
-SubEquipment.where(name: 'Mandrels', parent_id: @category_12.id).first_or_create #Mandrels
-SubEquipment.where(name: 'Tube & pipe mills', parent_id: @category_12.id).first_or_create #Tube & pipe mills
-SubEquipment.where(name: 'Tube cutting machinery', parent_id: @category_12.id).first_or_create #Tube cutting machinery
-SubEquipment.where(name: 'Tube louvers', parent_id: @category_12.id).first_or_create #Tube louvers
-SubEquipment.where(name: 'Tube-end forming equipment', parent_id: @category_12.id).first_or_create #Tube-end forming equipment
-SubEquipment.where(name: 'Tube/pipe bending machines', parent_id: @category_12.id).first_or_create #Tube/pipe bending machines
-SubEquipment.where(name: 'Automatic inspection systems', parent_id: @category_12.id).first_or_create #Automatic inspection systems
-SubEquipment.where(name: 'Coating thickness testers', parent_id: @category_12.id).first_or_create #Coating thickness testers
-SubEquipment.where(name: 'Coordinate measuring machines', parent_id: @category_12.id).first_or_create #Coordinate measuring machines
-SubEquipment.where(name: 'Gauges, cutoff', parent_id: @category_12.id).first_or_create #Gauges, cutoff
-SubEquipment.where(name: 'Gauges, dimensional', parent_id: @category_12.id).first_or_create #Gauges, dimensional
-SubEquipment.where(name: 'Gauges, thickness', parent_id: @category_12.id).first_or_create #Gauges, thickness
-SubEquipment.where(name: 'Gauges, thickness, noncontact', parent_id: @category_12.id).first_or_create #Gauges, thickness, noncontact
-SubEquipment.where(name: 'Gauges, thickness, ultrasonic', parent_id: @category_12.id).first_or_create #Gauges, thickness, ultrasonic
-SubEquipment.where(name: 'Hardness testers', parent_id: @category_12.id).first_or_create #Hardness testers
-SubEquipment.where(name: 'Inspection lights', parent_id: @category_12.id).first_or_create #Inspection lights
-SubEquipment.where(name: 'Inspection systems', parent_id: @category_12.id).first_or_create #Inspection systems
-SubEquipment.where(name: 'Inspection/measurement equipment, sheet/plate', parent_id: @category_12.id).first_or_create #Inspection/measurement equipment, sheet/plate
-SubEquipment.where(name: 'Inspection/measurement equipment, tube & pipe', parent_id: @category_12.id).first_or_create #Inspection/measurement equipment, tube & pipe
-SubEquipment.where(name: 'Load monitors', parent_id: @category_12.id).first_or_create #Load monitors
-SubEquipment.where(name: 'Measuring equipment', parent_id: @category_12.id).first_or_create #Measuring equipment
-SubEquipment.where(name: 'Metrology systems', parent_id: @category_12.id).first_or_create #Metrology systems
-SubEquipment.where(name: 'SPC (statistical process control) gauging', parent_id: @category_12.id).first_or_create #SPC (statistical process control) gauging
-SubEquipment.where(name: 'Spectrometers', parent_id: @category_12.id).first_or_create #Spectrometers
-SubEquipment.where(name: 'Ultrasonic testing equipment', parent_id: @category_12.id).first_or_create #Ultrasonic testing equipment
-SubEquipment.where(name: 'Accessories (gloves, holders, etc.)', parent_id: @category_12.id).first_or_create #Accessories (gloves, holders, etc.)
-SubEquipment.where(name: 'Arc welding equipment', parent_id: @category_12.id).first_or_create #Arc welding equipment
-SubEquipment.where(name: 'Beveling machines', parent_id: @category_12.id).first_or_create #Beveling machines
-SubEquipment.where(name: 'Brazing/soldering equipment', parent_id: @category_12.id).first_or_create #Brazing/soldering equipment
-SubEquipment.where(name: 'Cells & systems', parent_id: @category_12.id).first_or_create #Cells & systems
-SubEquipment.where(name: 'Consumables (electrodes, gases)', parent_id: @category_12.id).first_or_create #Consumables (electrodes, gases)
-SubEquipment.where(name: 'Coolers/chillers', parent_id: @category_12.id).first_or_create #Coolers/chillers
-SubEquipment.where(name: 'Deslagging machines', parent_id: @category_12.id).first_or_create #Deslagging machines
-SubEquipment.where(name: 'Dross systems', parent_id: @category_12.id).first_or_create #Dross systems
-SubEquipment.where(name: 'Electronic controls', parent_id: @category_12.id).first_or_create #Electronic controls
-SubEquipment.where(name: 'Fume ducting', parent_id: @category_12.id).first_or_create #Fume ducting
-SubEquipment.where(name: 'Fume removal systems/equipment', parent_id: @category_12.id).first_or_create #Fume removal systems/equipment
-SubEquipment.where(name: 'GMAW/GTAW', parent_id: @category_12.id).first_or_create #GMAW/GTAW
-SubEquipment.where(name: 'Guns', parent_id: @category_12.id).first_or_create #Guns
-SubEquipment.where(name: 'Helmets', parent_id: @category_12.id).first_or_create #Helmets
-SubEquipment.where(name: 'High-frequency', parent_id: @category_12.id).first_or_create #High-frequency
-SubEquipment.where(name: 'Laser', parent_id: @category_12.id).first_or_create #Laser
-SubEquipment.where(name: 'Plasma', parent_id: @category_12.id).first_or_create #Plasma
-SubEquipment.where(name: 'Platens/work tables', parent_id: @category_12.id).first_or_create #Platens/work tables
-SubEquipment.where(name: 'Positioners', parent_id: @category_12.id).first_or_create #Positioners
-SubEquipment.where(name: 'Resistance welding, flash', parent_id: @category_12.id).first_or_create #Resistance welding, flash
-SubEquipment.where(name: 'Resistance welding, seam', parent_id: @category_12.id).first_or_create #Resistance welding, seam
-SubEquipment.where(name: 'Resistance welding, spot, stud', parent_id: @category_12.id).first_or_create #Resistance welding, spot, stud
-SubEquipment.where(name: 'Robotic Welding Cells', parent_id: @category_12.id).first_or_create #Robotic Welding Cells
-SubEquipment.where(name: 'Torches', parent_id: @category_12.id).first_or_create #Torches
-SubEquipment.where(name: 'Weld fittings', parent_id: @category_12.id).first_or_create #Weld fittings
-SubEquipment.where(name: 'Weld-nut/stud feeders', parent_id: @category_12.id).first_or_create #Weld-nut/stud feeders
-SubEquipment.where(name: 'Welding wire', parent_id: @category_12.id).first_or_create #Welding wire
-SubEquipment.where(name: 'Workholding equipment', parent_id: @category_12.id).first_or_create #Workholding equipment
-SubEquipment.where(name: 'Acid purification equipment', parent_id: @category_12.id).first_or_create #Acid purification equipment
-SubEquipment.where(name: 'Air ejection equipment', parent_id: @category_12.id).first_or_create #Air ejection equipment
-SubEquipment.where(name: 'Automated assembly systems', parent_id: @category_12.id).first_or_create #Automated assembly systems
-SubEquipment.where(name: 'Automatic nut feeder', parent_id: @category_12.id).first_or_create #Automatic nut feeder
-SubEquipment.where(name: 'Canisters, extrusion', parent_id: @category_12.id).first_or_create #Canisters, extrusion
-SubEquipment.where(name: 'Clamps, anodizing, plating', parent_id: @category_12.id).first_or_create #Clamps, anodizing, plating
-SubEquipment.where(name: 'Cleaning equipment, aqueous, high-pressure', parent_id: @category_12.id).first_or_create #Cleaning equipment, aqueous, high-pressure
-SubEquipment.where(name: 'Cleaning equipment, ultrasonic', parent_id: @category_12.id).first_or_create #Cleaning equipment, ultrasonic
-SubEquipment.where(name: 'Cleaning equipment, vapor/mist', parent_id: @category_12.id).first_or_create #Cleaning equipment, vapor/mist
-SubEquipment.where(name: 'Containers, extrusion', parent_id: @category_12.id).first_or_create #Containers, extrusion
-SubEquipment.where(name: 'Containers, packaging', parent_id: @category_12.id).first_or_create #Containers, packaging
-SubEquipment.where(name: 'Control systems', parent_id: @category_12.id).first_or_create #Control systems
-SubEquipment.where(name: 'Controls, motion', parent_id: @category_12.id).first_or_create #Controls, motion
-SubEquipment.where(name: 'Controls, noise/vibration', parent_id: @category_12.id).first_or_create #Controls, noise/vibration
-SubEquipment.where(name: 'Controls, remote', parent_id: @category_12.id).first_or_create #Controls, remote
-SubEquipment.where(name: 'Cylinders, hydraulic & pneumatic', parent_id: @category_12.id).first_or_create #Cylinders, hydraulic & pneumatic
-SubEquipment.where(name: 'Cylinders, nitrogen die', parent_id: @category_12.id).first_or_create #Cylinders, nitrogen die
-SubEquipment.where(name: 'Deoilers', parent_id: @category_12.id).first_or_create #Deoilers
-SubEquipment.where(name: 'Erecting machinery', parent_id: @category_12.id).first_or_create #Erecting machinery
-SubEquipment.where(name: 'Expander rings', parent_id: @category_12.id).first_or_create #Expander rings
-SubEquipment.where(name: 'Fasteners, self-forming for sheet metal', parent_id: @category_12.id).first_or_create #Fasteners, self-forming for sheet metal
-SubEquipment.where(name: 'Filtration systems', parent_id: @category_12.id).first_or_create #Filtration systems
-SubEquipment.where(name: 'Forming & flanging machines', parent_id: @category_12.id).first_or_create #Forming & flanging machines
-SubEquipment.where(name: 'Injection molding equipment', parent_id: @category_12.id).first_or_create #Injection molding equipment
-SubEquipment.where(name: 'Ironworkers', parent_id: @category_12.id).first_or_create #Ironworkers
-SubEquipment.where(name: 'Lubricant applicators', parent_id: @category_12.id).first_or_create #Lubricant applicators
-SubEquipment.where(name: 'Machine monitors', parent_id: @category_12.id).first_or_create #Machine monitors
-SubEquipment.where(name: 'Machinery mounts', parent_id: @category_12.id).first_or_create #Machinery mounts
-SubEquipment.where(name: 'Machinery moving & erecting', parent_id: @category_12.id).first_or_create #Machinery moving & erecting
-SubEquipment.where(name: 'Manipulators', parent_id: @category_12.id).first_or_create #Manipulators
-SubEquipment.where(name: 'Marking', parent_id: @category_12.id).first_or_create #Marking
-SubEquipment.where(name: 'Mining equipment', parent_id: @category_12.id).first_or_create #Mining equipment
-SubEquipment.where(name: 'Optical sensing/gauging systems', parent_id: @category_12.id).first_or_create #Optical sensing/gauging systems
-SubEquipment.where(name: 'Panel, roll and linear cutting optimization', parent_id: @category_12.id).first_or_create #Panel, roll and linear cutting optimization
-SubEquipment.where(name: 'Parts identification & marking systems', parent_id: @category_12.id).first_or_create #Parts identification & marking systems
-SubEquipment.where(name: 'Payoff reels', parent_id: @category_12.id).first_or_create #Payoff reels
-SubEquipment.where(name: 'Portable tools, beveling', parent_id: @category_12.id).first_or_create #Portable tools, beveling
-SubEquipment.where(name: 'Portable tools, cutting', parent_id: @category_12.id).first_or_create #Portable tools, cutting
-SubEquipment.where(name: 'Portable tools, drilling', parent_id: @category_12.id).first_or_create #Portable tools, drilling
-SubEquipment.where(name: 'Portable tools, grinding', parent_id: @category_12.id).first_or_create #Portable tools, grinding
-SubEquipment.where(name: 'Portable tools, punching', parent_id: @category_12.id).first_or_create #Portable tools, punching
-SubEquipment.where(name: 'Programmable controls & switches', parent_id: @category_12.id).first_or_create #Programmable controls & switches
-SubEquipment.where(name: 'Proximity switches', parent_id: @category_12.id).first_or_create #Proximity switches
-SubEquipment.where(name: 'Pulley machines', parent_id: @category_12.id).first_or_create #Pulley machines
-SubEquipment.where(name: 'Rectifiers', parent_id: @category_12.id).first_or_create #Rectifiers
-SubEquipment.where(name: 'Recycling equipment', parent_id: @category_12.id).first_or_create #Recycling equipment
-SubEquipment.where(name: 'Riveting', parent_id: @category_12.id).first_or_create #Riveting
-SubEquipment.where(name: 'Runout tables', parent_id: @category_12.id).first_or_create #Runout tables
-SubEquipment.where(name: 'Scrap choppers', parent_id: @category_12.id).first_or_create #Scrap choppers
-SubEquipment.where(name: 'Scrap processing equipment', parent_id: @category_12.id).first_or_create #Scrap processing equipment
-SubEquipment.where(name: 'Sensors, color', parent_id: @category_12.id).first_or_create #Sensors, color
-SubEquipment.where(name: 'Sensors, load', parent_id: @category_12.id).first_or_create #Sensors, load
-SubEquipment.where(name: 'Sensors, noncontact', parent_id: @category_12.id).first_or_create #Sensors, noncontact
-SubEquipment.where(name: 'Servo feeds', parent_id: @category_12.id).first_or_create #Servo feeds
-SubEquipment.where(name: 'Sheeting lines', parent_id: @category_12.id).first_or_create #Sheeting lines
-SubEquipment.where(name: 'Slide forming & spring machines', parent_id: @category_12.id).first_or_create #Slide forming & spring machines
-SubEquipment.where(name: 'Spring forming machines', parent_id: @category_12.id).first_or_create #Spring forming machines
-SubEquipment.where(name: 'Stems, extrusion', parent_id: @category_12.id).first_or_create #Stems, extrusion
-SubEquipment.where(name: 'Straighteners, tube & bar', parent_id: @category_12.id).first_or_create #Straighteners, tube & bar
-SubEquipment.where(name: 'Stretchers, extrusion', parent_id: @category_12.id).first_or_create #Stretchers, extrusion
-SubEquipment.where(name: 'Swaging machines', parent_id: @category_12.id).first_or_create #Swaging machines
-SubEquipment.where(name: 'Thermocouples', parent_id: @category_12.id).first_or_create #Thermocouples
-SubEquipment.where(name: 'Transformers', parent_id: @category_12.id).first_or_create #Transformers
-SubEquipment.where(name: 'Trim handling systems', parent_id: @category_12.id).first_or_create #Trim handling systems
-SubEquipment.where(name: 'Upsetters', parent_id: @category_12.id).first_or_create #Upsetters
-SubEquipment.where(name: 'Used equipment', parent_id: @category_12.id).first_or_create #Used equipment
-SubEquipment.where(name: 'Valves, proportional', parent_id: @category_12.id).first_or_create #Valves, proportional
-SubEquipment.where(name: 'Vision systems', parent_id: @category_12.id).first_or_create #Vision systems
-SubEquipment.where(name: 'Washers', parent_id: @category_12.id).first_or_create #Washers
-SubEquipment.where(name: 'Waste treatment systems', parent_id: @category_12.id).first_or_create #Waste treatment systems
-SubEquipment.where(name: 'Winders, traverse', parent_id: @category_12.id).first_or_create #Winders, traverse
-SubEquipment.where(name: 'Wire forming machinery', parent_id: @category_12.id).first_or_create #Wire forming machinery
+
+puts 'Adding Safety Equipment'
+@category_13 = Equipment.where(name: 'Safety Equipment').first_or_create
+SubEquipment.where(name: 'Air purifying systems', parent_id: @category_13.id).first_or_create #Air purifying systems
+SubEquipment.where(name: 'Control systems, pollution', parent_id: @category_13.id).first_or_create #Control systems, pollution
+SubEquipment.where(name: 'Dust collectors', parent_id: @category_13.id).first_or_create #Dust collectors
+SubEquipment.where(name: 'Pollution control systems', parent_id: @category_13.id).first_or_create #Pollution control systems
+SubEquipment.where(name: 'Safety equipment, apparel', parent_id: @category_13.id).first_or_create #Safety equipment, apparel
+SubEquipment.where(name: 'Safety equipment, barriers & machine guards', parent_id: @category_13.id).first_or_create #Safety equipment, barriers & machine guards
+SubEquipment.where(name: 'Safety equipment, brake monitors', parent_id: @category_13.id).first_or_create #Safety equipment, brake monitors
+SubEquipment.where(name: 'Safety equipment, clutches & brakes', parent_id: @category_13.id).first_or_create #Safety equipment, clutches & brakes
+SubEquipment.where(name: 'Safety equipment, floor mats', parent_id: @category_13.id).first_or_create #Safety equipment, floor mats
+SubEquipment.where(name: 'Safety equipment, light curtains', parent_id: @category_13.id).first_or_create #Safety equipment, light curtains
+SubEquipment.where(name: 'Safety equipment, lockout/tagout devices', parent_id: @category_13.id).first_or_create #Safety equipment, lockout/tagout devices
+SubEquipment.where(name: 'Safety equipment, machine guards', parent_id: @category_13.id).first_or_create #Safety equipment, machine guards
+SubEquipment.where(name: 'Safety equipment, palm buttons', parent_id: @category_13.id).first_or_create #Safety equipment, palm buttons
+SubEquipment.where(name: 'Safety equipment, presence-sensing devices', parent_id: @category_13.id).first_or_create #Safety equipment, presence-sensing devices
+SubEquipment.where(name: 'Safety equipment, welding protection', parent_id: @category_13.id).first_or_create #Safety equipment, welding protection
+
+puts 'Adding Sawing and cutting'
+@category_14 = Equipment.where(name: 'Sawing and cutting').first_or_create
+SubEquipment.where(name: 'Abrasive cutoff machines', parent_id: @category_14.id).first_or_create #Abrasive cutoff machines
+SubEquipment.where(name: 'Air knife, drying', parent_id: @category_14.id).first_or_create #Air knife, drying
+SubEquipment.where(name: 'Cutoff machines, saws', parent_id: @category_14.id).first_or_create #Cutoff machines, saws
+SubEquipment.where(name: 'Cutoff machines, tube & pipe', parent_id: @category_14.id).first_or_create #Cutoff machines, tube & pipe
+SubEquipment.where(name: 'Cutting cells & systems', parent_id: @category_14.id).first_or_create #Cutting cells & systems
+SubEquipment.where(name: 'Flame cutting equipment', parent_id: @category_14.id).first_or_create #Flame cutting equipment
+SubEquipment.where(name: 'Miter cutoff saws, single & double', parent_id: @category_14.id).first_or_create #Miter cutoff saws, single & double
+SubEquipment.where(name: 'Notching machines', parent_id: @category_14.id).first_or_create #Notching machines
+SubEquipment.where(name: 'Oxy-fuel cutting equipment', parent_id: @category_14.id).first_or_create #Oxy-fuel cutting equipment
+SubEquipment.where(name: 'Plasma cutting equipment', parent_id: @category_14.id).first_or_create #Plasma cutting equipment
+SubEquipment.where(name: 'Saw blades, all types', parent_id: @category_14.id).first_or_create #Saw blades, all types
+SubEquipment.where(name: 'Saws, band', parent_id: @category_14.id).first_or_create #Saws, band
+SubEquipment.where(name: 'Saws, bar & billet', parent_id: @category_14.id).first_or_create #Saws, bar & billet
+SubEquipment.where(name: 'Saws, circular', parent_id: @category_14.id).first_or_create #Saws, circular
+SubEquipment.where(name: 'Saws, circular cutoff (cold)', parent_id: @category_14.id).first_or_create #Saws, circular cutoff (cold)
+SubEquipment.where(name: 'Saws, contour', parent_id: @category_14.id).first_or_create #Saws, contour
+SubEquipment.where(name: 'Saws, other', parent_id: @category_14.id).first_or_create #Saws, other
+SubEquipment.where(name: 'Saws/shears, extrusion', parent_id: @category_14.id).first_or_create #Saws/shears, extrusion
+SubEquipment.where(name: 'Shear knives', parent_id: @category_14.id).first_or_create #Shear knives
+SubEquipment.where(name: 'Shearing machines', parent_id: @category_14.id).first_or_create #Shearing machines
+SubEquipment.where(name: 'Shearing machines, flying', parent_id: @category_14.id).first_or_create #Shearing machines, flying
+SubEquipment.where(name: 'Spacers, shear', parent_id: @category_14.id).first_or_create #Spacers, shear
+SubEquipment.where(name: 'Waterjet cutting equipment', parent_id: @category_14.id).first_or_create #Waterjet cutting equipment
+
+puts 'Adding Software'
+@category_15 = Equipment.where(name: 'Software').first_or_create
+SubEquipment.where(name: 'Bending', parent_id: @category_15.id).first_or_create #Bending
+SubEquipment.where(name: 'CAD/CAM', parent_id: @category_15.id).first_or_create #CAD/CAM
+SubEquipment.where(name: 'ERP/MRP Supply chain management', parent_id: @category_15.id).first_or_create #ERP/MRP Supply chain management
+SubEquipment.where(name: 'Job costing & estimating', parent_id: @category_15.id).first_or_create #Job costing & estimating
+SubEquipment.where(name: 'NC/CNC programming', parent_id: @category_15.id).first_or_create #NC/CNC programming
+SubEquipment.where(name: 'Nesting', parent_id: @category_15.id).first_or_create #Nesting
+SubEquipment.where(name: 'Process planning & scheduling', parent_id: @category_15.id).first_or_create #Process planning & scheduling
+SubEquipment.where(name: 'Sheet metal layout, flat pattern', parent_id: @category_15.id).first_or_create #Sheet metal layout, flat pattern
+SubEquipment.where(name: 'Shop-floor tracking & flow control', parent_id: @category_15.id).first_or_create #Shop-floor tracking & flow control
+SubEquipment.where(name: 'Simulation, process modeling', parent_id: @category_15.id).first_or_create #Simulation, process modeling
+SubEquipment.where(name: 'Tool management & storage', parent_id: @category_15.id).first_or_create #Tool management & storage
+
+puts 'Adding Tool & die'
+@category_16 = Equipment.where(name: 'Tool & die').first_or_create
+SubEquipment.where(name: 'Carbide dies', parent_id: @category_16.id).first_or_create #Carbide dies
+SubEquipment.where(name: 'Die buttons', parent_id: @category_16.id).first_or_create #Die buttons
+SubEquipment.where(name: 'Die carts/lift tables', parent_id: @category_16.id).first_or_create #Die carts/lift tables
+SubEquipment.where(name: 'Die changing equipment', parent_id: @category_16.id).first_or_create #Die changing equipment
+SubEquipment.where(name: 'Die clamps', parent_id: @category_16.id).first_or_create #Die clamps
+SubEquipment.where(name: 'Die cushions', parent_id: @category_16.id).first_or_create #Die cushions
+SubEquipment.where(name: 'Die design', parent_id: @category_16.id).first_or_create #Die design
+SubEquipment.where(name: 'Die film', parent_id: @category_16.id).first_or_create #Die film
+SubEquipment.where(name: 'Die holders', parent_id: @category_16.id).first_or_create #Die holders
+SubEquipment.where(name: 'Die inserts', parent_id: @category_16.id).first_or_create #Die inserts
+SubEquipment.where(name: 'Die inserts', parent_id: @category_16.id).first_or_create #Die lifters
+SubEquipment.where(name: 'Die lubrication systems', parent_id: @category_16.id).first_or_create #Die lubrication systems
+SubEquipment.where(name: 'Die pins', parent_id: @category_16.id).first_or_create #Die pins
+SubEquipment.where(name: 'Die protection systems', parent_id: @category_16.id).first_or_create #Die protection systems
+SubEquipment.where(name: 'Die separators', parent_id: @category_16.id).first_or_create #Die separators
+SubEquipment.where(name: 'Die sets & accessories', parent_id: @category_16.id).first_or_create #Die sets & accessories
+SubEquipment.where(name: 'Die springs', parent_id: @category_16.id).first_or_create #Die springs
+SubEquipment.where(name: 'Die storage & retrieval systems', parent_id: @category_16.id).first_or_create #Die storage & retrieval systems
+SubEquipment.where(name: 'Die transfer, handling systems', parent_id: @category_16.id).first_or_create #Die transfer, handling systems
+SubEquipment.where(name: 'Dies, blank & form', parent_id: @category_16.id).first_or_create #Dies, blank & form
+SubEquipment.where(name: 'Dies, blanking', parent_id: @category_16.id).first_or_create #Dies, blanking
+SubEquipment.where(name: 'Dies, drawing/forming', parent_id: @category_16.id).first_or_create #Dies, drawing/forming
+SubEquipment.where(name: 'Dies, extrusion', parent_id: @category_16.id).first_or_create #Dies, extrusion
+SubEquipment.where(name: 'Dies, permanent mold casting', parent_id: @category_16.id).first_or_create #Dies, permanent mold casting
+SubEquipment.where(name: 'Dies, piercing & notching', parent_id: @category_16.id).first_or_create #Dies, piercing & notching
+SubEquipment.where(name: 'Dies, progressive', parent_id: @category_16.id).first_or_create #Dies, progressive
+SubEquipment.where(name: 'Dies, punch press', parent_id: @category_16.id).first_or_create #Dies, punch press
+SubEquipment.where(name: 'Dies, roll forming', parent_id: @category_16.id).first_or_create #Dies, roll forming
+SubEquipment.where(name: 'Quick die change systems', parent_id: @category_16.id).first_or_create #Quick die change systems
+SubEquipment.where(name: 'Tooling, bending', parent_id: @category_16.id).first_or_create #Tooling, bending
+SubEquipment.where(name: 'Tooling, ceramic', parent_id: @category_16.id).first_or_create #Tooling, ceramic
+SubEquipment.where(name: 'Tooling, die casting', parent_id: @category_16.id).first_or_create #Tooling, die casting
+SubEquipment.where(name: 'Tooling, extrusion', parent_id: @category_16.id).first_or_create #Tooling, extrusion
+SubEquipment.where(name: 'Tooling, ironworker', parent_id: @category_16.id).first_or_create #Tooling, ironworker
+SubEquipment.where(name: 'Tooling, press brake', parent_id: @category_16.id).first_or_create #Tooling, press brake
+SubEquipment.where(name: 'Tooling, presses', parent_id: @category_16.id).first_or_create #Tooling, presses
+SubEquipment.where(name: 'Tooling, punch & die sets', parent_id: @category_16.id).first_or_create #Tooling, punch & die sets
+SubEquipment.where(name: 'Tooling, roll forming', parent_id: @category_16.id).first_or_create #Tooling, roll forming
+SubEquipment.where(name: 'Tooling, short-run', parent_id: @category_16.id).first_or_create #Tooling, short-run
+SubEquipment.where(name: 'Tooling, tube & pipe mills', parent_id: @category_16.id).first_or_create #Tooling, tube & pipe mills
+SubEquipment.where(name: 'Tooling, tube bending', parent_id: @category_16.id).first_or_create #Tooling, tube bending
+SubEquipment.where(name: 'Tooling, turret punch press', parent_id: @category_16.id).first_or_create #Tooling, turret punch press
+SubEquipment.where(name: 'Tooling, unitized', parent_id: @category_16.id).first_or_create #Tooling, unitized
+SubEquipment.where(name: 'Tooling, urethane', parent_id: @category_16.id).first_or_create #Tooling, urethane
+SubEquipment.where(name: 'Tools, carbide cutting', parent_id: @category_16.id).first_or_create #Tools, carbide cutting
+SubEquipment.where(name: 'Tube perforating machines', parent_id: @category_16.id).first_or_create #Tube perforating machines
+SubEquipment.where(name: 'Tungsten carbide tooling', parent_id: @category_16.id).first_or_create #Tungsten carbide tooling
+
+puts 'Adding Tube & pipe'
+@category_17 = Equipment.where(name: 'Tube & pipe').first_or_create
+SubEquipment.where(name: 'Cold draw equipment', parent_id: @category_17.id).first_or_create #Cold draw equipment
+SubEquipment.where(name: 'Drawbenches', parent_id: @category_17.id).first_or_create #Drawbenches
+SubEquipment.where(name: 'Mandrels', parent_id: @category_17.id).first_or_create #Mandrels
+SubEquipment.where(name: 'Tube & pipe mills', parent_id: @category_17.id).first_or_create #Tube & pipe mills
+SubEquipment.where(name: 'Tube cutting machinery', parent_id: @category_17.id).first_or_create #Tube cutting machinery
+SubEquipment.where(name: 'Tube louvers', parent_id: @category_17.id).first_or_create #Tube louvers
+SubEquipment.where(name: 'Tube-end forming equipment', parent_id: @category_17.id).first_or_create #Tube-end forming equipment
+SubEquipment.where(name: 'Tube/pipe bending machines', parent_id: @category_17.id).first_or_create #Tube/pipe bending machines
+
+puts 'Adding Measurement and quality control'
+@category_18 = Equipment.where(name: 'Measurement and quality control').first_or_create
+SubEquipment.where(name: 'Automatic inspection systems', parent_id: @category_18.id).first_or_create #Automatic inspection systems
+SubEquipment.where(name: 'Coating thickness testers', parent_id: @category_18.id).first_or_create #Coating thickness testers
+SubEquipment.where(name: 'Coordinate measuring machines', parent_id: @category_18.id).first_or_create #Coordinate measuring machines
+SubEquipment.where(name: 'Gauges, cutoff', parent_id: @category_18.id).first_or_create #Gauges, cutoff
+SubEquipment.where(name: 'Gauges, dimensional', parent_id: @category_18.id).first_or_create #Gauges, dimensional
+SubEquipment.where(name: 'Gauges, thickness', parent_id: @category_18.id).first_or_create #Gauges, thickness
+SubEquipment.where(name: 'Gauges, thickness, noncontact', parent_id: @category_18.id).first_or_create #Gauges, thickness, noncontact
+SubEquipment.where(name: 'Gauges, thickness, ultrasonic', parent_id: @category_18.id).first_or_create #Gauges, thickness, ultrasonic
+SubEquipment.where(name: 'Hardness testers', parent_id: @category_18.id).first_or_create #Hardness testers
+SubEquipment.where(name: 'Inspection lights', parent_id: @category_18.id).first_or_create #Inspection lights
+SubEquipment.where(name: 'Inspection systems', parent_id: @category_18.id).first_or_create #Inspection systems
+SubEquipment.where(name: 'Inspection/measurement equipment, sheet/plate', parent_id: @category_18.id).first_or_create #Inspection/measurement equipment, sheet/plate
+SubEquipment.where(name: 'Inspection/measurement equipment, tube & pipe', parent_id: @category_18.id).first_or_create #Inspection/measurement equipment, tube & pipe
+SubEquipment.where(name: 'Load monitors', parent_id: @category_18.id).first_or_create #Load monitors
+SubEquipment.where(name: 'Measuring equipment', parent_id: @category_18.id).first_or_create #Measuring equipment
+SubEquipment.where(name: 'Metrology systems', parent_id: @category_18.id).first_or_create #Metrology systems
+SubEquipment.where(name: 'SPC (statistical process control) gauging', parent_id: @category_18.id).first_or_create #SPC (statistical process control) gauging
+SubEquipment.where(name: 'Spectrometers', parent_id: @category_18.id).first_or_create #Spectrometers
+SubEquipment.where(name: 'Ultrasonic testing equipment', parent_id: @category_18.id).first_or_create #Ultrasonic testing equipment
+
+puts 'Adding Welding'
+@category_19 = Equipment.where(name: 'Welding').first_or_create
+SubEquipment.where(name: 'Accessories (gloves, holders, etc.)', parent_id: @category_19.id).first_or_create #Accessories (gloves, holders, etc.)
+SubEquipment.where(name: 'Arc welding equipment', parent_id: @category_19.id).first_or_create #Arc welding equipment
+SubEquipment.where(name: 'Beveling machines', parent_id: @category_19.id).first_or_create #Beveling machines
+SubEquipment.where(name: 'Brazing/soldering equipment', parent_id: @category_19.id).first_or_create #Brazing/soldering equipment
+SubEquipment.where(name: 'Cells & systems', parent_id: @category_19.id).first_or_create #Cells & systems
+SubEquipment.where(name: 'Consumables (electrodes, gases)', parent_id: @category_19.id).first_or_create #Consumables (electrodes, gases)
+SubEquipment.where(name: 'Coolers/chillers', parent_id: @category_19.id).first_or_create #Coolers/chillers
+SubEquipment.where(name: 'Deslagging machines', parent_id: @category_19.id).first_or_create #Deslagging machines
+SubEquipment.where(name: 'Dross systems', parent_id: @category_19.id).first_or_create #Dross systems
+SubEquipment.where(name: 'Electronic controls', parent_id: @category_19.id).first_or_create #Electronic controls
+SubEquipment.where(name: 'Fume ducting', parent_id: @category_19.id).first_or_create #Fume ducting
+SubEquipment.where(name: 'Fume removal systems/equipment', parent_id: @category_19.id).first_or_create #Fume removal systems/equipment
+SubEquipment.where(name: 'GMAW/GTAW', parent_id: @category_19.id).first_or_create #GMAW/GTAW
+SubEquipment.where(name: 'Guns', parent_id: @category_19.id).first_or_create #Guns
+SubEquipment.where(name: 'Helmets', parent_id: @category_19.id).first_or_create #Helmets
+SubEquipment.where(name: 'High-frequency', parent_id: @category_19.id).first_or_create #High-frequency
+SubEquipment.where(name: 'Laser', parent_id: @category_19.id).first_or_create #Laser
+SubEquipment.where(name: 'Plasma', parent_id: @category_19.id).first_or_create #Plasma
+SubEquipment.where(name: 'Platens/work tables', parent_id: @category_19.id).first_or_create #Platens/work tables
+SubEquipment.where(name: 'Positioners', parent_id: @category_19.id).first_or_create #Positioners
+SubEquipment.where(name: 'Resistance welding, flash', parent_id: @category_19.id).first_or_create #Resistance welding, flash
+SubEquipment.where(name: 'Resistance welding, seam', parent_id: @category_19.id).first_or_create #Resistance welding, seam
+SubEquipment.where(name: 'Resistance welding, spot, stud', parent_id: @category_19.id).first_or_create #Resistance welding, spot, stud
+SubEquipment.where(name: 'Robotic Welding Cells', parent_id: @category_19.id).first_or_create #Robotic Welding Cells
+SubEquipment.where(name: 'Torches', parent_id: @category_19.id).first_or_create #Torches
+SubEquipment.where(name: 'Weld fittings', parent_id: @category_19.id).first_or_create #Weld fittings
+SubEquipment.where(name: 'Weld-nut/stud feeders', parent_id: @category_19.id).first_or_create #Weld-nut/stud feeders
+SubEquipment.where(name: 'Welding wire', parent_id: @category_19.id).first_or_create #Welding wire
+SubEquipment.where(name: 'Workholding equipment', parent_id: @category_19.id).first_or_create #Workholding equipment
+
+puts 'Adding Miscellaneous'
+@category_20 = Equipment.where(name: 'Miscellaneous').first_or_create
+SubEquipment.where(name: 'Acid purification equipment', parent_id: @category_20.id).first_or_create #Acid purification equipment
+SubEquipment.where(name: 'Air ejection equipment', parent_id: @category_20.id).first_or_create #Air ejection equipment
+SubEquipment.where(name: 'Automated assembly systems', parent_id: @category_20.id).first_or_create #Automated assembly systems
+SubEquipment.where(name: 'Automatic nut feeder', parent_id: @category_20.id).first_or_create #Automatic nut feeder
+SubEquipment.where(name: 'Canisters, extrusion', parent_id: @category_20.id).first_or_create #Canisters, extrusion
+SubEquipment.where(name: 'Clamps, anodizing, plating', parent_id: @category_20.id).first_or_create #Clamps, anodizing, plating
+SubEquipment.where(name: 'Cleaning equipment, aqueous, high-pressure', parent_id: @category_20.id).first_or_create #Cleaning equipment, aqueous, high-pressure
+SubEquipment.where(name: 'Cleaning equipment, ultrasonic', parent_id: @category_20.id).first_or_create #Cleaning equipment, ultrasonic
+SubEquipment.where(name: 'Cleaning equipment, vapor/mist', parent_id: @category_20.id).first_or_create #Cleaning equipment, vapor/mist
+SubEquipment.where(name: 'Containers, extrusion', parent_id: @category_20.id).first_or_create #Containers, extrusion
+SubEquipment.where(name: 'Containers, packaging', parent_id: @category_20.id).first_or_create #Containers, packaging
+SubEquipment.where(name: 'Control systems', parent_id: @category_20.id).first_or_create #Control systems
+SubEquipment.where(name: 'Controls, motion', parent_id: @category_20.id).first_or_create #Controls, motion
+SubEquipment.where(name: 'Controls, noise/vibration', parent_id: @category_20.id).first_or_create #Controls, noise/vibration
+SubEquipment.where(name: 'Controls, remote', parent_id: @category_20.id).first_or_create #Controls, remote
+SubEquipment.where(name: 'Cylinders, hydraulic & pneumatic', parent_id: @category_20.id).first_or_create #Cylinders, hydraulic & pneumatic
+SubEquipment.where(name: 'Cylinders, nitrogen die', parent_id: @category_20.id).first_or_create #Cylinders, nitrogen die
+SubEquipment.where(name: 'Deoilers', parent_id: @category_20.id).first_or_create #Deoilers
+SubEquipment.where(name: 'Erecting machinery', parent_id: @category_20.id).first_or_create #Erecting machinery
+SubEquipment.where(name: 'Expander rings', parent_id: @category_20.id).first_or_create #Expander rings
+SubEquipment.where(name: 'Fasteners, self-forming for sheet metal', parent_id: @category_20.id).first_or_create #Fasteners, self-forming for sheet metal
+SubEquipment.where(name: 'Filtration systems', parent_id: @category_20.id).first_or_create #Filtration systems
+SubEquipment.where(name: 'Forming & flanging machines', parent_id: @category_20.id).first_or_create #Forming & flanging machines
+SubEquipment.where(name: 'Injection molding equipment', parent_id: @category_20.id).first_or_create #Injection molding equipment
+SubEquipment.where(name: 'Ironworkers', parent_id: @category_20.id).first_or_create #Ironworkers
+SubEquipment.where(name: 'Lubricant applicators', parent_id: @category_20.id).first_or_create #Lubricant applicators
+SubEquipment.where(name: 'Machine monitors', parent_id: @category_20.id).first_or_create #Machine monitors
+SubEquipment.where(name: 'Machinery mounts', parent_id: @category_20.id).first_or_create #Machinery mounts
+SubEquipment.where(name: 'Machinery moving & erecting', parent_id: @category_20.id).first_or_create #Machinery moving & erecting
+SubEquipment.where(name: 'Manipulators', parent_id: @category_20.id).first_or_create #Manipulators
+SubEquipment.where(name: 'Marking', parent_id: @category_20.id).first_or_create #Marking
+SubEquipment.where(name: 'Mining equipment', parent_id: @category_20.id).first_or_create #Mining equipment
+SubEquipment.where(name: 'Optical sensing/gauging systems', parent_id: @category_20.id).first_or_create #Optical sensing/gauging systems
+SubEquipment.where(name: 'Panel, roll and linear cutting optimization', parent_id: @category_20.id).first_or_create #Panel, roll and linear cutting optimization
+SubEquipment.where(name: 'Parts identification & marking systems', parent_id: @category_20.id).first_or_create #Parts identification & marking systems
+SubEquipment.where(name: 'Payoff reels', parent_id: @category_20.id).first_or_create #Payoff reels
+SubEquipment.where(name: 'Portable tools, beveling', parent_id: @category_20.id).first_or_create #Portable tools, beveling
+SubEquipment.where(name: 'Portable tools, cutting', parent_id: @category_20.id).first_or_create #Portable tools, cutting
+SubEquipment.where(name: 'Portable tools, drilling', parent_id: @category_20.id).first_or_create #Portable tools, drilling
+SubEquipment.where(name: 'Portable tools, grinding', parent_id: @category_20.id).first_or_create #Portable tools, grinding
+SubEquipment.where(name: 'Portable tools, punching', parent_id: @category_20.id).first_or_create #Portable tools, punching
+SubEquipment.where(name: 'Programmable controls & switches', parent_id: @category_20.id).first_or_create #Programmable controls & switches
+SubEquipment.where(name: 'Proximity switches', parent_id: @category_20.id).first_or_create #Proximity switches
+SubEquipment.where(name: 'Pulley machines', parent_id: @category_20.id).first_or_create #Pulley machines
+SubEquipment.where(name: 'Rectifiers', parent_id: @category_20.id).first_or_create #Rectifiers
+SubEquipment.where(name: 'Recycling equipment', parent_id: @category_20.id).first_or_create #Recycling equipment
+SubEquipment.where(name: 'Riveting', parent_id: @category_20.id).first_or_create #Riveting
+SubEquipment.where(name: 'Runout tables', parent_id: @category_20.id).first_or_create #Runout tables
+SubEquipment.where(name: 'Scrap choppers', parent_id: @category_20.id).first_or_create #Scrap choppers
+SubEquipment.where(name: 'Scrap processing equipment', parent_id: @category_20.id).first_or_create #Scrap processing equipment
+SubEquipment.where(name: 'Sensors, color', parent_id: @category_20.id).first_or_create #Sensors, color
+SubEquipment.where(name: 'Sensors, load', parent_id: @category_20.id).first_or_create #Sensors, load
+SubEquipment.where(name: 'Sensors, noncontact', parent_id: @category_20.id).first_or_create #Sensors, noncontact
+SubEquipment.where(name: 'Servo feeds', parent_id: @category_20.id).first_or_create #Servo feeds
+SubEquipment.where(name: 'Sheeting lines', parent_id: @category_20.id).first_or_create #Sheeting lines
+SubEquipment.where(name: 'Slide forming & spring machines', parent_id: @category_20.id).first_or_create #Slide forming & spring machines
+SubEquipment.where(name: 'Spring forming machines', parent_id: @category_20.id).first_or_create #Spring forming machines
+SubEquipment.where(name: 'Stems, extrusion', parent_id: @category_20.id).first_or_create #Stems, extrusion
+SubEquipment.where(name: 'Straighteners, tube & bar', parent_id: @category_20.id).first_or_create #Straighteners, tube & bar
+SubEquipment.where(name: 'Stretchers, extrusion', parent_id: @category_20.id).first_or_create #Stretchers, extrusion
+SubEquipment.where(name: 'Swaging machines', parent_id: @category_20.id).first_or_create #Swaging machines
+SubEquipment.where(name: 'Thermocouples', parent_id: @category_20.id).first_or_create #Thermocouples
+SubEquipment.where(name: 'Transformers', parent_id: @category_20.id).first_or_create #Transformers
+SubEquipment.where(name: 'Trim handling systems', parent_id: @category_20.id).first_or_create #Trim handling systems
+SubEquipment.where(name: 'Upsetters', parent_id: @category_20.id).first_or_create #Upsetters
+SubEquipment.where(name: 'Used equipment', parent_id: @category_20.id).first_or_create #Used equipment
+SubEquipment.where(name: 'Valves, proportional', parent_id: @category_20.id).first_or_create #Valves, proportional
+SubEquipment.where(name: 'Vision systems', parent_id: @category_20.id).first_or_create #Vision systems
+SubEquipment.where(name: 'Washers', parent_id: @category_20.id).first_or_create #Washers
+SubEquipment.where(name: 'Waste treatment systems', parent_id: @category_20.id).first_or_create #Waste treatment systems
+SubEquipment.where(name: 'Winders, traverse', parent_id: @category_20.id).first_or_create #Winders, traverse
+SubEquipment.where(name: 'Wire forming machinery', parent_id: @category_20.id).first_or_create #Wire forming machinery
 
 puts 'Create Material Categories'
 
-puts 'Proprietary metals and other alloys'
-@category_13 = Material.where(name: 'Proprietary metals and other alloys').first_or_create
-#Material.where(name: 'Bar & rod, exotic alloys').first_or_create
-#Material.where(name: 'Bonderized').first_or_create #Bonderized
-#Material.where(name: 'Cobalt').first_or_create #Cobalt
-#Material.where(name: 'Galvalume').first_or_create #Galvalume
-#Material.where(name: 'Hastelloy').first_or_create #Hastelloy
-#Material.where(name: 'Inconel').first_or_create #Inconel
-#Material.where(name: 'Low-melt alloys').first_or_create #Low-melt alloys
-#Material.where(name: 'Plate, alloy steel').first_or_create #Plate, alloy steel
-#Material.where(name: 'Plate, exotic alloys').first_or_create #Plate, exotic alloys
-#Material.where(name: 'Sheet & coil, exotic alloys').first_or_create #Sheet & coil, exotic alloys
-#Material.where(name: 'Strip, exotic alloys').first_or_create #Strip, exotic alloys
-#Material.where(name: 'Tube & pipe, alloy').first_or_create #Tube & pipe, alloy
-#Material.where(name: 'Tube & pipe, chrome/moly').first_or_create #Tube & pipe, chrome/moly
-#Material.where(name: 'Tube & pipe, exotic alloys').first_or_create #Tube & pipe, exotic alloys
+puts 'Adding Proprietary metals and other alloys'
+@category_21 = Material.where(name: 'Proprietary metals and other alloys').first_or_create
+SubMaterial.where(name: 'Bar & rod, exotic alloys', parent_id: @category_21.id).first_or_create
+SubMaterial.where(name: 'Bonderized', parent_id: @category_21.id).first_or_create #Bonderized
+SubMaterial.where(name: 'Cobalt', parent_id: @category_21.id).first_or_create #Cobalt
+SubMaterial.where(name: 'Galvalume', parent_id: @category_21.id).first_or_create #Galvalume
+SubMaterial.where(name: 'Hastelloy', parent_id: @category_21.id).first_or_create #Hastelloy
+SubMaterial.where(name: 'Inconel', parent_id: @category_21.id).first_or_create #Inconel
+SubMaterial.where(name: 'Low-melt alloys', parent_id: @category_21.id).first_or_create #Low-melt alloys
+SubMaterial.where(name: 'Plate, alloy steel', parent_id: @category_21.id).first_or_create #Plate, alloy steel
+SubMaterial.where(name: 'Plate, exotic alloys', parent_id: @category_21.id).first_or_create #Plate, exotic alloys
+SubMaterial.where(name: 'Sheet & coil, exotic alloys', parent_id: @category_21.id).first_or_create #Sheet & coil, exotic alloys
+SubMaterial.where(name: 'Strip, exotic alloys', parent_id: @category_21.id).first_or_create #Strip, exotic alloys
+SubMaterial.where(name: 'Tube & pipe, alloy', parent_id: @category_21.id).first_or_create #Tube & pipe, alloy
+SubMaterial.where(name: 'Tube & pipe, chrome/moly', parent_id: @category_21.id).first_or_create #Tube & pipe, chrome/moly
+SubMaterial.where(name: 'Tube & pipe, exotic alloys', parent_id: @category_21.id).first_or_create #Tube & pipe, exotic alloys
 
-# Aluminum
-#Material.where(name: 'Bar & rod').first_or_create #Bar & rod
-#Material.where(name: 'Bar & rod, aluminum alloys').first_or_create #Bar & rod, aluminum alloys
-#Material.where(name: 'Bar & rod, extruded').first_or_create #Bar & rod, extruded
-#Material.where(name: 'Casting alloys').first_or_create #Casting alloys
-#Material.where(name: 'Coiled sheet').first_or_create #Coiled sheet
-#Material.where(name: 'Filters').first_or_create #Filters
-#Material.where(name: 'Ingot').first_or_create #Ingot
-#Material.where(name: 'Plate').first_or_create #Plate
-#Material.where(name: 'Plate, aluminum alloys').first_or_create #Plate, aluminum alloys
-#Material.where(name: 'Sheet & coil').first_or_create #Sheet & coil
-#Material.where(name: 'Sheet & coil, aluminum alloys').first_or_create #Sheet & coil, aluminum alloys
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Strip, aluminum alloys').first_or_create #Strip, aluminum alloys
-#Material.where(name: 'Tooling plate').first_or_create #Tooling plate
-#Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
-#Material.where(name: 'Tube & pipe, aluminum alloys').first_or_create #Tube & pipe, aluminum alloys
+puts 'Adding Aluminum'
+@category_22 = Material.where(name: 'Aluminum').first_or_create
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_22.id).first_or_create #Bar & rod
+SubMaterial.where(name: 'Bar & rod, aluminum alloys', parent_id: @category_22.id).first_or_create #Bar & rod, aluminum alloys
+SubMaterial.where(name: 'Bar & rod, extruded', parent_id: @category_22.id).first_or_create #Bar & rod, extruded
+SubMaterial.where(name: 'Casting alloys', parent_id: @category_22.id).first_or_create #Casting alloys
+SubMaterial.where(name: 'Coiled sheet', parent_id: @category_22.id).first_or_create #Coiled sheet
+SubMaterial.where(name: 'Filters', parent_id: @category_22.id).first_or_create #Filters
+SubMaterial.where(name: 'Ingot', parent_id: @category_22.id).first_or_create #Ingot
+SubMaterial.where(name: 'Plate', parent_id: @category_22.id).first_or_create #Plate
+SubMaterial.where(name: 'Plate, aluminum alloys', parent_id: @category_22.id).first_or_create #Plate, aluminum alloys
+SubMaterial.where(name: 'Sheet & coil', parent_id: @category_22.id).first_or_create #Sheet & coil
+SubMaterial.where(name: 'Sheet & coil, aluminum alloys', parent_id: @category_22.id).first_or_create #Sheet & coil, aluminum alloys
+SubMaterial.where(name: 'Strip', parent_id: @category_22.id).first_or_create #Strip
+SubMaterial.where(name: 'Strip, aluminum alloys', parent_id: @category_22.id).first_or_create #Strip, aluminum alloys
+SubMaterial.where(name: 'Tooling plate', parent_id: @category_22.id).first_or_create #Tooling plate
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_22.id).first_or_create #Tube & pipe
+SubMaterial.where(name: 'Tube & pipe, aluminum alloys', parent_id: @category_22.id).first_or_create #Tube & pipe, aluminum alloys
 
-# Brass
-#Material.where(name: 'Bar & rod').first_or_create #Bar & rod
-#Material.where(name: 'Plate').first_or_create #Plate
-#Material.where(name: 'Sheet & coil').first_or_create #Sheet & coil
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
+puts 'Adding Brass'
+@category_23 = Material.where(name: 'Brass').first_or_create
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_23.id).first_or_create #Bar & rod
+SubMaterial.where(name: 'Plate', parent_id: @category_23.id).first_or_create #Plate
+SubMaterial.where(name: 'Sheet & coil', parent_id: @category_23.id).first_or_create #Sheet & coil
+SubMaterial.where(name: 'Strip', parent_id: @category_23.id).first_or_create #Strip
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_23.id).first_or_create #Tube & pipe
 
-# Bronze
-#Material.where(name: 'Bar & rod').first_or_create #Bar & rod
-#Material.where(name: 'Bearing bronze').first_or_create #Bearing bronze
-#Material.where(name: 'Plate').first_or_create #Plate
-#Material.where(name: 'Sheet & coil').first_or_create #Sheet & coil
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
-#Material.where(name: 'Bar & rod').first_or_create #Bar & rod
-#Material.where(name: 'Bar & rod, beryllium copper').first_or_create #Bar & rod, beryllium copper
-#Material.where(name: 'Bar & rod, copper alloys').first_or_create #Bar & rod, copper alloys
-#Material.where(name: 'Bar and rod').first_or_create #Bar and rod
-#Material.where(name: 'Plate').first_or_create #Plate
-#Material.where(name: 'Plate, beryllium copper').first_or_create #Plate, beryllium copper
-#Material.where(name: 'Plate, copper alloys').first_or_create #Plate, copper alloys
-#Material.where(name: 'Sheet & coil').first_or_create #Sheet & coil
-#Material.where(name: 'Sheet & coil, beryllium copper').first_or_create #Sheet & coil, beryllium copper
-#Material.where(name: 'Sheet & coil, copper alloys').first_or_create #Sheet & coil, copper alloys
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Strip, beryllium copper').first_or_create #Strip, beryllium copper
-#Material.where(name: 'Strip, copper alloys').first_or_create #Strip, copper alloys
-#Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
-#Material.where(name: 'Tube & pipe, beryllium copper').first_or_create #Tube & pipe, beryllium copper
-#Material.where(name: 'Tube & pipe, copper alloys').first_or_create #Tube & pipe, copper alloys
-#Material.where(name: 'Wire').first_or_create #Wire
-#Material.where(name: 'Anodes').first_or_create #Anodes
-#Material.where(name: 'Casting alloys').first_or_create #Casting alloys
-#Material.where(name: 'Tooling plate').first_or_create #Tooling plate
-#Material.where(name: 'Bar & rod, nickel & nickel alloys').first_or_create #Bar & rod, nickel & nickel alloys
-#Material.where(name: 'Plate').first_or_create	 #Plate
-#Material.where(name: 'Plate, nickel alloys').first_or_create	 #Plate, nickel alloys
-#Material.where(name: 'Sheet & coil').first_or_create	 #Sheet & coil
-#Material.where(name: 'Sheet & coil, nickel alloys').first_or_create	 #Sheet & coil, nickel alloys
-#Material.where(name: 'Strip').first_or_create	 #Strip
-#Material.where(name: 'Strip, nickel alloys').first_or_create	 #Strip, nickel alloys
-#Material.where(name: 'Tube & pipe').first_or_create	 #Tube & pipe
-#Material.where(name: 'Tube & pipe, nickel alloy').first_or_create	 #Tube & pipe, nickel alloy
-#Material.where(name: 'Bar & rod').first_or_create	 #Bar & rod
-#Material.where(name: 'Bar & rod, cold finished').first_or_create	 #Bar & rod, cold finished
-#Material.where(name: 'Bar & rod, cold rolled').first_or_create	 #Bar & rod, cold rolled
-#Material.where(name: 'Bar & rod, hot rolled').first_or_create	 #Bar & rod, hot rolled
-#Material.where(name: 'Bar & rod, stainless steel').first_or_create	 #Bar & rod, stainless steel
-#Material.where(name: 'Bar, cold finished').first_or_create	 #Bar, cold finished
-#Material.where(name: 'Bar, hot rolled').first_or_create #Bar, hot rolled
-#Material.where(name: 'Cold rolled').first_or_create #Cold rolled
-#Material.where(name: 'Die steels').first_or_create #Die steels
-#Material.where(name: 'EPS (eco pickled surface)').first_or_create #EPS (eco pickled surface)
-#Material.where(name: 'Galvanized').first_or_create #Galvanized
-#Material.where(name: 'Galvannealed').first_or_create #Galvannealed
-#Material.where(name: 'Hot rolled').first_or_create #Hot rolled
-#Material.where(name: 'Hot rolled pickled & oiled').first_or_create #Hot rolled pickled & oiled
-#Material.where(name: 'Plate').first_or_create #Plate
-#Material.where(name: 'Plate, carbon steel').first_or_create #Plate, carbon steel
-#Material.where(name: 'Plate, cold rolled').first_or_create #Plate, cold rolled
-#Material.where(name: 'Plate, hot rolled').first_or_create #Plate, hot rolled
-#Material.where(name: 'Plate, stainless steel').first_or_create #Plate, stainless steel
-#Material.where(name: 'Rebar/mesh').first_or_create #Rebar/mesh
-#Material.where(name: 'SCS (smooth clean surface)').first_or_create #SCS (smooth clean surface)
-#Material.where(name: 'Sheet & coil').first_or_create #Sheet & coil
-#Material.where(name: 'Sheet & coil, cold rolled').first_or_create #Sheet & coil, cold rolled
-#Material.where(name: 'Sheet & coil, hot rolled').first_or_create #Sheet & coil, hot rolled
-#Material.where(name: 'Sheet & coil, stainless steel').first_or_create #Sheet & coil, stainless steel
-#Material.where(name: 'Sheet and coil, galvanized').first_or_create #Sheet and coil, galvanized
-#Material.where(name: 'Squares, cold roll formed').first_or_create #Squares, cold roll formed
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Strip, cold rolled').first_or_create #Strip, cold rolled
-#Material.where(name: 'Strip, hot rolled').first_or_create #Strip, hot rolled
-#Material.where(name: 'Strip, stainless steel').first_or_create #Strip, stainless steel
-#Material.where(name: 'Tool steel').first_or_create #Tool steel
-#Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
-#Material.where(name: 'Tube & pipe, carbon').first_or_create #Tube & pipe, carbon
-#Material.where(name: 'Tube & pipe, cold rolled').first_or_create #Tube & pipe, cold rolled
-#Material.where(name: 'Tube & pipe, hot rolled').first_or_create #Tube & pipe, hot rolled
-#Material.where(name: 'Tube & pipe, stainless steel').first_or_create #Tube & pipe, stainless steel
-#Material.where(name: 'Tubes, cold roll formed').first_or_create #Tubes, cold roll formed
-#Material.where(name: 'Weathering grades').first_or_create #Weathering grades
-#Material.where(name: 'Bar & rod').first_or_create #Bar & rod
-#Material.where(name: 'Forging').first_or_create #Forging
-#Material.where(name: 'Plate').first_or_create #Plate
-#Material.where(name: 'Sheets').first_or_create #Sheets
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Tube & pipe').first_or_create #Tube & pipe
-#Material.where(name: 'Anodes').first_or_create #Anodes
-#Material.where(name: 'Bar & rod').first_or_create #Bar & rod
-#Material.where(name: 'Ingot').first_or_create #Ingot
-#Material.where(name: 'Strip').first_or_create #Strip
-#Material.where(name: 'Zinc carbon alloys').first_or_create #Zinc carbon alloys
-#Material.where(name: 'Clad metals').first_or_create #Clad metals
-#Material.where(name: 'Coatings, ceramic').first_or_create #Coatings, ceramic
-#Material.where(name: 'Coatings, conversion').first_or_create #Coatings, conversion
-#Material.where(name: 'Coatings, enamel').first_or_create #Coatings, enamel
-#Material.where(name: 'Coatings, extrusion').first_or_create #Coatings, extrusion
-#Material.where(name: 'Coatings, other').first_or_create #Coatings, other
-#Material.where(name: 'Coatings, physical vapor deposition').first_or_create #Coatings, physical vapor deposition
-#Material.where(name: 'Coatings, powder').first_or_create #Coatings, powder
-#Material.where(name: 'Coatings, ultraviolet').first_or_create #Coatings, ultraviolet
-#Material.where(name: 'Coatings, water-based').first_or_create #Coatings, water-based
-#Material.where(name: 'Coil coating finishes').first_or_create #Coil coating finishes
-#Material.where(name: 'Laminated panels, aluminum & stainless').first_or_create #Laminated panels, aluminum & stainless
-#Material.where(name: 'Laminates, vinyl/metal').first_or_create #Laminates, vinyl/metal
-#Material.where(name: 'Laminating films, decorative, appliances').first_or_create #Laminating films, decorative, appliances
-#Material.where(name: 'Powder metal parts').first_or_create #Powder metal parts
-#Material.where(name: 'Preanodized sheet/coil').first_or_create #Preanodized sheet/coil
-#Material.where(name: 'Prefinished metals').first_or_create #Prefinished metals
-#Material.where(name: 'Prepainted metals').first_or_create #Prepainted metals
-#Material.where(name: 'Preplated metals').first_or_create #Preplated metals
-#Material.where(name: 'Sheet & coil, aluminized').first_or_create #Sheet & coil, aluminized
-#Material.where(name: 'Specialty coated metals').first_or_create #Specialty coated metals
-#Material.where(name: 'Tool coatings').first_or_create #Tool coatings
-#Material.where(name: 'Angles/channels/profiles').first_or_create #Angles/channels/profiles
-#Material.where(name: 'Bar, forged').first_or_create #Bar, forged
-#Material.where(name: 'Billet').first_or_create #Billet
-#Material.where(name: 'Blocks, forged').first_or_create #Blocks, forged
-#Material.where(name: 'Containers').first_or_create #Containers
-#Material.where(name: 'Cylinders, forged').first_or_create #Cylinders, forged
-#Material.where(name: 'Expanded metals').first_or_create #Expanded metals
-#Material.where(name: 'Foil').first_or_create #Foil
-#Material.where(name: 'Frames').first_or_create #Frames
-#Material.where(name: 'Gratings').first_or_create #Gratings
-#Material.where(name: 'High chairs').first_or_create #High chairs
-#Material.where(name: 'Insulated panels').first_or_create #Insulated panels
-#Material.where(name: 'Metal building systems').first_or_create #Metal building systems
-#Material.where(name: 'Perforated metals').first_or_create #Perforated metals
-#Material.where(name: 'Prepolished metals').first_or_create #Prepolished metals
-#Material.where(name: 'Rings, forged').first_or_create #Rings, forged
-#Material.where(name: 'Safety gratings').first_or_create #Safety gratings
-#Material.where(name: 'Screw machine products').first_or_create #Screw machine products
-#Material.where(name: 'Shafts, forged').first_or_create #Shafts, forged
-#Material.where(name: 'Slab bolster').first_or_create #Slab bolster
-#Material.where(name: 'Sound dampening materials').first_or_create #Sound dampening materials
-#Material.where(name: 'Strapping').first_or_create #Strapping
-#Material.where(name: 'Structural reinforcement material').first_or_create #Structural reinforcement material
-#Material.where(name: 'Textured metals').first_or_create #Textured metals
-#Material.where(name: 'Thermal barrier systems').first_or_create #Thermal barrier systems
-#Material.where(name: 'Thermal insulation').first_or_create #Thermal insulation
-#Material.where(name: 'Tie wire').first_or_create #Tie wire
-#Material.where(name: 'Tube & pipe, corrosion resistant').first_or_create #Tube & pipe, corrosion resistant
-#Material.where(name: 'Tube & pipe, high-temperature').first_or_create #Tube & pipe, high-temperature
-#Material.where(name: 'Tubing, DOM').first_or_create #Tubing, DOM
-#Material.where(name: 'Tubing, lock seam/open seam').first_or_create #Tubing, lock seam/open seam
-#Material.where(name: 'Wire cloth').first_or_create #Wire cloth
-#Material.where(name: 'Wire, other').first_or_create #Wire, other
-#Material.where(name: 'Wrought mill products').first_or_create #Wrought mill products
-#Material.where(name: 'Z-sections').first_or_create #Z-sections
-#Material.where(name: 'Composites').first_or_create #Composites
-#Material.where(name: 'Graphite').first_or_create #Graphite
-#Material.where(name: 'Industrial felt & textiles').first_or_create #Industrial felt & textiles
-#Material.where(name: 'Paint').first_or_create #Paint
-#Material.where(name: 'Plastics, engineered').first_or_create #Plastics, engineered
-#Material.where(name: 'Protective adhesive masking').first_or_create #Protective adhesive masking
-#Material.where(name: 'Refractory products').first_or_create #Refractory products
-#Material.where(name: 'Stretch film').first_or_create #Stretch film
-#Material.where(name: 'Abrasives').first_or_create #Abrasives
-#Material.where(name: 'Adhesives').first_or_create #Adhesives
-#Material.where(name: 'Biocides').first_or_create #Biocides
-#Material.where(name: 'Brazing/soldering, fillers & fluxes').first_or_create #Brazing/soldering, fillers & fluxes
-#Material.where(name: 'Carbides & ceramics').first_or_create #Carbides & ceramics
-#Material.where(name: 'Carbon black').first_or_create #Carbon black
-#Material.where(name: 'Cleaners, metals').first_or_create #Cleaners, metals
-#Material.where(name: 'Cleaning, solvents/degreasing equipment agents').first_or_create #Cleaning, solvents/degreasing equipment agents
-#Material.where(name: 'Clutches and brakes').first_or_create #Clutches and brakes
-#Material.where(name: 'Compounds, cutting & drawing').first_or_create #Compounds, cutting & drawing
-#Material.where(name: 'Degreasers').first_or_create #Degreasers
-#Material.where(name: 'Environmental & industrial hygiene products').first_or_create #Environmental & industrial hygiene products
-#Material.where(name: 'Etchants').first_or_create #Etchants
-#Material.where(name: 'Filter media, air & liquid').first_or_create #Filter media, air & liquid
-#Material.where(name: 'Finishes & coatings').first_or_create #Finishes & coatings
-#Material.where(name: 'Fittings').first_or_create #Fittings
-#Material.where(name: 'Fluids, cutting').first_or_create #Fluids, cutting
-#Material.where(name: 'Fluids, drawing/stamping').first_or_create #Fluids, drawing/stamping
-#Material.where(name: 'Fluids, equipment lubrication').first_or_create #Fluids, equipment lubrication
-#Material.where(name: 'Gases, nitrogen regeneration').first_or_create #Gases, nitrogen regeneration
-#Material.where(name: 'Hydraulic fluids').first_or_create #Hydraulic fluids
-#Material.where(name: 'Labeling').first_or_create #Labeling
-#Material.where(name: 'Laser assist gases').first_or_create #Laser assist gases
-#Material.where(name: 'Lubricant, applicators/systems').first_or_create #Lubricant, applicators/systems
-#Material.where(name: 'Lubricants').first_or_create #Lubricants
-#Material.where(name: 'Lubricants, forming').first_or_create #Lubricants, forming
-#Material.where(name: 'Lubricants, recycling').first_or_create #Lubricants, recycling
-#Material.where(name: 'Packaging materials').first_or_create #Packaging materials
-#Material.where(name: 'Permanent bond adhesive tapes').first_or_create #Permanent bond adhesive tapes
-#Material.where(name: 'Polishing, buffing compounds').first_or_create #Polishing, buffing compounds
-#Material.where(name: 'Pollution control catalysts').first_or_create #Pollution control catalysts
-#Material.where(name: 'Pretreatment chemicals').first_or_create #Pretreatment chemicals
-#Material.where(name: 'Release agents').first_or_create #Release agents
-#Material.where(name: 'Resins').first_or_create #Resins
-#Material.where(name: 'Rings').first_or_create #Rings
-#Material.where(name: 'Rolls, embossing').first_or_create #Rolls, embossing
-#Material.where(name: 'Rubber products').first_or_create #Rubber products
-#Material.where(name: 'Rust inhibitors').first_or_create #Rust inhibitors
-#Material.where(name: 'Strip coil separators').first_or_create #Strip coil separators
+puts 'Adding Bronze'
+@category_24 = Material.where(name: 'Bronze').first_or_create
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_24.id).first_or_create #Bar & rod
+SubMaterial.where(name: 'Bearing bronze', parent_id: @category_24.id).first_or_create #Bearing bronze
+SubMaterial.where(name: 'Plate', parent_id: @category_24.id).first_or_create #Plate
+SubMaterial.where(name: 'Sheet & coil', parent_id: @category_24.id).first_or_create #Sheet & coil
+SubMaterial.where(name: 'Strip', parent_id: @category_24.id).first_or_create #Strip
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_24.id).first_or_create #Tube & pipe
+
+puts 'Adding Copper'
+@category_25 = Material.where(name: 'Copper').first_or_create
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_25.id).first_or_create #Bar & rod
+SubMaterial.where(name: 'Bar & rod, beryllium copper', parent_id: @category_25.id).first_or_create #Bar & rod, beryllium copper
+SubMaterial.where(name: 'Bar & rod, copper alloys', parent_id: @category_25.id).first_or_create #Bar & rod, copper alloys
+SubMaterial.where(name: 'Bar and rod', parent_id: @category_25.id).first_or_create #Bar and rod
+SubMaterial.where(name: 'Plate', parent_id: @category_25.id).first_or_create #Plate
+SubMaterial.where(name: 'Plate, beryllium copper', parent_id: @category_25.id).first_or_create #Plate, beryllium copper
+SubMaterial.where(name: 'Plate, copper alloys', parent_id: @category_25.id).first_or_create #Plate, copper alloys
+SubMaterial.where(name: 'Sheet & coil', parent_id: @category_25.id).first_or_create #Sheet & coil
+SubMaterial.where(name: 'Sheet & coil, beryllium copper', parent_id: @category_25.id).first_or_create #Sheet & coil, beryllium copper
+SubMaterial.where(name: 'Sheet & coil, copper alloys', parent_id: @category_25.id).first_or_create #Sheet & coil, copper alloys
+SubMaterial.where(name: 'Strip', parent_id: @category_25.id).first_or_create #Strip
+SubMaterial.where(name: 'Strip, beryllium copper', parent_id: @category_25.id).first_or_create #Strip, beryllium copper
+SubMaterial.where(name: 'Strip, copper alloys', parent_id: @category_25.id).first_or_create #Strip, copper alloys
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_25.id).first_or_create #Tube & pipe
+SubMaterial.where(name: 'Tube & pipe, beryllium copper', parent_id: @category_25.id).first_or_create #Tube & pipe, beryllium copper
+SubMaterial.where(name: 'Tube & pipe, copper alloys', parent_id: @category_25.id).first_or_create #Tube & pipe, copper alloys
+SubMaterial.where(name: 'Wire', parent_id: @category_25.id).first_or_create #Wire
+
+puts 'Adding Magnesium'
+@category_26 = Material.where(name: 'Magnesium').first_or_create
+SubMaterial.where(name: 'Anodes', parent_id: @category_26.id).first_or_create #Anodes
+SubMaterial.where(name: 'Casting alloys', parent_id: @category_26.id).first_or_create #Casting alloys
+SubMaterial.where(name: 'Tooling plate', parent_id: @category_26.id).first_or_create #Tooling plate
+
+puts 'Adding Nickel'
+@category_27 = Material.where(name: 'Nickel').first_or_create
+SubMaterial.where(name: 'Bar & rod, nickel & nickel alloys', parent_id: @category_27.id).first_or_create #Bar & rod, nickel & nickel alloys
+SubMaterial.where(name: 'Plate', parent_id: @category_27.id).first_or_create	 #Plate
+SubMaterial.where(name: 'Plate, nickel alloys', parent_id: @category_27.id).first_or_create	 #Plate, nickel alloys
+SubMaterial.where(name: 'Sheet & coil', parent_id: @category_27.id).first_or_create	 #Sheet & coil
+SubMaterial.where(name: 'Sheet & coil, nickel alloys', parent_id: @category_27.id).first_or_create	 #Sheet & coil, nickel alloys
+SubMaterial.where(name: 'Strip', parent_id: @category_27.id).first_or_create	 #Strip
+SubMaterial.where(name: 'Strip, nickel alloys', parent_id: @category_27.id).first_or_create	 #Strip, nickel alloys
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_27.id).first_or_create	 #Tube & pipe
+SubMaterial.where(name: 'Tube & pipe, nickel alloy', parent_id: @category_27.id).first_or_create	 #Tube & pipe, nickel alloy
+
+puts 'Adding Steel'
+@category_28 = Material.where(name: 'Steel').first_or_create
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_28.id).first_or_create	 #Bar & rod
+SubMaterial.where(name: 'Bar & rod, cold finished', parent_id: @category_28.id).first_or_create	 #Bar & rod, cold finished
+SubMaterial.where(name: 'Bar & rod, cold rolled', parent_id: @category_28.id).first_or_create	 #Bar & rod, cold rolled
+SubMaterial.where(name: 'Bar & rod, hot rolled', parent_id: @category_28.id).first_or_create	 #Bar & rod, hot rolled
+SubMaterial.where(name: 'Bar & rod, stainless steel', parent_id: @category_28.id).first_or_create	 #Bar & rod, stainless steel
+SubMaterial.where(name: 'Bar, cold finished', parent_id: @category_28.id).first_or_create	 #Bar, cold finished
+SubMaterial.where(name: 'Bar, hot rolled', parent_id: @category_28.id).first_or_create #Bar, hot rolled
+SubMaterial.where(name: 'Cold rolled', parent_id: @category_28.id).first_or_create #Cold rolled
+SubMaterial.where(name: 'Die steels', parent_id: @category_28.id).first_or_create #Die steels
+SubMaterial.where(name: 'EPS (eco pickled surface)', parent_id: @category_28.id).first_or_create #EPS (eco pickled surface)
+SubMaterial.where(name: 'Galvanized', parent_id: @category_28.id).first_or_create #Galvanized
+SubMaterial.where(name: 'Galvannealed', parent_id: @category_28.id).first_or_create #Galvannealed
+SubMaterial.where(name: 'Hot rolled', parent_id: @category_28.id).first_or_create #Hot rolled
+SubMaterial.where(name: 'Hot rolled pickled & oiled', parent_id: @category_28.id).first_or_create #Hot rolled pickled & oiled
+SubMaterial.where(name: 'Plate', parent_id: @category_28.id).first_or_create #Plate
+SubMaterial.where(name: 'Plate, carbon steel', parent_id: @category_28.id).first_or_create #Plate, carbon steel
+SubMaterial.where(name: 'Plate, cold rolled', parent_id: @category_28.id).first_or_create #Plate, cold rolled
+SubMaterial.where(name: 'Plate, hot rolled', parent_id: @category_28.id).first_or_create #Plate, hot rolled
+SubMaterial.where(name: 'Plate, stainless steel', parent_id: @category_28.id).first_or_create #Plate, stainless steel
+SubMaterial.where(name: 'Rebar/mesh', parent_id: @category_28.id).first_or_create #Rebar/mesh
+SubMaterial.where(name: 'SCS (smooth clean surface)', parent_id: @category_28.id).first_or_create #SCS (smooth clean surface)
+SubMaterial.where(name: 'Sheet & coil', parent_id: @category_28.id).first_or_create #Sheet & coil
+SubMaterial.where(name: 'Sheet & coil, cold rolled', parent_id: @category_28.id).first_or_create #Sheet & coil, cold rolled
+SubMaterial.where(name: 'Sheet & coil, hot rolled', parent_id: @category_28.id).first_or_create #Sheet & coil, hot rolled
+SubMaterial.where(name: 'Sheet & coil, stainless steel', parent_id: @category_28.id).first_or_create #Sheet & coil, stainless steel
+SubMaterial.where(name: 'Sheet and coil, galvanized', parent_id: @category_28.id).first_or_create #Sheet and coil, galvanized
+SubMaterial.where(name: 'Squares, cold roll formed', parent_id: @category_28.id).first_or_create #Squares, cold roll formed
+SubMaterial.where(name: 'Strip', parent_id: @category_28.id).first_or_create #Strip
+SubMaterial.where(name: 'Strip, cold rolled', parent_id: @category_28.id).first_or_create #Strip, cold rolled
+SubMaterial.where(name: 'Strip, hot rolled', parent_id: @category_28.id).first_or_create #Strip, hot rolled
+SubMaterial.where(name: 'Strip, stainless steel', parent_id: @category_28.id).first_or_create #Strip, stainless steel
+SubMaterial.where(name: 'Tool steel', parent_id: @category_28.id).first_or_create #Tool steel
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_28.id).first_or_create #Tube & pipe
+SubMaterial.where(name: 'Tube & pipe, carbon', parent_id: @category_28.id).first_or_create #Tube & pipe, carbon
+SubMaterial.where(name: 'Tube & pipe, cold rolled', parent_id: @category_28.id).first_or_create #Tube & pipe, cold rolled
+SubMaterial.where(name: 'Tube & pipe, hot rolled', parent_id: @category_28.id).first_or_create #Tube & pipe, hot rolled
+SubMaterial.where(name: 'Tube & pipe, stainless steel', parent_id: @category_28.id).first_or_create #Tube & pipe, stainless steel
+SubMaterial.where(name: 'Tubes, cold roll formed', parent_id: @category_28.id).first_or_create #Tubes, cold roll formed
+SubMaterial.where(name: 'Weathering grades', parent_id: @category_28.id).first_or_create #Weathering gradesSub
+
+puts 'Adding Titanium'
+@category_29 = Material.where(name: 'Titanium').first_or_create
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_29.id).first_or_create #Bar & rod
+SubMaterial.where(name: 'Forging', parent_id: @category_29.id).first_or_create #Forging
+SubMaterial.where(name: 'Plate', parent_id: @category_29.id).first_or_create #Plate
+SubMaterial.where(name: 'Sheets', parent_id: @category_29.id).first_or_create #Sheets
+SubMaterial.where(name: 'Strip', parent_id: @category_29.id).first_or_create #Strip
+SubMaterial.where(name: 'Tube & pipe', parent_id: @category_29.id).first_or_create #Tube & pipe
+
+puts 'Adding Zinc'
+@category_30 = Material.where(name: 'Zinc').first_or_create
+SubMaterial.where(name: 'Anodes', parent_id: @category_30.id).first_or_create #Anodes
+SubMaterial.where(name: 'Bar & rod', parent_id: @category_30.id).first_or_create #Bar & rod
+SubMaterial.where(name: 'Ingot', parent_id: @category_30.id).first_or_create #Ingot
+SubMaterial.where(name: 'Strip', parent_id: @category_30.id).first_or_create #Strip
+SubMaterial.where(name: 'Zinc carbon alloys', parent_id: @category_30.id).first_or_create #Zinc carbon alloys
+
+puts 'Adding Coatings and Laminates'
+@category_31 = Material.where(name: 'Coatings and Laminates').first_or_create
+SubMaterial.where(name: 'Clad metals', parent_id: @category_31.id).first_or_create #Clad metals
+SubMaterial.where(name: 'Coatings, ceramic', parent_id: @category_31.id).first_or_create #Coatings, ceramic
+SubMaterial.where(name: 'Coatings, conversion', parent_id: @category_31.id).first_or_create #Coatings, conversion
+SubMaterial.where(name: 'Coatings, enamel', parent_id: @category_31.id).first_or_create #Coatings, enamel
+SubMaterial.where(name: 'Coatings, extrusion', parent_id: @category_31.id).first_or_create #Coatings, extrusion
+SubMaterial.where(name: 'Coatings, other', parent_id: @category_31.id).first_or_create #Coatings, other
+SubMaterial.where(name: 'Coatings, physical vapor deposition', parent_id: @category_31.id).first_or_create #Coatings, physical vapor deposition
+SubMaterial.where(name: 'Coatings, powder', parent_id: @category_31.id).first_or_create #Coatings, powder
+SubMaterial.where(name: 'Coatings, ultraviolet', parent_id: @category_31.id).first_or_create #Coatings, ultraviolet
+SubMaterial.where(name: 'Coatings, water-based', parent_id: @category_31.id).first_or_create #Coatings, water-based
+SubMaterial.where(name: 'Coil coating finishes', parent_id: @category_31.id).first_or_create #Coil coating finishes
+SubMaterial.where(name: 'Laminated panels, aluminum & stainless', parent_id: @category_31.id).first_or_create #Laminated panels, aluminum & stainless
+SubMaterial.where(name: 'Laminates, vinyl/metal', parent_id: @category_31.id).first_or_create #Laminates, vinyl/metal
+SubMaterial.where(name: 'Laminating films, decorative, appliances', parent_id: @category_31.id).first_or_create #Laminating films, decorative, appliances
+SubMaterial.where(name: 'Powder metal parts', parent_id: @category_31.id).first_or_create #Powder metal parts
+SubMaterial.where(name: 'Preanodized sheet/coil', parent_id: @category_31.id).first_or_create #Preanodized sheet/coil
+SubMaterial.where(name: 'Prefinished metals', parent_id: @category_31.id).first_or_create #Prefinished metals
+SubMaterial.where(name: 'Prepainted metals', parent_id: @category_31.id).first_or_create #Prepainted metals
+SubMaterial.where(name: 'Preplated metals', parent_id: @category_31.id).first_or_create #Preplated metals
+SubMaterial.where(name: 'Sheet & coil, aluminized', parent_id: @category_31.id).first_or_create #Sheet & coil, aluminized
+SubMaterial.where(name: 'Specialty coated metals', parent_id: @category_31.id).first_or_create #Specialty coated metals
+SubMaterial.where(name: 'Tool coatings', parent_id: @category_31.id).first_or_create #Tool coatings
+
+puts 'Adding Metal products'
+@category_32 = Material.where(name: 'Metal products').first_or_create
+SubMaterial.where(name: 'Angles/channels/profiles', parent_id: @category_32.id).first_or_create #Angles/channels/profiles
+SubMaterial.where(name: 'Bar, forged', parent_id: @category_32.id).first_or_create #Bar, forged
+SubMaterial.where(name: 'Billet', parent_id: @category_32.id).first_or_create #Billet
+SubMaterial.where(name: 'Blocks, forged', parent_id: @category_32.id).first_or_create #Blocks, forged
+SubMaterial.where(name: 'Containers', parent_id: @category_32.id).first_or_create #Containers
+SubMaterial.where(name: 'Cylinders, forged', parent_id: @category_32.id).first_or_create #Cylinders, forged
+SubMaterial.where(name: 'Expanded metals', parent_id: @category_32.id).first_or_create #Expanded metals
+SubMaterial.where(name: 'Foil', parent_id: @category_32.id).first_or_create #Foil
+SubMaterial.where(name: 'Frames', parent_id: @category_32.id).first_or_create #Frames
+SubMaterial.where(name: 'Gratings', parent_id: @category_32.id).first_or_create #Gratings
+SubMaterial.where(name: 'High chairs', parent_id: @category_32.id).first_or_create #High chairs
+SubMaterial.where(name: 'Insulated panels', parent_id: @category_32.id).first_or_create #Insulated panels
+SubMaterial.where(name: 'Metal building systems', parent_id: @category_32.id).first_or_create #Metal building systems
+SubMaterial.where(name: 'Perforated metals', parent_id: @category_32.id).first_or_create #Perforated metals
+SubMaterial.where(name: 'Prepolished metals', parent_id: @category_32.id).first_or_create #Prepolished metals
+SubMaterial.where(name: 'Rings, forged', parent_id: @category_32.id).first_or_create #Rings, forged
+SubMaterial.where(name: 'Safety gratings', parent_id: @category_32.id).first_or_create #Safety gratings
+SubMaterial.where(name: 'Screw machine products', parent_id: @category_32.id).first_or_create #Screw machine products
+SubMaterial.where(name: 'Shafts, forged', parent_id: @category_32.id).first_or_create #Shafts, forged
+SubMaterial.where(name: 'Slab bolster', parent_id: @category_32.id).first_or_create #Slab bolster
+SubMaterial.where(name: 'Sound dampening materials', parent_id: @category_32.id).first_or_create #Sound dampening materials
+SubMaterial.where(name: 'Strapping', parent_id: @category_32.id).first_or_create #Strapping
+SubMaterial.where(name: 'Structural reinforcement material', parent_id: @category_32.id).first_or_create #Structural reinforcement material
+SubMaterial.where(name: 'Textured metals', parent_id: @category_32.id).first_or_create #Textured metals
+SubMaterial.where(name: 'Thermal barrier systems', parent_id: @category_32.id).first_or_create #Thermal barrier systems
+SubMaterial.where(name: 'Thermal insulation', parent_id: @category_32.id).first_or_create #Thermal insulation
+SubMaterial.where(name: 'Tie wire', parent_id: @category_32.id).first_or_create #Tie wire
+SubMaterial.where(name: 'Tube & pipe, corrosion resistant', parent_id: @category_32.id).first_or_create #Tube & pipe, corrosion resistant
+SubMaterial.where(name: 'Tube & pipe, high-temperature', parent_id: @category_32.id).first_or_create #Tube & pipe, high-temperature
+SubMaterial.where(name: 'Tubing, DOM', parent_id: @category_32.id).first_or_create #Tubing, DOM
+SubMaterial.where(name: 'Tubing, lock seam/open seam', parent_id: @category_32.id).first_or_create #Tubing, lock seam/open seam
+SubMaterial.where(name: 'Wire cloth', parent_id: @category_32.id).first_or_create #Wire cloth
+SubMaterial.where(name: 'Wire, other', parent_id: @category_32.id).first_or_create #Wire, other
+SubMaterial.where(name: 'Wrought mill products', parent_id: @category_32.id).first_or_create #Wrought mill products
+SubMaterial.where(name: 'Z-sections', parent_id: @category_32.id).first_or_create #Z-sections
+
+puts 'Adding Nonmetallic materials'
+@category_33 = Material.where(name: 'Nonmetallic materials').first_or_create
+SubMaterial.where(name: 'Composites', parent_id: @category_33.id).first_or_create #Composites
+SubMaterial.where(name: 'Graphite', parent_id: @category_33.id).first_or_create #Graphite
+SubMaterial.where(name: 'Industrial felt & textiles', parent_id: @category_33.id).first_or_create #Industrial felt & textiles
+SubMaterial.where(name: 'Paint', parent_id: @category_33.id).first_or_create #Paint
+SubMaterial.where(name: 'Plastics, engineered', parent_id: @category_33.id).first_or_create #Plastics, engineered
+SubMaterial.where(name: 'Protective adhesive masking', parent_id: @category_33.id).first_or_create #Protective adhesive masking
+SubMaterial.where(name: 'Refractory products', parent_id: @category_33.id).first_or_create #Refractory products
+SubMaterial.where(name: 'Stretch film', parent_id: @category_33.id).first_or_create #Stretch film
+
+puts 'Adding Miscellaneous'
+@category_34 = Material.where(name: 'Miscellaneous').first_or_create
+SubMaterial.where(name: 'Abrasives', parent_id: @category_34.id).first_or_create #Abrasives
+SubMaterial.where(name: 'Adhesives', parent_id: @category_34.id).first_or_create #Adhesives
+SubMaterial.where(name: 'Biocides', parent_id: @category_34.id).first_or_create #Biocides
+SubMaterial.where(name: 'Brazing/soldering, fillers & fluxes', parent_id: @category_34.id).first_or_create #Brazing/soldering, fillers & fluxes
+SubMaterial.where(name: 'Carbides & ceramics', parent_id: @category_34.id).first_or_create #Carbides & ceramics
+SubMaterial.where(name: 'Carbon black', parent_id: @category_34.id).first_or_create #Carbon black
+SubMaterial.where(name: 'Cleaners, metals', parent_id: @category_34.id).first_or_create #Cleaners, metals
+SubMaterial.where(name: 'Cleaning, solvents/degreasing equipment agents', parent_id: @category_34.id).first_or_create #Cleaning, solvents/degreasing equipment agents
+SubMaterial.where(name: 'Clutches and brakes', parent_id: @category_34.id).first_or_create #Clutches and brakes
+SubMaterial.where(name: 'Compounds, cutting & drawing', parent_id: @category_34.id).first_or_create #Compounds, cutting & drawing
+SubMaterial.where(name: 'Degreasers', parent_id: @category_34.id).first_or_create #Degreasers
+SubMaterial.where(name: 'Environmental & industrial hygiene products', parent_id: @category_34.id).first_or_create #Environmental & industrial hygiene products
+SubMaterial.where(name: 'Etchants', parent_id: @category_34.id).first_or_create #Etchants
+SubMaterial.where(name: 'Filter media, air & liquid', parent_id: @category_34.id).first_or_create #Filter media, air & liquid
+SubMaterial.where(name: 'Finishes & coatings', parent_id: @category_34.id).first_or_create #Finishes & coatings
+SubMaterial.where(name: 'Fittings', parent_id: @category_34.id).first_or_create #Fittings
+SubMaterial.where(name: 'Fluids, cutting', parent_id: @category_34.id).first_or_create #Fluids, cutting
+SubMaterial.where(name: 'Fluids, drawing/stamping', parent_id: @category_34.id).first_or_create #Fluids, drawing/stamping
+SubMaterial.where(name: 'Fluids, equipment lubrication', parent_id: @category_34.id).first_or_create #Fluids, equipment lubrication
+SubMaterial.where(name: 'Gases, nitrogen regeneration', parent_id: @category_34.id).first_or_create #Gases, nitrogen regeneration
+SubMaterial.where(name: 'Hydraulic fluids', parent_id: @category_34.id).first_or_create #Hydraulic fluids
+SubMaterial.where(name: 'Labeling', parent_id: @category_34.id).first_or_create #Labeling
+SubMaterial.where(name: 'Laser assist gases', parent_id: @category_34.id).first_or_create #Laser assist gases
+SubMaterial.where(name: 'Lubricant, applicators/systems', parent_id: @category_34.id).first_or_create #Lubricant, applicators/systems
+SubMaterial.where(name: 'Lubricants', parent_id: @category_34.id).first_or_create #Lubricants
+SubMaterial.where(name: 'Lubricants, forming', parent_id: @category_34.id).first_or_create #Lubricants, forming
+SubMaterial.where(name: 'Lubricants, recycling', parent_id: @category_34.id).first_or_create #Lubricants, recycling
+SubMaterial.where(name: 'Packaging materials', parent_id: @category_34.id).first_or_create #Packaging materials
+SubMaterial.where(name: 'Permanent bond adhesive tapes', parent_id: @category_34.id).first_or_create #Permanent bond adhesive tapes
+SubMaterial.where(name: 'Polishing, buffing compounds', parent_id: @category_34.id).first_or_create #Polishing, buffing compounds
+SubMaterial.where(name: 'Pollution control catalysts', parent_id: @category_34.id).first_or_create #Pollution control catalysts
+SubMaterial.where(name: 'Pretreatment chemicals', parent_id: @category_34.id).first_or_create #Pretreatment chemicals
+SubMaterial.where(name: 'Release agents', parent_id: @category_34.id).first_or_create #Release agents
+SubMaterial.where(name: 'Resins', parent_id: @category_34.id).first_or_create #Resins
+SubMaterial.where(name: 'Rings', parent_id: @category_34.id).first_or_create #Rings
+SubMaterial.where(name: 'Rolls, embossing', parent_id: @category_34.id).first_or_create #Rolls, embossing
+SubMaterial.where(name: 'Rubber products', parent_id: @category_34.id).first_or_create #Rubber products
+SubMaterial.where(name: 'Rust inhibitors', parent_id: @category_34.id).first_or_create #Rust inhibitors
+SubMaterial.where(name: 'Strip coil separators', parent_id: @category_34.id).first_or_create #Strip coil separators
 
 puts 'Create Service Categories'
-#Service.where(name: 'Bar & rod, exotic alloys').first_or_create
-#Service.where(name: 'Consulting, business').first_or_create #Consulting, business
-#Service.where(name: 'Consulting, recruitment').first_or_create #Consulting, recruitment
-#Service.where(name: 'Data collection/market research').first_or_create #Data collection/market research
-#Service.where(name: 'Depot stock availability').first_or_create #Depot stock availability
-#Service.where(name: 'Distribution').first_or_create #Distribution
-#Service.where(name: 'E-commerce').first_or_create #E-commerce
-#Service.where(name: 'Economic analysis').first_or_create #Economic analysis
-#Service.where(name: 'Enterprise resource planning software (ERP)').first_or_create #Enterprise resource planning software (ERP)
-#Service.where(name: 'Financial services').first_or_create #Financial services
-#Service.where(name: 'Freight management').first_or_create #Freight management
-#Service.where(name: 'Industrial auctioneer').first_or_create #Industrial auctioneer
-#Service.where(name: 'Industrial equipment appraisals & inspections').first_or_create #Industrial equipment appraisals & inspections
-#Service.where(name: 'Insurance, risk management and loss prevention').first_or_create #Insurance, risk management and loss prevention
-#Service.where(name: 'Investment banking').first_or_create #Investment banking
-#Service.where(name: 'Material execution system software (MES)').first_or_create #Material execution system software (MES)
-#Service.where(name: 'Material resource planning software (MRP)').first_or_create #Material resource planning software (MRP)
-#Service.where(name: 'Mergers & acquisitions').first_or_create #Mergers & acquisitions
-#Service.where(name: 'Real estate leasing').first_or_create #Real estate leasing
-#Service.where(name: 'Software development').first_or_create #Software development
-#Service.where(name: 'Supply chain management').first_or_create #Supply chain management
-#Service.where(name: 'Systems integrators').first_or_create #Systems integrators
-#Service.where(name: 'Training').first_or_create #Training
-#Service.where(name: 'CNC programming').first_or_create #CNC programming
-#Service.where(name: 'Cutting').first_or_create #Cutting
-#Service.where(name: 'Die & fixtures').first_or_create #Die & fixtures
-#Service.where(name: 'Fabricating').first_or_create #Fabricating
-#Service.where(name: 'Finishing').first_or_create #Finishing
-#Service.where(name: 'Machine rebuilding').first_or_create #Machine rebuilding
-#Service.where(name: 'Roll forming').first_or_create #Roll forming
-#Service.where(name: 'Stamping/drawing').first_or_create #Stamping/drawing
-#Service.where(name: 'Welding').first_or_create #Welding
-#Service.where(name: 'Aluminum').first_or_create #Aluminum
-#Service.where(name: 'Copper').first_or_create #Copper
-#Service.where(name: 'Impact').first_or_create #Impact
-#Service.where(name: 'Magnesium').first_or_create #Magnesium
-#Service.where(name: 'Steel').first_or_create #Steel
-#Service.where(name: 'Vinyl').first_or_create #Vinyl
-#Service.where(name: 'Clutch/brake controls').first_or_create #Clutch/brake controls
-#Service.where(name: 'Computerized maintenance management software (CMMS)').first_or_create #Computerized maintenance management software (CMMS)
-#Service.where(name: 'Press rebuilding').first_or_create #Press rebuilding
-#Service.where(name: 'Printed circuit boards repair').first_or_create #Printed circuit boards repair
-#Service.where(name: 'Rebuild').first_or_create #Rebuild
-#Service.where(name: 'Retrofit').first_or_create #Retrofit
-#Service.where(name: 'Additives & testers').first_or_create #Additives & testers
-#Service.where(name: 'Calibrating, noncontact thickness gauges').first_or_create #Calibrating, noncontact thickness gauges
-#Service.where(name: 'Charpy impact testing').first_or_create #Charpy impact testing
-#Service.where(name: 'Indoor air quality testing').first_or_create #Indoor air quality testing
-#Service.where(name: 'Laboratory services, chemical & spectrographic').first_or_create #Laboratory services, chemical & spectrographic
-#Service.where(name: 'Laboratory services, metallurgical & physical').first_or_create #Laboratory services, metallurgical & physical
-#Service.where(name: 'Nondestructive testing').first_or_create #Nondestructive testing
-#Service.where(name: 'Quality inspection').first_or_create #Quality inspection
-#Service.where(name: 'Signature analysis').first_or_create #Signature analysis
-#Service.where(name: 'Anodizing').first_or_create #Anodizing
-#Service.where(name: 'Blanchard grinding').first_or_create #Blanchard grinding
-#Service.where(name: 'Cleaning, paint stripping').first_or_create #Cleaning, paint stripping
-#Service.where(name: 'Coil coating').first_or_create #Coil coating
-#Service.where(name: 'Deburring').first_or_create #Deburring
-#Service.where(name: 'Edge conditioning').first_or_create #Edge conditioning
-#Service.where(name: 'Edging, skiving').first_or_create #Edging, skiving
-#Service.where(name: 'Electrogalvanizing').first_or_create #Electrogalvanizing
-#Service.where(name: 'Electropolishing').first_or_create #Electropolishing
-#Service.where(name: 'Finishing').first_or_create #Finishing
-#Service.where(name: 'Galvanizing').first_or_create #Galvanizing
-#Service.where(name: 'Gauering flat bars').first_or_create #Gauering flat bars
-#Service.where(name: 'Metal finishing').first_or_create #Metal finishing
-#Service.where(name: 'Painting').first_or_create #Painting
-#Service.where(name: 'Pickling').first_or_create #Pickling
-#Service.where(name: 'Plating').first_or_create #Plating
-#Service.where(name: 'Polishing').first_or_create #Polishing
-#Service.where(name: 'Powder coating').first_or_create #Powder coating
-#Service.where(name: 'Sandblasting').first_or_create #Sandblasting
-#Service.where(name: 'Shot blasting').first_or_create #Shot blasting
-#Service.where(name: 'Surface grinding').first_or_create #Surface grinding
-#Service.where(name: 'Thermal spray coating').first_or_create #Thermal spray coating
-#Service.where(name: 'Annealing').first_or_create #Annealing
-#Service.where(name: 'Blanking and sheeting').first_or_create #Blanking and sheeting
-#Service.where(name: 'Cambering').first_or_create #Cambering
-#Service.where(name: 'Casting, copper-based').first_or_create #Casting, copper-based
-#Service.where(name: 'Casting, die').first_or_create #Casting, die
-#Service.where(name: 'Casting, die, aluminum').first_or_create #Casting, die, aluminum
-#Service.where(name: 'Casting, die, magnesium').first_or_create #Casting, die, magnesium
-#Service.where(name: 'Casting, die, zinc').first_or_create #Casting, die, zinc
-#Service.where(name: 'Casting, investment').first_or_create #Casting, investment
-#Service.where(name: 'Casting, permanent mold').first_or_create #Casting, permanent mold
-#Service.where(name: 'Casting, titanium').first_or_create #Casting, titanium
-#Service.where(name: 'Coil processing').first_or_create #Coil processing
-#Service.where(name: 'Cold drawing').first_or_create #Cold drawing
-#Service.where(name: 'Cold finishing').first_or_create #Cold finishing
-#Service.where(name: 'Cold rolling').first_or_create #Cold rolling
-#Service.where(name: 'Custom roll forming').first_or_create #Custom roll forming
-#Service.where(name: 'Custom rolling').first_or_create #Custom rolling
-#Service.where(name: 'Cut-to-length').first_or_create #Cut-to-length
-#Service.where(name: 'Drawforming').first_or_create #Drawforming
-#Service.where(name: 'Edge trimming').first_or_create #Edge trimming
-#Service.where(name: 'Embossing').first_or_create #Embossing
-#Service.where(name: 'EPS (eco pickled surface) processing').first_or_create #EPS (eco pickled surface) processing
-#Service.where(name: 'Fabricating').first_or_create #Fabricating
-#Service.where(name: 'Fineblanking').first_or_create #Fineblanking
-#Service.where(name: 'Flame cutting').first_or_create #Flame cutting
-#Service.where(name: 'Flattening').first_or_create #Flattening
-#Service.where(name: 'Forging').first_or_create #Forging
-#Service.where(name: 'Grinding').first_or_create #Grinding
-#Service.where(name: 'Heat treating').first_or_create #Heat treating
-#Service.where(name: 'Hydroforming').first_or_create #Hydroforming
-#Service.where(name: 'Impregnation').first_or_create #Impregnation
-#Service.where(name: 'Ion nitriding').first_or_create #Ion nitriding
-#Service.where(name: 'Laser cutting').first_or_create #Laser cutting
-#Service.where(name: 'Leveling').first_or_create #Leveling
-#Service.where(name: 'Perforation').first_or_create #Perforation
-#Service.where(name: 'Planer milling').first_or_create #Planer milling
-#Service.where(name: 'Plasma cutting').first_or_create #Plasma cutting
-#Service.where(name: 'Plate cutting').first_or_create #Plate cutting
-#Service.where(name: 'Plate forming & rolling').first_or_create #Plate forming & rolling
-#Service.where(name: 'Plate, fabricating').first_or_create #Plate, fabricating
-#Service.where(name: 'Punching, drilling, notching').first_or_create #Punching, drilling, notching
-#Service.where(name: 'Rebar, fabricating').first_or_create #Rebar, fabricating
-#Service.where(name: 'Roll forming').first_or_create #Roll forming
-#Service.where(name: 'Roll texturing').first_or_create #Roll texturing
-#Service.where(name: 'Roller leveling').first_or_create #Roller leveling
-#Service.where(name: 'Rolling').first_or_create #Rolling
-#Service.where(name: 'Rolls, surface conditioning').first_or_create #Rolls, surface conditioning
-#Service.where(name: 'Sawing, band').first_or_create #Sawing, band
-#Service.where(name: 'Sawing, circle/ring').first_or_create #Sawing, circle/ring
-#Service.where(name: 'Sawing, miter').first_or_create #Sawing, miter
-#Service.where(name: 'Sawing, other').first_or_create #Sawing, other
-#Service.where(name: 'SCS (surface clean steel) processing').first_or_create #SCS (surface clean steel) processing
-#Service.where(name: 'Shearing').first_or_create #Shearing
-#Service.where(name: 'Sheet, fabricating').first_or_create #Sheet, fabricating
-#Service.where(name: 'Slitting').first_or_create #Slitting
-#Service.where(name: 'Stamping, custom').first_or_create #Stamping, custom
-#Service.where(name: 'Stamping, other').first_or_create #Stamping, other
-#Service.where(name: 'Stress relieving').first_or_create #Stress relieving
-#Service.where(name: 'Temper rolling').first_or_create #Temper rolling
-#Service.where(name: 'Tempering').first_or_create #Tempering
-#Service.where(name: 'Tension leveling').first_or_create #Tension leveling
-#Service.where(name: 'Toll processing').first_or_create #Toll processing
-#Service.where(name: 'Traverse winding').first_or_create #Traverse winding
-#Service.where(name: 'Trepanning').first_or_create #Trepanning
-#Service.where(name: 'Tube & pipe, fabricating').first_or_create #Tube & pipe, fabricating
-#Service.where(name: 'Tube bending').first_or_create #Tube bending
-#Service.where(name: 'Tube deburring').first_or_create #Tube deburring
-#Service.where(name: 'Tube drilling').first_or_create #Tube drilling
-#Service.where(name: 'Tube endfinishing').first_or_create #Tube endfinishing
-#Service.where(name: 'Tube flanging').first_or_create #Tube flanging
-#Service.where(name: 'Tube flaring').first_or_create #Tube flaring
-#Service.where(name: 'Tube forming').first_or_create #Tube forming
-#Service.where(name: 'Tube notching').first_or_create #Tube notching
-#Service.where(name: 'Tube punching').first_or_create #Tube punching
-#Service.where(name: 'Tube rolling').first_or_create #Tube rolling
-#Service.where(name: 'Waterjet cutting').first_or_create #Waterjet cutting
-#Service.where(name: 'Welding').first_or_create #Welding
-#Service.where(name: 'Light assembly').first_or_create #Light assembly
-#Service.where(name: 'Rapid prototyping').first_or_create #Rapid prototyping
-#Service.where(name: 'Steel bar labels').first_or_create #Steel bar labels
-#Service.where(name: 'Steel coil tags').first_or_create #Steel coil tags
-#Service.where(name: 'Steel tube labels').first_or_create #Steel tube labels
-#Service.where(name: 'Steel wire tags').first_or_create #Steel wire tags
-#Service.where(name: 'Air purification services').first_or_create #Air purification services
-#Service.where(name: 'Custom equipment').first_or_create #Custom equipment
-#Service.where(name: 'Custom molding').first_or_create #Custom molding
-#Service.where(name: 'Design/construction').first_or_create #Design/construction
-#Service.where(name: 'Die protection systems').first_or_create #Die protection systems
-#Service.where(name: 'Engineering/analysis').first_or_create #Engineering/analysis
-#Service.where(name: 'Industrial hygiene monitoring').first_or_create #Industrial hygiene monitoring
-#Service.where(name: 'Installation').first_or_create #Installation
-#Service.where(name: 'Labeling').first_or_create #Labeling
-#Service.where(name: 'Machine foundations').first_or_create #Machine foundations
-#Service.where(name: 'Material storage').first_or_create #Material storage
-#Service.where(name: 'Materials standards and specifications').first_or_create #Materials standards and specifications
-#Service.where(name: 'Molding, polyurethane').first_or_create #Molding, polyurethane
-#Service.where(name: 'Press pits').first_or_create #Press pits
-#Service.where(name: 'Scrap buying').first_or_create #Scrap buying
+
+puts 'Adding Business services'
+@category_35 = Service.where(name: 'Business services').first_or_create
+SubService.where(name: 'Consulting, business', parent_id: @category_35.id).first_or_create #Consulting, business
+SubService.where(name: 'Consulting, recruitment', parent_id: @category_35.id).first_or_create #Consulting, recruitment
+SubService.where(name: 'Data collection/market research', parent_id: @category_35.id).first_or_create #Data collection/market research
+SubService.where(name: 'Depot stock availability', parent_id: @category_35.id).first_or_create #Depot stock availability
+SubService.where(name: 'Distribution', parent_id: @category_35.id).first_or_create #Distribution
+SubService.where(name: 'E-commerce', parent_id: @category_35.id).first_or_create #E-commerce
+SubService.where(name: 'Economic analysis', parent_id: @category_35.id).first_or_create #Economic analysis
+SubService.where(name: 'Enterprise resource planning software (ERP)', parent_id: @category_35.id).first_or_create #Enterprise resource planning software (ERP)
+SubService.where(name: 'Financial services', parent_id: @category_35.id).first_or_create #Financial services
+SubService.where(name: 'Freight management', parent_id: @category_35.id).first_or_create #Freight management
+SubService.where(name: 'Industrial auctioneer', parent_id: @category_35.id).first_or_create #Industrial auctioneer
+SubService.where(name: 'Industrial equipment appraisals & inspections', parent_id: @category_35.id).first_or_create #Industrial equipment appraisals & inspections
+SubService.where(name: 'Insurance, risk management and loss prevention', parent_id: @category_35.id).first_or_create #Insurance, risk management and loss prevention
+SubService.where(name: 'Investment banking', parent_id: @category_35.id).first_or_create #Investment banking
+SubService.where(name: 'Material execution system software (MES)', parent_id: @category_35.id).first_or_create #Material execution system software (MES)
+SubService.where(name: 'Material resource planning software (MRP)', parent_id: @category_35.id).first_or_create #Material resource planning software (MRP)
+SubService.where(name: 'Mergers & acquisitions', parent_id: @category_35.id).first_or_create #Mergers & acquisitions
+SubService.where(name: 'Real estate leasing', parent_id: @category_35.id).first_or_create #Real estate leasing
+SubService.where(name: 'Software development', parent_id: @category_35.id).first_or_create #Software development
+SubService.where(name: 'Supply chain management', parent_id: @category_35.id).first_or_create #Supply chain management
+SubService.where(name: 'Systems integrators', parent_id: @category_35.id).first_or_create #Systems integrators
+SubService.where(name: 'Training', parent_id: @category_35.id).first_or_create #Training
+
+puts 'Adding Contract manufacturing'
+@category_36 = Service.where(name: 'Contract manufacturing').first_or_create
+SubService.where(name: 'CNC programming', parent_id: @category_36.id).first_or_create #CNC programming
+SubService.where(name: 'Cutting', parent_id: @category_36.id).first_or_create #Cutting
+SubService.where(name: 'Die & fixtures', parent_id: @category_36.id).first_or_create #Die & fixtures
+SubService.where(name: 'Fabricating', parent_id: @category_36.id).first_or_create #Fabricating
+SubService.where(name: 'Finishing', parent_id: @category_36.id).first_or_create #Finishing
+SubService.where(name: 'Machine rebuilding', parent_id: @category_36.id).first_or_create #Machine rebuilding
+SubService.where(name: 'Roll forming', parent_id: @category_36.id).first_or_create #Roll forming
+SubService.where(name: 'Stamping/drawing', parent_id: @category_36.id).first_or_create #Stamping/drawing
+SubService.where(name: 'Welding', parent_id: @category_36.id).first_or_create #Welding
+
+puts 'Adding Extrusions'
+@category_37 = Service.where(name: 'Extrusions').first_or_create
+SubService.where(name: 'Aluminum', parent_id: @category_37.id).first_or_create #Aluminum
+SubService.where(name: 'Copper', parent_id: @category_37.id).first_or_create #Copper
+SubService.where(name: 'Impact', parent_id: @category_37.id).first_or_create #Impact
+SubService.where(name: 'Magnesium', parent_id: @category_37.id).first_or_create #Magnesium
+SubService.where(name: 'Steel', parent_id: @category_37.id).first_or_create #Steel
+SubService.where(name: 'Vinyl', parent_id: @category_37.id).first_or_create #Vinyl
+
+puts 'Adding Maintenance and repair'
+@category_38 = Service.where(name: 'Maintenance and repair').first_or_create
+SubService.where(name: 'Clutch/brake controls', parent_id: @category_38.id).first_or_create #Clutch/brake controls
+SubService.where(name: 'Computerized maintenance management software (CMMS)', parent_id: @category_38.id).first_or_create #Computerized maintenance management software (CMMS)
+SubService.where(name: 'Press rebuilding', parent_id: @category_38.id).first_or_create #Press rebuilding
+SubService.where(name: 'Printed circuit boards repair', parent_id: @category_38.id).first_or_create #Printed circuit boards repair
+SubService.where(name: 'Rebuild', parent_id: @category_38.id).first_or_create #Rebuild
+SubService.where(name: 'Retrofit', parent_id: @category_38.id).first_or_create #Retrofit
+
+puts 'Adding Measurement and testing'
+@category_39 = Service.where(name: 'Measurement and testing').first_or_create
+SubService.where(name: 'Additives & testers', parent_id: @category_39.id).first_or_create #Additives & testers
+SubService.where(name: 'Calibrating, noncontact thickness gauges', parent_id: @category_39.id).first_or_create #Calibrating, noncontact thickness gauges
+SubService.where(name: 'Charpy impact testing', parent_id: @category_39.id).first_or_create #Charpy impact testing
+SubService.where(name: 'Indoor air quality testing', parent_id: @category_39.id).first_or_create #Indoor air quality testing
+SubService.where(name: 'Laboratory services, chemical & spectrographic', parent_id: @category_39.id).first_or_create #Laboratory services, chemical & spectrographic
+SubService.where(name: 'Laboratory services, metallurgical & physical', parent_id: @category_39.id).first_or_create #Laboratory services, metallurgical & physical
+SubService.where(name: 'Nondestructive testing', parent_id: @category_39.id).first_or_create #Nondestructive testing
+SubService.where(name: 'Quality inspection', parent_id: @category_39.id).first_or_create #Quality inspection
+SubService.where(name: 'Signature analysis', parent_id: @category_39.id).first_or_create #Signature analysis
+
+puts 'Adding Metal coating and finishing'
+@category_40 = Service.where(name: 'Metal coating and finishing').first_or_create
+SubService.where(name: 'Anodizing', parent_id: @category_40.id).first_or_create #Anodizing
+SubService.where(name: 'Blanchard grinding', parent_id: @category_40.id).first_or_create #Blanchard grinding
+SubService.where(name: 'Cleaning, paint stripping', parent_id: @category_40.id).first_or_create #Cleaning, paint stripping
+SubService.where(name: 'Coil coating', parent_id: @category_40.id).first_or_create #Coil coating
+SubService.where(name: 'Deburring', parent_id: @category_40.id).first_or_create #Deburring
+SubService.where(name: 'Edge conditioning', parent_id: @category_40.id).first_or_create #Edge conditioning
+SubService.where(name: 'Edging, skiving', parent_id: @category_40.id).first_or_create #Edging, skiving
+SubService.where(name: 'Electrogalvanizing', parent_id: @category_40.id).first_or_create #Electrogalvanizing
+SubService.where(name: 'Electropolishing', parent_id: @category_40.id).first_or_create #Electropolishing
+SubService.where(name: 'Finishing', parent_id: @category_40.id).first_or_create #Finishing
+SubService.where(name: 'Galvanizing', parent_id: @category_40.id).first_or_create #Galvanizing
+SubService.where(name: 'Gauering flat bars', parent_id: @category_40.id).first_or_create #Gauering flat bars
+SubService.where(name: 'Metal finishing', parent_id: @category_40.id).first_or_create #Metal finishing
+SubService.where(name: 'Painting', parent_id: @category_40.id).first_or_create #Painting
+SubService.where(name: 'Pickling', parent_id: @category_40.id).first_or_create #Pickling
+SubService.where(name: 'Plating', parent_id: @category_40.id).first_or_create #Plating
+SubService.where(name: 'Polishing', parent_id: @category_40.id).first_or_create #Polishing
+SubService.where(name: 'Powder coating', parent_id: @category_40.id).first_or_create #Powder coating
+SubService.where(name: 'Sandblasting', parent_id: @category_40.id).first_or_create #Sandblasting
+SubService.where(name: 'Shot blasting', parent_id: @category_40.id).first_or_create #Shot blasting
+SubService.where(name: 'Surface grinding', parent_id: @category_40.id).first_or_create #Surface grinding
+SubService.where(name: 'Thermal spray coating', parent_id: @category_40.id).first_or_create #Thermal spray coating
+
+puts 'Adding Metal processing'
+@category_41 = Service.where(name: 'Metal processing').first_or_create
+SubService.where(name: 'Annealing', parent_id: @category_41.id).first_or_create #Annealing
+SubService.where(name: 'Blanking and sheeting', parent_id: @category_41.id).first_or_create #Blanking and sheeting
+SubService.where(name: 'Cambering', parent_id: @category_41.id).first_or_create #Cambering
+SubService.where(name: 'Casting, copper-based', parent_id: @category_41.id).first_or_create #Casting, copper-based
+SubService.where(name: 'Casting, die', parent_id: @category_41.id).first_or_create #Casting, die
+SubService.where(name: 'Casting, die, aluminum', parent_id: @category_41.id).first_or_create #Casting, die, aluminum
+SubService.where(name: 'Casting, die, magnesium', parent_id: @category_41.id).first_or_create #Casting, die, magnesium
+SubService.where(name: 'Casting, die, zinc', parent_id: @category_41.id).first_or_create #Casting, die, zinc
+SubService.where(name: 'Casting, investment', parent_id: @category_41.id).first_or_create #Casting, investment
+SubService.where(name: 'Casting, permanent mold', parent_id: @category_41.id).first_or_create #Casting, permanent mold
+SubService.where(name: 'Casting, titanium', parent_id: @category_41.id).first_or_create #Casting, titanium
+SubService.where(name: 'Coil processing', parent_id: @category_41.id).first_or_create #Coil processing
+SubService.where(name: 'Cold drawing', parent_id: @category_41.id).first_or_create #Cold drawing
+SubService.where(name: 'Cold finishing', parent_id: @category_41.id).first_or_create #Cold finishing
+SubService.where(name: 'Cold rolling', parent_id: @category_41.id).first_or_create #Cold rolling
+SubService.where(name: 'Custom roll forming', parent_id: @category_41.id).first_or_create #Custom roll forming
+SubService.where(name: 'Custom rolling', parent_id: @category_41.id).first_or_create #Custom rolling
+SubService.where(name: 'Cut-to-length', parent_id: @category_41.id).first_or_create #Cut-to-length
+SubService.where(name: 'Drawforming', parent_id: @category_41.id).first_or_create #Drawforming
+SubService.where(name: 'Edge trimming', parent_id: @category_41.id).first_or_create #Edge trimming
+SubService.where(name: 'Embossing', parent_id: @category_41.id).first_or_create #Embossing
+SubService.where(name: 'EPS (eco pickled surface) processing', parent_id: @category_41.id).first_or_create #EPS (eco pickled surface) processing
+SubService.where(name: 'Fabricating', parent_id: @category_41.id).first_or_create #Fabricating
+SubService.where(name: 'Fineblanking', parent_id: @category_41.id).first_or_create #Fineblanking
+SubService.where(name: 'Flame cutting', parent_id: @category_41.id).first_or_create #Flame cutting
+SubService.where(name: 'Flattening', parent_id: @category_41.id).first_or_create #Flattening
+SubService.where(name: 'Forging', parent_id: @category_41.id).first_or_create #Forging
+SubService.where(name: 'Grinding', parent_id: @category_41.id).first_or_create #Grinding
+SubService.where(name: 'Heat treating', parent_id: @category_41.id).first_or_create #Heat treating
+SubService.where(name: 'Hydroforming', parent_id: @category_41.id).first_or_create #Hydroforming
+SubService.where(name: 'Impregnation', parent_id: @category_41.id).first_or_create #Impregnation
+SubService.where(name: 'Ion nitriding', parent_id: @category_41.id).first_or_create #Ion nitriding
+SubService.where(name: 'Laser cutting', parent_id: @category_41.id).first_or_create #Laser cutting
+SubService.where(name: 'Leveling', parent_id: @category_41.id).first_or_create #Leveling
+SubService.where(name: 'Perforation', parent_id: @category_41.id).first_or_create #Perforation
+SubService.where(name: 'Planer milling', parent_id: @category_41.id).first_or_create #Planer milling
+SubService.where(name: 'Plasma cutting', parent_id: @category_41.id).first_or_create #Plasma cutting
+SubService.where(name: 'Plate cutting', parent_id: @category_41.id).first_or_create #Plate cutting
+SubService.where(name: 'Plate forming & rolling', parent_id: @category_41.id).first_or_create #Plate forming & rolling
+SubService.where(name: 'Plate, fabricating', parent_id: @category_41.id).first_or_create #Plate, fabricating
+SubService.where(name: 'Punching, drilling, notching', parent_id: @category_41.id).first_or_create #Punching, drilling, notching
+SubService.where(name: 'Rebar, fabricating', parent_id: @category_41.id).first_or_create #Rebar, fabricating
+SubService.where(name: 'Roll forming', parent_id: @category_41.id).first_or_create #Roll forming
+SubService.where(name: 'Roll texturing', parent_id: @category_41.id).first_or_create #Roll texturing
+SubService.where(name: 'Roller leveling', parent_id: @category_41.id).first_or_create #Roller leveling
+SubService.where(name: 'Rolling', parent_id: @category_41.id).first_or_create #Rolling
+SubService.where(name: 'Rolls, surface conditioning', parent_id: @category_41.id).first_or_create #Rolls, surface conditioning
+SubService.where(name: 'Sawing, band', parent_id: @category_41.id).first_or_create #Sawing, band
+SubService.where(name: 'Sawing, circle/ring', parent_id: @category_41.id).first_or_create #Sawing, circle/ring
+SubService.where(name: 'Sawing, miter', parent_id: @category_41.id).first_or_create #Sawing, miter
+SubService.where(name: 'Sawing, other', parent_id: @category_41.id).first_or_create #Sawing, other
+SubService.where(name: 'SCS (surface clean steel) processing', parent_id: @category_41.id).first_or_create #SCS (surface clean steel) processing
+SubService.where(name: 'Shearing', parent_id: @category_41.id).first_or_create #Shearing
+SubService.where(name: 'Sheet, fabricating', parent_id: @category_41.id).first_or_create #Sheet, fabricating
+SubService.where(name: 'Slitting', parent_id: @category_41.id).first_or_create #Slitting
+SubService.where(name: 'Stamping, custom', parent_id: @category_41.id).first_or_create #Stamping, custom
+SubService.where(name: 'Stamping, other', parent_id: @category_41.id).first_or_create #Stamping, other
+SubService.where(name: 'Stress relieving', parent_id: @category_41.id).first_or_create #Stress relieving
+SubService.where(name: 'Temper rolling', parent_id: @category_41.id).first_or_create #Temper rolling
+SubService.where(name: 'Tempering', parent_id: @category_41.id).first_or_create #Tempering
+SubService.where(name: 'Tension leveling', parent_id: @category_41.id).first_or_create #Tension leveling
+SubService.where(name: 'Toll processing', parent_id: @category_41.id).first_or_create #Toll processing
+SubService.where(name: 'Traverse winding', parent_id: @category_41.id).first_or_create #Traverse winding
+SubService.where(name: 'Trepanning', parent_id: @category_41.id).first_or_create #Trepanning
+SubService.where(name: 'Tube & pipe, fabricating', parent_id: @category_41.id).first_or_create #Tube & pipe, fabricating
+SubService.where(name: 'Tube bending', parent_id: @category_41.id).first_or_create #Tube bending
+SubService.where(name: 'Tube deburring', parent_id: @category_41.id).first_or_create #Tube deburring
+SubService.where(name: 'Tube drilling', parent_id: @category_41.id).first_or_create #Tube drilling
+SubService.where(name: 'Tube endfinishing', parent_id: @category_41.id).first_or_create #Tube endfinishing
+SubService.where(name: 'Tube flanging', parent_id: @category_41.id).first_or_create #Tube flanging
+SubService.where(name: 'Tube flaring', parent_id: @category_41.id).first_or_create #Tube flaring
+SubService.where(name: 'Tube forming', parent_id: @category_41.id).first_or_create #Tube forming
+SubService.where(name: 'Tube notching', parent_id: @category_41.id).first_or_create #Tube notching
+SubService.where(name: 'Tube punching', parent_id: @category_41.id).first_or_create #Tube punching
+SubService.where(name: 'Tube rolling', parent_id: @category_41.id).first_or_create #Tube rolling
+SubService.where(name: 'Waterjet cutting', parent_id: @category_41.id).first_or_create #Waterjet cutting
+SubService.where(name: 'Welding', parent_id: @category_41.id).first_or_create #Welding
+
+puts 'Adding Production and manufacturing'
+@category_42 = Service.where(name: 'Production and manufacturing').first_or_create
+SubService.where(name: 'Light assembly', parent_id: @category_42.id).first_or_create #Light assembly
+SubService.where(name: 'Rapid prototyping', parent_id: @category_42.id).first_or_create #Rapid prototyping
+
+puts 'Adding Supplies and accessories / consumables'
+@category_43 = Service.where(name: 'Adding Supplies and accessories / consumables').first_or_create
+SubService.where(name: 'Steel bar labels', parent_id: @category_43.id).first_or_create #Steel bar labels
+SubService.where(name: 'Steel coil tags', parent_id: @category_43.id).first_or_create #Steel coil tags
+SubService.where(name: 'Steel tube labels', parent_id: @category_43.id).first_or_create #Steel tube labels
+SubService.where(name: 'Steel wire tags', parent_id: @category_43.id).first_or_create #Steel wire tags
+
+puts 'Adding Miscellaneous services'
+@category_44 = Service.where(name: 'Miscellaneous services').first_or_create
+SubService.where(name: 'Air purification services', parent_id: @category_44.id).first_or_create #Air purification services
+SubService.where(name: 'Custom equipment', parent_id: @category_44.id).first_or_create #Custom equipment
+SubService.where(name: 'Custom molding, parent_id: @category_44.id').first_or_create #Custom molding
+SubService.where(name: 'Design/construction', parent_id: @category_44.id).first_or_create #Design/construction
+SubService.where(name: 'Die protection systems', parent_id: @category_44.id).first_or_create #Die protection systems
+SubService.where(name: 'Engineering/analysis', parent_id: @category_44.id).first_or_create #Engineering/analysis
+SubService.where(name: 'Industrial hygiene monitoring', parent_id: @category_44.id).first_or_create #Industrial hygiene monitoring
+SubService.where(name: 'Installation', parent_id: @category_44.id).first_or_create #Installation
+SubService.where(name: 'Labeling', parent_id: @category_44.id).first_or_create #Labeling
+SubService.where(name: 'Machine foundations', parent_id: @category_44.id).first_or_create #Machine foundations
+SubService.where(name: 'Material storage', parent_id: @category_44.id).first_or_create #Material storage
+SubService.where(name: 'Materials standards and specifications', parent_id: @category_44.id).first_or_create #Materials standards and specifications
+SubService.where(name: 'Molding, polyurethane', parent_id: @category_44.id).first_or_create #Molding, polyurethane
+SubService.where(name: 'Press pits', parent_id: @category_44.id).first_or_create #Press pits
+SubService.where(name: 'Scrap buying', parent_id: @category_44.id).first_or_create #Scrap buying
