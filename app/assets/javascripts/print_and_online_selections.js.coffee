@@ -1,4 +1,4 @@
-$ ->
+$(document).on 'ready page:load', ->
   update_print_total()
   update_online_total()
   $("#print_selections :checkbox").click (event) ->
