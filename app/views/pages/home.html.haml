@@ -20,7 +20,7 @@
                 .span12{style: 'padding: 10px;'}
                   .thumbnail
                     #logo
-                      = image_tag @company.logo @company.logo?
+                      = image_tag(@company.logo.thumb.url) if @company.logo.present?
                     %h5= @company.company_name
                     %p
                       = @company.address_1
