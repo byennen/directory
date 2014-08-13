@@ -31,7 +31,8 @@ gem 'multi-select-rails'
 
 gem 'mysql2' #required for think-sphinx
 gem 'thinking-sphinx'
-gem 'flying-sphinx'
+gem 'flying-sphinx', github: 'flying-sphinx/flying-sphinx', branch: 'master', ref: '6b691c2b43'
+
 
 gem 'kaminari'
 gem 'state_machine'
