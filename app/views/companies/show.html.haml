@@ -1,15 +1,76 @@
-= @company.contact_name
-= @company.company_name
-= @company.sub_company_name
-= @company.address_1
-= @company.address_2
-= @company.city
-= @company.state
-= @company.zip
-= @company.country
-= @company.website
-= @company.phone_1
-= @company.phone_2
-= @company.fax
-= @company.logo_package_id
-= @company.logo
+.container{style: 'background: #CCC; border-top: 1px solid #333; border-bottom: 1px solid #333;'}
+  .row-fluid
+    .span12
+      #homepage.row-fluid
+        .span3
+          = render 'shared/directory_deadline'
+        .span9
+          .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
+            = image_tag(@company.logo_url) if @company.logo?
+            %h1.heading= @company.company_name
+            %p= @company.sub_company_name
+
+            %b ADDRESS
+            %br
+            = @company.address_1
+            %br
+            = @company.address_2
+            %br
+            = @company.city
+            %br
+            = @company.state
+            %br
+            = @company.zip
+            %br
+            = @company.country
+            %br
+            %br
+            %b CONTACT
+            .row-fluid
+              .span2
+                Phone:
+              .span4
+                = @company.phone_1
+            - if @company.phone_2.present?
+              .row-fluid
+                .span2
+                  Phone 2:
+                .span4
+                  = @company.phone_2
+            - if @company.fax.present?
+              .row-fluid
+                .span2
+                  Fax:
+                .span4
+                  = @company.fax
+            - if @company.user.present?
+              .row-fluid
+                .span2
+                  Email:
+                .span4
+                  = @company.user.email
+            - if @company.website.present?
+              .row-fluid
+                .span2
+                  Website:
+                .span4
+                  = @company.website
+            %br
+            %b BRANCH LOCATIONS
+            %br
+            - @company.branches.each do |branch|
+              .row-fluid
+                .span12
+                  = branch.branch_name
+                  %br
+                  = branch.address_1
+                  %br
+                  = branch.address_2
+                  %br
+                  = succeed ', ' do
+                    = branch.city
+                  = branch.state
+                  = branch.zip
+                  %br
+                  Phone:
+                  = branch.phone_1
