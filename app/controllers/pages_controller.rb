@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @company = current_user.companies.last if current_user
+    @companies = current_user.companies if current_user
   end
 
   def about

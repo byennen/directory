@@ -18,21 +18,12 @@
                     Welcome
               .row-fluid
                 .span12{style: 'padding: 10px;'}
-                  .thumbnail
-                    #logo
-                      = image_tag(@company.logo.thumb.url) if @company.logo.present?
-                    %h5= @company.company_name
-                    %p
-                      = @company.address_1
-                      = @company.address_2
-                    %p
-                      P:
-                      = @company.phone_1
-                      F:
-                      = @company.fax
-                    %p= @company.website
-                .span12
-                  = link_to "My companies list", my_companies_companies_path
+                  %table.table.table-hover
+                    %tbody
+                      - @companies.each do |company|
+                        %tr
+                          %td=link_to company.company_name, company
+                          %td= link_to "edit", edit_company_path(company)
                 .span12
                   = link_to 'Logout', destroy_user_session_path, :method=>'delete'
             - else
