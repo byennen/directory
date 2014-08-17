@@ -7,3 +7,9 @@ Sphinx setup
 brew install sphinx --mysql --pgsql
 rake ts:index
 rake ts:start
+
+
+Heroku Sphinx
+heroku run bundle exec flying-sphinx configure
+heroku run bundle exec flying-sphinx index
+heroku run bundle exec flying-sphinx start
