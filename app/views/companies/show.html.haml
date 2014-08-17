@@ -3,7 +3,18 @@
     .span12
       #homepage.row-fluid
         .span3
-          = render 'shared/directory_deadline'
+          %h4 MATERIALS
+          %ul
+            - @company.material_categorizables.each do |material|
+              %li= link_to material.name
+          %h4 SERVICES
+          %ul
+            - @company.service_categorizables.each do |service|
+              %li= link_to service.name
+          %h4 EQUIPMENTS
+          %ul
+            - @company.equipment_categorizables.each do |equipment|
+              %li= link_to equipment.name
         .span9
           .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
             = image_tag(@company.logo_url) if @company.logo?
