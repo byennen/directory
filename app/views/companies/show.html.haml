@@ -6,15 +6,15 @@
           %h4 MATERIALS
           %ul
             - @company.material_categorizables.each do |material|
-              %li= link_to material.name
+              %li= link_to material.name, "/companies?search[term]=#{material.name}&search[cat]=material"
           %h4 SERVICES
           %ul
             - @company.service_categorizables.each do |service|
-              %li= link_to service.name
+              %li= link_to service.name, "/companies?search[term]=#{service.name}&search[cat]=service"
           %h4 EQUIPMENTS
           %ul
             - @company.equipment_categorizables.each do |equipment|
-              %li= link_to equipment.name
+              %li= link_to equipment.name, "/companies?search[term]=#{equipment.name}&search[cat]=equipment"
         .span9
           .div{style: 'background: white; margin: 10px; padding: 20px; min-height: 400px;'}
             = image_tag(@company.logo_url) if @company.logo?
