@@ -24,13 +24,13 @@ gem 'fog'
 gem 'money'
 gem 'font-awesome-rails'
 gem 'stripe'
-gem "jquery-fileupload-rails"
-gem "binding_of_caller"
+gem 'jquery-fileupload-rails'
+gem 'binding_of_caller'
 gem 'multi-select-rails'
 
 gem 'mysql2' #required for think-sphinx
 gem 'thinking-sphinx'
-gem 'flying-sphinx' #, github: 'flying-sphinx/flying-sphinx', branch: 'master', ref: '6b691c2b43'
+gem 'flying-sphinx'
 
 
 gem 'kaminari'
