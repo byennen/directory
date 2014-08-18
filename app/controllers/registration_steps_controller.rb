@@ -49,6 +49,11 @@ class RegistrationStepsController < ApplicationController
               flash[:error] = @order.errors.full_messages.join(", ")
             end
           end
+          if Rails.env.development?
+            system "rake ts:index"
+          else
+            system "heroku run bundle exec flying-sphinx index"
+          end
         else
           flash[:error] = @order.errors.full_messages.join(", ")
         end
