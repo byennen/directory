@@ -17,7 +17,7 @@
     = @company.material_print_printables.map(&:name).join(", ")
 - unless @company.service_print_printables.blank?
   %p
-    %strong Equipment Print Selections
+    %strong Service Print Selections
     %br
     - @company.service_print_printables.map(&:name).join(", ")
 
@@ -33,7 +33,7 @@
     = @company.material_online_onlineables.map(&:name).join(", ")
 - unless @company.service_online_onlineables.blank?
   %p
-    %strong Equipment Online Selections
+    %strong Service Online Selections
     %br
     = @company.service_online_onlineables.each.map(&:name).join(", ")
 %p
