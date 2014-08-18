@@ -1,8 +1,8 @@
 class ConfirmationsController < Devise::ConfirmationsController
-  private
-
-  def after_confirmation_path_for(resource_name, resource)
-    @user = current_user
-    company_registration_steps_path(@user.companies.last)
-  end
+  # private
+  #
+  # def after_confirmation_path_for(resource_name, resource)
+  #   @user = current_user
+  #   company_registration_steps_path('1')
+  # end
 end
