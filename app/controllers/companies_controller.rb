@@ -13,8 +13,12 @@ class CompaniesController < ApplicationController
       @companies = Company.search_country(country).page(params[:page]).per(15)
     elsif params[:search][:term] && params[:search][:cat].blank?
       @companies = Company.search "*#{params[:search][:term]}*", page: params[:page], per_page: 15
-    else
-      @companies = Company.search conditions: {categories: "*#{params[:search][:term]}*", category_type: params[:search][:cat]}, page: params[:page], per_page: 15  
+    elsif params[:search][:cat] == "equipment"
+      @companies = Company.search conditions: {equipment_categories: "*#{params[:search][:term]}*", category_type: params[:search][:cat]}, page: params[:page], per_page: 15
+    elsif params[:search][:cat] == "material"
+      @companies = Company.search conditions: {material_categories: "*#{params[:search][:term]}*", category_type: params[:search][:cat]}, page: params[:page], per_page: 15
+    elsif params[:search][:cat] == "service"
+      @companies = Company.search conditions: {service_categories: "*#{params[:search][:term]}*", category_type: params[:search][:cat]}, page: params[:page], per_page: 15
     end
   end
 
