@@ -38,6 +38,7 @@ class Admin::CompaniesController < Admin::ApplicationController
       if @company.save
         format.html { redirect_to admin_companies_path, notice: 'Company was successfully created.' }
         format.json { render action: 'show', status: :created, location: @company }
+        system "rake ts:index"
       else
         format.html { render action: 'new' }
         format.json { render json: @company.errors, status: :unprocessable_entity }
@@ -57,6 +58,7 @@ class Admin::CompaniesController < Admin::ApplicationController
       if @company.update(company_params)
         format.html { redirect_to admin_companies_path, notice: 'Company was successfully updated.' }
         format.json { head :no_content }
+        system "rake ts:index"
       else
         format.html { render action: 'edit' }
         format.json { render json: @company.errors, status: :unprocessable_entity }
@@ -81,6 +83,7 @@ class Admin::CompaniesController < Admin::ApplicationController
   # DELETE /companies/1.json
   def destroy
     @company.destroy
+    system "rake ts:index"
     respond_to do |format|
       format.html { redirect_to admin_companies_path }
       format.json { head :no_content }

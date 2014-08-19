@@ -1,15 +1,14 @@
 puts 'ROLES'
 YAML.load(ENV['ROLES']).each do |role|
-  Role.create(name: role)
+  Role.find_or_create_by(name: role)
   puts 'role: ' << role
 end
 
 puts 'DEFAULT USERS'
-# User.destroy_all
-# user = User.create(email: ENV['ADMIN_EMAIL'].dup, password: ENV['ADMIN_PASSWORD'].dup, password_confirmation: ENV['ADMIN_PASSWORD'].dup)
-# puts 'user: ' << user.email
-# user.confirm!
-# user.add_role :admin
+user = User.create_with(password: ENV['ADMIN_PASSWORD'].dup, password_confirmation: ENV['ADMIN_PASSWORD'].dup).find_or_create_by(email: ENV['ADMIN_EMAIL'].dup)
+puts 'user: ' << user.email
+user.confirm!
+user.add_role :admin
 
 puts 'Settings'
 Setting.create(print_edition_deadline: '2013-05-02')

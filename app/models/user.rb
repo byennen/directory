@@ -4,12 +4,12 @@ class User < ActiveRecord::Base
 
   attr_accessor :stripe_card_token
 
-  rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+  rolify
 
   after_create :create_current_users_company
 
