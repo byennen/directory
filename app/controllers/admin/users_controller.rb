@@ -7,7 +7,7 @@ class Admin::UsersController < Admin::ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
     @user.add_role :admin
 
     if @user.save
@@ -20,7 +20,7 @@ class Admin::UsersController < Admin::ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(params[:user], :as => :admin)
+    if @user.update(user_params)
       redirect_to admin_users_path, :notice => "User updated."
     else
       redirect_to admin_users_path, :alert => "Unable to update user."
@@ -35,5 +35,10 @@ class Admin::UsersController < Admin::ApplicationController
     else
       redirect_to admin_users_path, :notice => "Can't delete yourself."
     end
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation, :role_ids)
   end
 end

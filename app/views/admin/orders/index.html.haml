@@ -8,7 +8,6 @@
       %th Company
       %th Total Price
       %th Paid?
-      %th
   %tbody
     - @orders.each do |order|
       %tr
@@ -16,7 +15,5 @@
         %td= order.company.company_name if order.company
         %td= "$#{order.price}"
         %td= order.paid?
-        %td
-          = link_to 'Destroy', admin_order_path(order), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
