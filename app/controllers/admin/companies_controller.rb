@@ -83,11 +83,11 @@ class Admin::CompaniesController < Admin::ApplicationController
   # DELETE /companies/1.json
   def destroy
     @company.destroy
-    system "rake ts:index"
     respond_to do |format|
       format.html { redirect_to admin_companies_path }
       format.json { head :no_content }
     end
+    system "rake ts:index"
   end
 
   private
