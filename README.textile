@@ -1,4 +1,4 @@
-h1. Metals Directory
+h1. Directory
 
 h2. Getting started
 
